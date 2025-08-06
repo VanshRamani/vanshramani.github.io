@@ -1,0 +1,921 @@
+0 notifications total
+
+Skip to search
+
+Skip to main content
+
+Keyboard shortcuts
+Close jump menu
+
+new feed updates notifications
+Home
+My Network
+Jobs
+Messaging
+3
+3 new notifications
+Notifications
+Vansh RamaniMe 
+
+For Business 
+Try Premium for ₹0
+Vansh Ramani
+Vansh Ramani
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+Followers
+4,862
+All activity
+
+Posts
+
+Comments
+
+Images
+
+Reactions
+Loaded 19 Posts posts
+Feed post number 1
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1w • Edited •  1 week ago • Edited • Visible to anyone on or off LinkedIn
+
+It’s a wrap! My summer internship at the Ravikumar AI Lab(RAIL) - Carnegie Mellon University has come to an end - and what an experience it has been. Academically enriching, culturally eye-opening, and personally unforgettable. The internship was engaging in more ways than academic!
+
+Over the coming months, I’ll be continuing a longer-term collaboration where we aim to explore some deep and fundamental questions:
+
+1) How can machines alter their learnt information - via fine tuning, steering, unlearning efficiently?
+
+2) How can we define and formalize the notion of “concepts”, and then concretely enable machines to alter/forget them - especially in semi- or self-supervised settings? for example an LLM forgetting the concept of Harry Potter instead of just the name "Harry Potter".
+
+3) And separate from above 2, how can we distill structure from symbolic architectures into neural models, bringing together the rigor of logic with the fluidity of representation learning?
+
+Our broader goal is to make progress on understanding and shaping abstraction inside neural networks-black boxes that increasingly govern decision-making. We aim to make them not just powerful, but interpretable and adaptable!
+
+Beyond the research, this was the most amazing cultural experience of my life. From the thrilling rides at Kennywood to late nights in Millvale, Pittsburgh gave me a glimpse into American life!
+
+I'm deeply grateful to Professor Pradeep Ravikumar, and to incredible collaborators and friends: Chandler Squires, Hugo Contant, Alexis, Martin P., and many others. Your mentorship, curiosity, and camaraderie made this summer truly special.
+
+Now I understand why they say CMU is the heart of computer science and I will be back :)
+
+To end with the words of Carnegie himself:
+“My heart is in the work.”
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+likelovecelebrate
+601
+Laksh Goel and 600 others
+21 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+29,723 impressions
+View analytics
+Feed post number 2
+Vansh’s profile photo
+Vansh Ramani reposted this
+
+View Subbarao Kambhampati’s  graphic link
+Subbarao KambhampatiSubbarao Kambhampati
+   • FollowingVerified • Following
+Prof at ASU (Former President of AAAI)Prof at ASU (Former President of AAAI)
+2mo • Edited •  2 months ago • Edited • Visible to anyone on or off LinkedIn
+The transformer expressiveness results are often a bit of a red herring as there tends to be a huge gap between what can be expressed in transformers, and what can be learned with gradient descent. Mind the Gap, a new paper lead by Yochanite Lucas S. dives deeper into this issue. Paper 👉 https://lnkd.in/gbudjwEd
+
+[The following from Lucas; his full thread 👉 https://lnkd.in/gHixh_SY]
+
+Neural networks can express more than they learn, creating expressivity-trainability gaps. Our paper, “Mind The Gap,” shows neural networks best learn parallel algorithms, and analyzes gaps in faithfulness and effectiveness.
+
+We characterize expressivity-trainability gaps via neural compilation, which compiles a source program into neural network parameters that implement it perfectly. Our paper is the first to introduce neural compilation for GNNs.
+
+Compiled solutions act as constructive expressivity proofs for a given architecture. In particular, we analyze the disparity between learning breadth-first search (BFS) and depth-first search (DFS), and then analyze Bellman-Ford.
+
+Even when controlling for trace length or trace complexity, we find there is still a large disparity between BFS and DFS, indicating the issue is not the training data, but the underlying algorithm:
+
+This leads to our main hypothesis, NC-Learnability: Neural Networks best learn parallel algorithms in the computational class NC. It’s conjectured that P != NC, implying the existence of IS, inherently sequential algorithms. DFS is likely in IS, while BFS is in NC.
+
+The NC-Learnability hypothesis is supported by the field’s historical transition from RNNs to Transformers, since transformers are wide, parallel, and generally shallow. https://lnkd.in/gQdXfBV9
+
+ALTA’s results also support NC-Learnability. They showed that transformers tend to learn the sum-and-modulo variant (in NC) of parity, rather than the sequential-relative version (in IS). https://lnkd.in/g_UzDH-r
+https://lnkd.in/gSf8CfAf
+
+Even for algorithms that are learned effectively, we find that learned solutions are often not faithful at predicting traces, especially as time goes on! Also, high performance is possible even when traces aren't used for training.
+
+Beyond traces, we investigate if the learned attention mechanisms resemble compiled solutions. We show the closest learned attention mechanisms for BFS and Bellman-Ford across 128 random seeds, finding that it quickly deviates like trace predictions do:
+
+In general, we find that there is little correlation between faithfulness and effectiveness, indicating that even the best learned solutions use alternative strategies:
+
+Also, neural compilation leads us to an architecture modification for graph attention networks, which ends up being effective in practice, especially for smaller models:
+…more
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+likeinsightfullove
+198
+Vaibhav Kashyap and 197 others
+11 comments
+17 reposts
+
+Like
+
+Comment
+
+Repost
+
+Send
+Feed post number 3
+Vansh’s profile photo
+Vansh Ramani reposted this
+
+View Sayan Ranu’s  graphic link
+Sayan RanuSayan Ranu
+   • 1stVerified • 1st
+Professor at Indian Institute of Technology, DelhiProfessor at Indian Institute of Technology, Delhi
+2mo • Edited •  2 months ago • Edited • Visible to anyone on or off LinkedIn
+We are conducting a research survey as part of an ongoing project on the explainability of Graph Neural Networks (GNNs). Our goal is to explore which form of explanation—textual descriptions or visual subgraphs—is more intuitive and helpful, especially from the perspective of non-experts.
+
+Your input is valuable, as these explanations are intended for broader audiences beyond just GNN researchers.
+
+Here's the link to the survey: https://lnkd.in/dr4-wf6u
+
+CSE IIT Delhi Yardi School of Artificial Intelligence Burouj Armgaan Eshan Jain Harsh Pandey
+…more
+
+Comparing global explanation modalities
+docs.google.com
+likesupportlove
+109
+Aditya Bommakanti and 108 others
+3 comments
+11 reposts
+
+Like
+
+Comment
+
+Repost
+
+Send
+Feed post number 4
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+2mo • Edited •  2 months ago • Edited • Visible to anyone on or off LinkedIn
+
+Now that endsems are over, time to actually write about hashtag#ICLR25
+
+Still feels surreal - 2nd year undergrad at ICLR.
+
+Day 1 started with Zico Kolter's talk. Then suddenly Hall 2 was packed with Jump Trading Group, Citadel, Jane Street, Hudson River Trading, Optiver, Google, Meta and like 50 other booths.
+Was so cool to be welcomed by them.
+(also the goodies... the goodies)
+
+With 500 posters a day, it was an absolute EXPERIENCE!
+LLMs, AI security, graphs, edge of stability, interpretability, multi-modality -- Saw more ideas in 4 days than I do in 4 months.
+
+Day 2 was our poster.
+Spoke to people whose names I’ve literally only seen on arXiv headers. They read our paper. They had questions - I felt accountable to them!
+
+At night, dinner with Citadel, got deep into FP arithmetic, FPGA, and Indian traffic :) with Hunter Morris and Xiaoyu Zhang and team Citadel. Insanely fun (and very nerdy).
+Big thanks to them for that.
+
+Also: thank you Wei Siang for one of the best coffee chats!
+
+Apart from the Conference, the best part was the 1am walks with Mridul Gupta (and losing my debit card lol) and Sentosa trip with Samyak Jain!
+Sourav Medya made every day folds fun! Sayan Ranu and Hariprasad Kodamana showed us every cool paper they saw!
+
+Will never forget these 7 days!
+
+ICLR25 - thank you - will see you again next year :)
+
+Acknowledgements:
+thanks CSE @ Indian Institute of Technology, Delhi for CSE RAF grant!
+
+Here's the paper again:
+Paper: https://lnkd.in/gVfPF34d
+Code: https://lnkd.in/ez_G-wZ8
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
++2
+Activate to view larger image,
+likelovecelebrate
+368
+You and 367 others
+3 comments
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+14,217 impressions
+View analytics
+Feed post number 5
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+3mo • Edited •  3 months ago • Edited • Visible to anyone on or off LinkedIn
+
+And I presented Bonsai to Michael Bronstein.
+I was at ICLR today, standing by our poster (#186), when I noticed Prof. Michael Bronstein and his group right across from us. After a brief chat, he walked over to see our paper. A few minutes in, he called his students over to check it out too.
+
+If I haven’t said this before - presenting your paper at a conference is the BEST feeling ever. Sharing your work with brilliant minds, hearing feedback, and seeing people genuinely engage with what you've built… it’s incredible.
+
+Huge thanks to everyone who stopped by our poster - including Prof. Michael Bronstein, Prof. Johannes Lutzeyer, and Prof. Filippo Maria Bianchi. Grateful for all the conversations and encouragement!
+
+Here's the paper: https://lnkd.in/gze4WrfS
+
+Authors: Mridul Gupta Samyak Jain Vansh Ramani Hariprasad Kodamana Sayan Ranu 
+
+hashtag#ICLR2025 hashtag#MachineLearning hashtag#GraphLearning hashtag#GNN
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+likecelebratelove
+416
+You and 415 others
+18 comments
+3 reposts
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+19,086 impressions
+View analytics
+Feed post number 6
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+5mo • Edited •  5 months ago • Edited • Visible to anyone on or off LinkedIn
+
+CMU is a dream for any computer scientist. From pioneers like Ruslan Salakhutdinov, who shaped deep learning, to Tom Mitchell, a founding figure in machine learning, the university has been at the centre of AI advancements.
+
+I’m thrilled to share that I’ll be spending this summer at the Machine Learning Department at Carnegie Mellon University working under Dr. Pradeep Ravikumar as a research intern. My research will focus on causal representation learning, with a broader emphasis on neurosymbolic AI and its role in explainable and robust machine learning systems.
+
+A huge thanks to Prof. Pradeep, Chandler Squires, and the team at CMU including Mary Stech for this opportunity and their support in getting me on board. Looking forward to an exciting summer of research and collaboration!
+As Andrew Carnegie said, "My heart is in the work."
+
+If you're in #Pittsburgh in summers and would like to hangout - Please feel free to DM me :)
+
+hashtag#CMU hashtag#MachineLearning hashtag#CausalAI hashtag#NeuroSymbolicAI hashtag#Intern hashtag#Pittsburgh
+Activate to view larger image,
+text, letter
+Activate to view larger image,
+likecelebratelove
+521
+Kumar Aditya and 520 others
+42 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+26,569 impressions
+View analytics
+Feed post number 7
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+6mo • Edited •  6 months ago • Edited • Visible to anyone on or off LinkedIn
+
+ICLR 2025 - HERE I COME!!!
+
+Thrilled to announce that our paper "Bonsai: Gradient-free Graph Distillation for Node Classification" has been accepted at the International Conference on Learning Representations 2025, Singapore!
+
+BONSAI introduces a novel approach to graph distillation that's:
+- 22x faster than existing methods
+- Model-agnostic across all GNN architectures
+- CPU-optimized, reducing carbon emissions by 17x
+
+Grateful to mentors Dr. Sayan Ranu, Dr. Hariprasad Kodamana, and co-authors Mridul Gupta and Samyak Jain.
+
+Paper and code can be found on openreview: [https://lnkd.in/gVfPF34d]
+reviews and feedback are always welcome :)
+
+hashtag#ICLR2025 hashtag#GraphLearning hashtag#MachineLearning
+
+Indian Institute of Technology, Delhi 
+Yardi School of Artificial Intelligence
+Activate to view larger image,
+graphical user interface, text
+Activate to view larger image,
+likecelebratelove
+656
+You and 655 others
+29 comments
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+53,690 impressions
+View analytics
+Feed post number 8
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+8mo •  8 months ago • Visible to anyone on or off LinkedIn
+
+Honored to have been invited as a speaker at the American Chemical Society and BioPractify's 38th Students Journal Club and Networking Program! I had the opportunity to present on "Undergrad Research: Navigating AI for Applied Sciences" to an engaged audience of researchers and future scientists.
+
+Shared my insights on Graph Neural Networks and their transformative applications in drug discovery and molecular modeling. 
+The talk revolved around my two recent publications:
+ • Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions
+ • Bonsai: Gradient-free Graph Distillation for Node Classification
+
+And discussing how these methods can be applied to research in computational chemistry and biology.
+
+Another discussion I had was on sustainable AI practices and how we can develop powerful computational models while being mindful of their environmental impact.
+
+The Q&A session was great.
+
+Special thanks to the ACS International Student Chapter: IIT Delhi India, IIT Delhi and BioPractify for organizing this excellent platform for knowledge exchange. It's inspiring to see such dedication to bridging the gap between traditional and computational approaches in life sciences.
+
+Additional thanks to Vineet Mittal for inviting me to the same.
+
+It will soon be available as a webinar here: https://lnkd.in/gcFpqSWw
+
+hashtag#AIResearch hashtag#DrugDiscovery hashtag#STEM hashtag#GraphNeuralNetworks hashtag#UndergraduateResearch hashtag#AcademicSpeaking
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+likecelebratelove
+208
+3 comments
+1 repost
+
+Like
+
+Comment
+
+Repost
+
+Send
+12,820 impressions
+View analytics
+Feed post number 9
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+8mo • Edited •  8 months ago • Edited • Visible to anyone on or off LinkedIn
+
+Making a 4-axis robotic arm for shuffling silicon wafers in semiconductor manufacturing was nowhere on my bucket list. Yet here we are.
+
+I'm pleased to share that our team, Pi Propulsion, has been named National Champions at the Lam Research Challenge 2024, achieving first position and securing a prize of INR 5 lakhs. The championship trophy will be housed at the Indian Institute of Technology, Delhi, until the next challenge.
+
+The competition brought together 2,500 students from 153 universities across India, progressing through three intensive rounds:
+1. An online theory round testing knowledge of mechanical design, electronics, and machining
+2. Development of a Peltier-based Liquid Cooling System for Temperature Calibration
+3. The final round at IISc Bengaluru - designing and building a 4-axis robotic arm
+
+Team Pi Propulsion: Vansh Ramani, Reeshabh Kotecha, Dhruv Joshi and Nakshat Pandey
+
+The experience included a visit to the Centre for Nano Science and Engineering (CeNSE) Lab at Indian Institute of Science (IISc), pioneers in chip design. A special thanks to Prof. Srinivasan Raghavan for the same.
+
+This competition has certainly heightened my interest in what the semiconductor industry has to offer.
+
+Special thanks to T-Works and Lam Research for organizing this competition, and I am grateful to Rangesh Raghavan for his guidance and initiative.
+It was great talking to Dinesh Munireddy, Eshwar Krishnappa, Srinivasan Mudaliar and learn from their expertise.
+
+A thank you to Soumik Rao, Vansh Raj, Naomi Kundu, etc, for their immense hospitality.
+
+A heartfelt congratulations to team Good Morning Pineapple from IIT Delhi for being first runner ups(Anirudha Saraf, Arnav Panjla, Mahesh Pareek, Lakshya Bhatnagar)
+
+Lam Research (India) Private Ltd, Narayanan Kurur
+hashtag#LamResearch hashtag#Innovation hashtag#Engineering hashtag#Robotics hashtag#Semiconductor hashtag#IITDelhi
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
++1
+Activate to view larger image,
+likecelebratelove
+345
+You and 344 others
+25 comments
+1 repost
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+16,007 impressions
+View analytics
+Feed post number 10
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+9mo •  9 months ago • Visible to anyone on or off LinkedIn
+
+Really honored to share my recent achievement at the Goldman Sachs India Hackathon 2024 (GSIH)!
+
+Among 8,000 participants from India's premier institutions, I'm humbled to have secured 4th place nationally! 🏆 The journey began with ranking 5th in the preliminary round, leading to an exciting invitation to Goldman Sachs' Bengaluru office for the finals.
+
+There were 6 questions - 3 in computer science and 3 in quantitative finance! 💡
+I was selected in the computer science domain. The questions were:
+ • Building a SQL query engine using Python and Abstract Syntax Trees
+ • Advanced problem on graph theory (minimum spanning trees, Chinese postman problem, modified Catalan numbers)
+ • Developing an OMR sheet scoring pipeline
+
+What made this experience special was applying theoretical computer science concepts to solve real-world problems. Each solution demanded deep algorithmic thinking and innovative approaches.
+
+✨ Goldman Sachs' hospitality was exceptional throughout the event. From our stay at the Marriott to exploring their stunning Bengaluru campus, every moment was memorable. The opportunity to connect with some of the smartest people in India.
+
+Grateful for this incredible experience and looking forward to more such challenges!
+
+Special thanks to Pilith Pericho Anmol Motta and other members of Goldman Sachs team for their hospitality :)
+
+hashtag#GoldmanSachs hashtag#Technology hashtag#Innovation hashtag#ComputerScience hashtag#Hackathon hashtag#India
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
++1
+Activate to view larger image,
+likecelebratelove
+309
+You and 308 others
+17 comments
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+17,907 impressions
+View analytics
+Feed post number 11
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+9mo • Edited •  9 months ago • Edited • Visible to anyone on or off LinkedIn
+
+🌟 I’m excited to announce that my research project on 𝐠𝐫𝐚𝐩𝐡 𝐝𝐚𝐭𝐚 𝐝𝐢𝐬𝐭𝐢𝐥𝐥𝐚𝐭𝐢𝐨𝐧 is finally completed, and our preprint is now out while it’s under submission!
+
+Bonsai: Gradient-free Graph Distillation for Node Classification
+[https://lnkd.in/gze4WrfS]
+
+🌐 𝐖𝐡𝐚𝐭 𝐢𝐬 𝐆𝐫𝐚𝐩𝐡 𝐃𝐢𝐬𝐭𝐢𝐥𝐥𝐚𝐭𝐢𝐨𝐧?
+Graph neural networks (GNNs) are vital for handling complex relational data within massive graphs, but training on such large-scale data can be extremely resource-intensive. Graph distillation seeks to tackle this challenge by creating a smaller, high-quality version of the graph that retains essential information—allowing for faster, more efficient training 🏎️ without needing extensive computational resources.
+
+𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐢𝐧𝐠 𝐁𝐎𝐍𝐒𝐀𝐈 🌳
+Most existing methods require a full training pass on the original graph dataset, which can undermine the goal of efficient distillation. 𝐁𝐎𝐍𝐒𝐀𝐈 is a unique, 𝐥𝐢𝐧𝐞𝐚𝐫-𝐭𝐢𝐦𝐞, 𝐦𝐨𝐝𝐞𝐥-𝐚𝐠𝐧𝐨𝐬𝐭𝐢𝐜 𝐠𝐫𝐚𝐩𝐡 𝐝𝐢𝐬𝐭𝐢𝐥𝐥𝐚𝐭𝐢𝐨𝐧 𝐚𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦 that overcomes this by distilling graphs 𝟐𝟐𝐱 𝐟𝐚𝐬𝐭𝐞𝐫 than previous methods. 🌟 It achieves state-of-the-art results on 𝟏𝟒 𝐨𝐮𝐭 𝐨𝐟 𝟏𝟖 benchmark scenarious!
+
+𝐖𝐡𝐚𝐭 𝐒𝐞𝐭𝐬 𝐁𝐎𝐍𝐒𝐀𝐈 𝐀𝐩𝐚𝐫𝐭?
+✅ 𝐌𝐨𝐝𝐞𝐥-𝐀𝐠𝐧𝐨𝐬𝐭𝐢𝐜 𝐃𝐢𝐬𝐭𝐢𝐥𝐥𝐚𝐭𝐢𝐨𝐧: A single distilled dataset that works across GNN architectures (GCN, GAT, GraphSage, GIN, etc.) 
+✅ 𝐂𝐏𝐔-𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐞𝐝: Designed to run efficiently without relying on expensive GPUs 
+✅ 𝐋𝐢𝐧𝐞𝐚𝐫-𝐓𝐢𝐦𝐞 𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞: BONSAI mirrors the input space, bypassing full-dataset training, and cuts down computation time dramatically while being embarrassingly parallel ⚡
+
+With BONSAI, we can now train on single-GPU setups without sacrificing accuracy, all while saving time, resources, and reducing the carbon footprint 🌍.
+
+Over the past 8 months, working on BONSAI has been an incredible learning journey. I am deeply grateful for the guidance and mentorship of Dr. Sayan Ranu and Dr. Hariprasad Kodamana, under whom this project was developed. Special thanks to my collaborators, Mridul Gupta and Samyak Jain, with whom I learned a lot.
+
+The preprint is now live, and I’d love to hear your thoughts! 💬 Please feel free to reach out with feedback, insights, or suggestions. 
+
+Indian Institute of Technology, Delhi
+hashtag#GraphNeuralNetworks hashtag#MachineLearning hashtag#AI hashtag#DataScience hashtag#Research hashtag#Sustainability hashtag#ComputerScience
+likecelebratelove
+132
+Kumar Aditya and 131 others
+13 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+11,644 impressions
+View analytics
+Feed post number 12
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr • Edited •  1 year ago • Edited • Visible to anyone on or off LinkedIn
+
+🏆 Thrilled to Announce a 1st Place Finish in Citadel's Quants Arena Challenge! 🏆
+
+I'm thrilled to announce that I successfully solved an incredibly fascinating problem as part of Citadel's Quants Arena, a challenge based on probability theory, linear systems, and even quantum mechanics.
+
+🔍 The Problem:
+The challenge revolved around constructing and analyzing probability distributions under specific constraints. Imagine two researchers, Alice and Bob, making measurements that yield probabilistic outcomes. The task was to develop an algorithm that could reconstruct global probability distributions based on their partial observations, and then test this against various scenarios and to determine if a system is "Well-Behaved". It was a complex and captivating problem.
+
+🧠 The Approach:
+I approached this problem by first defining the system of equations that govern the relationships between the global distribution and the observed probabilities. Using a Non-Negative Linear System, I optimized it to include the criteria for "well-behaved" distributions as described in the problem statement. This approach required constructing a 16x16 sparse matrix to efficiently solve the system, ensuring that the solution met all constraints while also providing rigorous mathematical proofs to substantiate the results.
+
+I explored an alternative perspective by interpreting Alice and Bob's measurements as particles existing in a quantum state, measurement. These particles could exhibit non-classical properties, including entanglement, where one measurement influences or determines the outcome of the other. This quantum interpretation was formalized using Bell's Theorem and the Clauser-Horne-Shimony-Holt (CHSH) Inequality.
+
+The process wasn't just about coding; it was about blending mathematical theory with algorithmic implementation and Quantum interpretation, a challenge that I found both intellectually stimulating and deeply rewarding.
+
+Solution and Problem Statement: https://lnkd.in/gjgq3r7k 
+
+🙏A Big Thank You:
+I want to extend my heartfelt thanks to Dr. Giovanni Carù for crafting such an intriguing and well-structured problem statement. Your challenge was the perfect mix of theory and application, making the problem-solving process incredibly engaging.
+
+I also want to express my gratitude to Citadel Securities and ARIES IIT Delhi for organizing the Quants Arena and providing this platform for us to push our limits. It's opportunities like these that drive innovation. Special thanks to Vaibhav Seth for his efforts in arranging the competition and his efforts at Aries.
+
+Indian Institute of Technology, Delhi
+hashtag#Citadel hashtag#AI hashtag#QuantumMechanics hashtag#LinearSystems hashtag#ProblemSolving
+Activate to view larger image,
+graphical user interface, text, application, email
+Activate to view larger image,
+likecelebratelove
+1,198
+Kumar Aditya and 1,197 others
+28 comments
+4 reposts
+
+Like
+
+Comment
+
+Repost
+
+Send
+120,546 impressions
+View analytics
+Feed post number 13
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr • Edited •  1 year ago • Edited • Visible to anyone on or off LinkedIn
+
+Excited to share my first-author paper, is published in the American Chemical Society's Journal of Chemical Theory and Computation, a flagship journal in theoretical chemistry! 📄🎉
+
+Title: "Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions"
+[Link: https://lnkd.in/ezekfhBU ]
+
+In this work, we tackled the complex challenge of predicting molecular solubility, a critical factor in various industries, especially pharmaceuticals. Our innovative approach combines Graph Neural Networks with a novel "MolMerger" algorithm to capture solute-solvent interactions.
+
+Using Graph-based Deep Learning models, we can map the structural properties of molecules using their topology to predict solubility in diverse solvents. This model excels by creating virtual bonds that simulate ground interactions, allowing the neural network to learn from the structural nuances of the solute-solvent pair.
+
+Key highlights:
+• Developed a unique way to incorporate solute-solvent interactions without relying on expensive experimental data or quantum chemical calculations.
+
+• Created a model using Graph Deep Learning that predicts solubility across a wide range of organic molecules and pharmaceuticals in both aqueous and organic solvents.
+
+• Achieved promising results with R² values of 0.767 on our test set and an average MAE of 0.79 across 65 previously unseen solvents to ensure generalization.
+
+• Conducted feature relevance analysis to identify the most influential factors in solubility prediction.
+
+This research opens new avenues for rapid and accurate solubility predictions, potentially accelerating drug discovery and formulation processes.
+
+I'm incredibly grateful for the guidance and mentorship of my co-author, Dr. Tarak Karmakar. Your support has been invaluable throughout this journey.
+
+Special thanks to Dr. Narayanan Kurur and Dr. Naresh Bhatnagar at the Indian Institute of Technology, Delhi, for resources and opportunities.
+
+hashtag#ChemicalEngineering hashtag#MachineLearning hashtag#DrugDiscovery hashtag#ArtificialIntelligence hashtag#Research hashtag#Chemistry hashtag#GNNs hashtag#IITDelhi
+
+Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions
+pubs.acs.org
+likecelebratelove
+141
+You and 140 others
+12 comments
+
+like
+Like
+
+Comment
+
+Repost
+
+Send
+14,177 impressions
+View analytics
+Feed post number 14
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr • Edited •  1 year ago • Edited • Visible to anyone on or off LinkedIn
+
+I'm thrilled to announce that I've been awarded a prestigious DDSA - Danish Data Science Academy scholarship (Visit Grant) of 15,000 DKK (equivalent to 2,150 USD) for my research visit to Denmark!
+
+At the University of Copenhagen (Københavns Universitet), I collaborated with Dr. Panagiotis Karras on tackling the All-RkNN (All Reverse k-Nearest Neighbors) problem for high-dimensional data. This challenge is crucial in Data Science, Machine Learning, and Natural Sciences, where high-dimensional data complicates similarity search operations like kNN and RkNN, making them computationally expensive, like large image datasets, bag-of-words, etc.
+
+Our work addresses the need for efficient algorithms to handle such data in modern applications like location-based services, social networks, and recommendation systems that rely on identifying popular or frequently accessed data points. These contexts require methods that can prune irrelevant data points and dimensions, ensuring accurate results without exhaustive computations.
+
+Our novel zooming method will prune candidates based on distance bounds in a transformed space [more details in the upcoming publication], showing potential to outperform current methods.
+
+I'm grateful for the mentorship and collaboration of Dr. Sayan Ranu, my supervisor at Indian Institute of Technology, Delhi (Yardi School of Artificial Intelligence), who is also working on this problem with us. His guidance has been instrumental in shaping our research direction and approach.
+
+This visit lays the groundwork for long-term collaboration, including potential PhD opportunities and joint publications. We will also explore future funding avenues through the Innovation Fund Denmark.
+
+Many thanks to the DDSA - Danish Data Science Academy, funded by the Novo Nordisk and VILLIUM DEVELOPERS PRIVATE LIMITED, and special thanks to Mette Andersen, the DDSA Fellowship & Grant Manager, for her invaluable guidance throughout this process.
+
+hashtag#DataScience hashtag#AI hashtag#DDSA hashtag#GraphNeuralNetworks hashtag#DeepLearning hashtag#DataDistillation hashtag#Algorithms hashtag#Databases hashtag#Scholarship
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+with You and 1 other
+likecelebratelove
+270
+20 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+22,737 impressions
+View analytics
+Feed post number 15
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr •  1 year ago • Visible to anyone on or off LinkedIn
+
+I'm thrilled to announce that I'll be starting a research internship at the University of Copenhagen, Denmark with the Software, Data, People and Society(SDPS) in the Department of Computer Science(DIKU). I'll have the incredible opportunity to work with Dr. Panagiotis Karras, a renowned computer scientist in the field of data mining.
+
+My research will focus on "indexing-based methods for reverse nearest neighbor search in vector representations of ego graphs." This ties into the broader application of large graph data distillation, which involves extracting meaningful patterns and insights from massive graph datasets.
+
+As datasets continue to grow exponentially in size and complexity, the ability to distill large graph data becomes increasingly important. It allows us to identify critical relationships, uncover hidden patterns, and gain a deeper understanding of the underlying structure and dynamics within these intricate networks.
+
+I'm honored to contribute to this cutting-edge research area and collaborate with experts in the field. This fully-funded research visit will undoubtedly be an great experience, fostering intellectual growth and advancing the frontiers of data mining and spatio-temporal analytics.
+
+I extend my gratitude to Dr. Panagiotis Karras and the Københavns Universitet - University of Copenhagen for this incredible opportunity and look forward to the exciting journey ahead!
+
+hashtag#DataMining hashtag#GraphAnalytics hashtag#LargeGraphData hashtag#UniversityofCopenhagen hashtag#IITDelhi
+Activate to view larger image,
+text
+Activate to view larger image,
+likecelebratelove
+310
+37 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+38,136 impressions
+View analytics
+Feed post number 16
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr •  1 year ago • Visible to anyone on or off LinkedIn
+
+I'm thrilled to share that my teammate Dhruv Joshi and I won the DeepFake Detection competition at the recent CodeWars event hosted by PanScience Innovations at BeCON, IIT Delhi! 🏆
+
+Our winning solution employed an ensemble learning approach with a multimodal setup, utilizing multitask cascaded neural networks and a fact-checking mechanism. This innovative approach allowed us to achieve an impressive 93% classification accuracy in detecting deepfakes.
+
+We were honored to receive a cash prize of ₹10,000, along with eco-friendly goodies from Kalakari, a startup focused on natural products. Additionally, we were awarded AWS credits, which will undoubtedly fuel our future endeavors in this domain.
+
+I'm incredibly grateful to the organizers, PanScience Innovations (PSI) , for hosting such a challenging and rewarding competition. Events like these drive innovation and progress in the field of AI, particularly in tackling the growing threat of deepfakes.
+
+I'd like to extend my sincere appreciation to my teammate, Dhruv, for his invaluable contributions and collaborative spirit throughout this journey. Winning wouldn't have been possible without our combined efforts and synergy.
+
+Looking ahead, we remain committed to furthering our research in deepfake detection and exploring novel techniques to combat this emerging challenge effectively.
+
+hashtag#DeepfakeDetection hashtag#CodeWars hashtag#BeCONIITD hashtag#PanScienceInnovations hashtag#EnsembleLearning hashtag#MultimodalAI
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+likelovecelebrate
+105
+7 comments
+1 repost
+
+Like
+
+Comment
+
+Repost
+
+Send
+9,295 impressions
+View analytics
+Feed post number 17
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr •  1 year ago • Visible to anyone on or off LinkedIn
+
+I was thrilled to meet Professor Michele Parinello at IIT Delhi recently. My sincere thanks to Dr. Tarak Karmakar for graciously introducing us. During his visit, I had the privilege of presenting my research on solubility prediction to Professor Parrinello. 
+
+His feedback was incredibly valuable and insightful. He not only appreciated my work, but also gave constructive suggestions on exploring the use of a 2-molecule system to predict energy diagrams and identify energy minima. I found his ideas very exciting, as they open up new possibilities for advancing my research.
+
+Interacting with someone of Professor Parrinello's stature was an enriching experience for me. His depth of expertise is truly remarkable. I'm genuinely grateful that he generously took the time to share his knowledge and guide me. 
+
+I very much look forward to potentially working with Professor Parrinello in the future. This visit kindled my passion for research and reminded me of the value of connecting with leaders in one's field. I couldn't be more thankful for having this opportunity to learn from one of the best!
+
+No alternative text description for this image
+
+No alternative text description for this image
+
+No alternative text description for this image
+Activate to view larger image,
+like
+52
+1 comment
+
+Like
+
+Comment
+
+Repost
+
+Send
+6,067 impressions
+View analytics
+Feed post number 18
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr • Edited •  1 year ago • Edited • Visible to anyone on or off LinkedIn
+
+Thrilled to announce that my first research paper, "Graph Neural Networks for Predicting Solubility in Diverse Solvents using MolMerger incorporating Solute-solvent Interactions," co-authored with Dr. Tarak Karmakar, is now open access on arXiv!
+
+Predicting solubility has been a longstanding challenge in the chemical and pharmaceutical industry. Our research tackles this complex physiochemical problem by leveraging the power of machine learning, specifically Graph Neural Networks (GNNs). Unlike traditional methods relying on experimental data or expensive quantum chemical calculations, we introduce a novel approach using `MolMerger' to represent solute-solvent interactions.
+
+Our method has successfully been applied to calculate molecular solubility, predicting Log solubility values for various organic molecules and pharmaceuticals across diverse sets of solvents.
+
+I want to express my heartfelt gratitude to Dr. Tarak Karmakar for being an amazing guide, mentor, and research advisor throughout this journey. His expertise and support have been invaluable in shaping this research.
+
+As a first year student, this experience has been nothing short of magical. Late nights with countless iterations of models, and the thrill of seeing our predictions align with real-world outcomes—it's been truly wonderful, and I'm eager to continue contributing to the intersection of machine learning and chemistry. Excited for what the future holds and the potential impact our work can have on the field.
+
+🌐 Link to the paper: https://lnkd.in/gxsWUP3e
+
+hashtag#Research hashtag#MachineLearning hashtag#Chemistry hashtag#GraphNeuralNetworks hashtag#Solubility hashtag#aiandml
+Activate to view larger image,
+diagram
+Activate to view larger image,
+likecelebratesupport
+135
+7 comments
+
+Like
+
+Comment
+
+Repost
+
+Send
+10,947 impressions
+View analytics
+Feed post number 19
+View Vansh Ramani’s  graphic link
+Vansh RamaniVansh Ramani
+   • YouVerified • You
+Research Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITDResearch Assistant @ CMU | CS Undergrad @ IIT Delhi | Research Intern @ University of Copenhagen | Researcher @ DSIRe Labs IITD
+1yr • Edited •  1 year ago • Edited • Visible to anyone on or off LinkedIn
+
+Delighted to have crossed paths with the distinguished Nobel Prize winner in Chemistry, Morten Meldal , during a memorable encounter at IIT Delhi. His pioneering contributions to click chemistry and bioorthogonal chemistry have left an indelible mark on drug discovery, materials science, and chemical biology.
+
+Dr. Meldal's innovative concepts, such as click chemistry, have significantly accelerated the synthesis of complex molecules, expediting the development of groundbreaking drugs and therapies. Moreover, his work in bioorthogonal chemistry has opened up fresh avenues for studying biological systems and crafting novel diagnostic tools.
+
+During our conversation, I had the privilege of sharing insights into my research with Dr. Meldal, and his invaluable feedback has fueled my enthusiasm to explore new dimensions in my work. I express sincere gratitude for his time and eagerly anticipate further engagements.
+
+Special mention to Dr Phaedria Marie St. Hilaire for her noteworthy contribution to the dialogue. This encounter has been a unique and enriching experience, solidifying my admiration for Dr. Meldal's transformative impact on the realm of chemistry. Looking forward to continued learning. hashtag#Chemistry hashtag#NobelPrize hashtag#ResearchExcellence
+Activate to view larger image,
+No alternative text description for this image
+Activate to view larger image,
+likecelebrate
+42
+
+Like
+
+Comment
+
+Repost
+
+Send
+3,563 impressions
+View analytics
+
+Show more results
+People you may knowPeople you may know
+From your companyFrom your company
+
+Amit Regmi
+Amit Regmi
+Amit Regmi
+Crafting Mechanical Agents.Crafting Mechanical Agents.
+
+Connect
+Samsara F.
+Samsara F.
+Samsara F.
+PhD Student | Data ScientistPhD Student | Data Scientist
+
+Connect
+Pranav Sangwan
+Pranav Sangwan
+Pranav Sangwan
+Maths, Algo & ML enthusiast; Passionate about problem solving; Intrigued by AGI/LK-99/Post Quantum EraMaths, Algo & ML enthusiast; Passionate about problem solving; Intrigued by AGI/LK-99/Post Quantum Era
+
+Connect
+Mia DiIanni
+Mia DiIanni
+Mia DiIanni
+Associate Director, MSCF Admissions & Recruiting at MS Computational Finance, Carnegie Mellon UniversityAssociate Director, MSCF Admissions & Recruiting at MS Computational Finance, Carnegie Mellon University
+
+Connect
+Xiang Fei
+Xiang Fei
+Xiang Fei
+MS in Robotics 26' @ CMU SCS-RI Biorobotics Lab | Visiting 23' @ UC Berkeley | B.Eng. in CS 24' @ CUHK-ShenzhenMS in Robotics 26' @ CMU SCS-RI Biorobotics Lab | Visiting 23' @ UC Berkeley | B.Eng. in CS 24' @ CUHK-Shenzhen
+
+Connect
+
+Show more
+About
+Accessibility
+Help Center
+
+Privacy & Terms
+Ad Choices
+Advertising
+
+Business Services
+Get the LinkedIn app
+More
+ LinkedIn Corporation © 2025

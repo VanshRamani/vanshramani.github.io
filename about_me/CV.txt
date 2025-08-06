@@ -1,0 +1,85 @@
+Vansh Ramani
+ +91-9559001075
+ B.Tech + M.Tech
+ Computer Science and Engineering
+ Indian Institute Of Technology, Delhi
+ Education
+ vanshramani27@gmail.com
+ VanshRamani.com
+ Linkedin 
+Github
+ Degree
+ Institute/Board
+ CGPA/Percentage
+ B.Tech + M.Tech
+ Indian Institute of Technology, Delhi
+ Year
+ 3.4/4
+ Senior Secondary (XII)
+ Swaraj India Public School
+ 2023-Present
+ 96.5%
+ Secondary (X)
+ Swaraj India Public School
+ 2023
+ Publications
+ 95.4%
+ 2021
+ • Bonsai: Gradient-free Graph Distillation for Node Classification
+ MGupta, S Jain, V Ramani, H Kodamana, S Ranu, International Conference on Learning Representations 2025
+ • GNN for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions
+ V Ramani, T Karmakar, Journal of Chemical Theory and Computation, American Chemical Society
+ Scholastic Achievements
+ CSE Research Accelarator Fund: Awarded Conference Grant/Scholarship of 2,50,000 INR for ICLR 2025.
+ Danish Data Science Academy 2024: Awarded Scholarship/Research Visit Grant of 15,000 DKK or 1,80,000 INR.
+ Lam Research Challenge 2024: Achieved First Position in 5-axis Robotic arm design and prize of 5,00,000 INR.
+ Citadel Securities 2024: Secured First Position in Quants Arena Data Challenge created by Dr. Giovanni Caru.
+ Goldman Sachs 2024: Achieved All India Rank of 4 out of 7000 participants in Goldman Sachs India Hackathon 24’.
+ Eightfold AI 2024: Curated problem statement and judged INNOV8 2.0 hackathon with a prize pool of 4,25,000 INR.
+ Deepfake Detection Codewar, BECon 2024: Awarded First Position and 50,000 INR prize for deepfake detection model.
+ Semester Merit Award 2023: Awarded 2,500 INR and Certificate for ranking among top 7% in the institute.
+ JEE Advanced 2023: Ranked among Top 0.5% of 1.2 million candidates in prestigious engineering entrance examination.
+ JEE Mains 2023: Achieved rank in Top 1% of 1.2 million candidates in national-level engineering entrance examination.
+ Swaraj India Public School 2023: Awarded Gold Medal of Excellence for achieving Class Rank 1 among 500 students.
+ UGEE 2023: Secured All India Rank 153 in IIIT-Hyderabad undergraduate engineering entrance examination(UGEE).
+ Experience
+ Research Assistant | Dr. Pradeep Ravikumar | May’25- July’24
+ MLD, Carnegie Melon University, USA
+ • Workedonformalizing unlearning, designing mechanisms with provable removal guarantees for data and representations.
+ • Developed a NeuroSymbolic architecture for lifting neural models via symbolic modules for interpretability+convergence.
+ • Achieved SOTA acc on the CLEVR dataset for visual question answering via differentiable logic modules+neural models.
+ Spatial Data Research Intern | Dr. Panagiotis Karras | June’24- July’24
+ DIKU, University of Copenhagen, Denmark
+ • Developed Panorama: an iterative zooming algorithm for neighbor queries using Cauchy-Schwarz bounds on L2 norm.
+ • Developed All-kNN algorithm for high-dimensional spaces, achieving 4x speedup on datasets up to 10000 dimensions.
+ • Created dimension pruning method using DCT and Haar Wavelets, reducing 80% dimensions while preserving fidelity.
+ Graph Data Researcher | Dr. Sayan Ranu | Feb’24- Present
+ DSIRe Labs, IIT Delhi, India
+ • Developed Bonsai: linear-time graph distillation algorithm achieving 22x faster processing across 6 real-world datasets.
+ • Implemented gradient-free distillation, compatible with GAT, GCN, GraphSage, GIN and hyper-param independence.
+ • Designed exemplar computation tree ranking via topological similarity using Wasserstein Weisfeiler-Lehman Kernel.
+ • Achieved state-of-the-art accuracy in 14/18 test scenarios, outperforming other baselines by ≥5% in multiple cases.
+ ML Research Intern | Dr. Tarak Karmakar | Dec’23- Feb’24
+ CCMB Labs, IIT Delhi, India
+ • Developed a state-of-art GNN framework incorporating novel Merged-Molecule approach for Solubility Prediction.
+ • Implemented Attention mechanism with GRUs on graphs, achieving R2 score of 0.94 in predicting aqueous solubility.
+ • Created MolMerger algorithm to represent solute-solvent pairs with virtual bonds, modeling molecular interaction.
+ • Achieved R2 of 0.767 and MAE of 0.78 on test set; average MAE of 0.79 across 65 solvents in robust evaluation.
+ • Performed SHAP analysis for explainability discovering high impact of atom type, formal charge, and aromatic rings.
+ Projects
+ Optimised VLSI Gate Packing | Algorithms | Dr. Preeti Panda
+ [Repository]
+ • Benchmarked approximation methods and created a visualization pipeline for 2-D gate packing & wiring problem.
+ • Developed a greedy and annealing algorithm achieving over 96% packing fraction and circuits with minimised wire length.
+ • Implemented multiple sorting heuristics, analyzed algorithm complexity, and evaluated performance on edge cases.
+ Multimodal Deepfake Detection System | Computer Vision | Dhruv Joshi
+ [Repository]
+ • Developed a robust Deepfake detection model with an ensemble-multimodal approach achieving high accuracy.
+ • Implemented MTCNN-EfficientNet for frame-by-frame classification & matched audio-visual features via Fact-Checking.
+ • Combined predictions using simple regressor, achieving an award-winning 93% accuracy in detecting deepfakes.
+ Skills/Courses
+ Languages: C/C++, OCaml, Python, VHDL | Tools/Libraries: PyTorch, Pandas, NetworkX, NumPy, RDKit, DeepChem
+ Machine Learning: CS224W(Stanford-GNNs)*, CS230(Stanford-DL)*, CS229(Stanford-ML)*, Deepfindr-GNNs*
+ Others: Computer Architecture, Programming Languages, Data Structures and Algorithms, Discrete Mathematics, Digital
+ Logic and System Design, Linear Algebra, Calculus
+ *Online Courses

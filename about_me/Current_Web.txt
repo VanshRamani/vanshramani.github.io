@@ -1,0 +1,155 @@
+
+About Me
+
+Education
+
+Publications
+
+Experience
+
+Projects
+
+Contact
+
+Vansh Ramani
+
+cs5230804@iitd.ac.in
+
+vanshramani27@gmail.com
+
+Graph Deep Learning
+Data Distillation
+Spatial databases
+
+About me
+I'm an undergraduate in Computer Science Engineering at IIT Delhi with a deep interest in Artificial Intelligence and its applications. My work spans graph deep learning, spatio-temporal data analytics, data distillation, and high-dimensional nearest neighbor search. Recently, I've been exploring LLMs and agentic frameworks. 
+
+I love reading random facts, listening to jazz music, and right now, I'm just trying to work my way through quizzes and academics. :3
+
+Affiliations
+Carnegie Mellon University
+Incoming May 2025 | Pittsburgh, PA, USA
+
+Research Assistant (under Dr. Pradeep Ravikumar)- Statistical & Symbolic Learning Group, MLD
+
+University of Copenhagen
+May 2024 - June 2024 | Copenhagen, Denmark
+
+Research Intern (under Dr. Panagiotis Karras)- Software, Data, People & Society, DIKU
+
+Indian Institute of Technology Delhi
+Feb 2024 - Present | Delhi, India
+
+Research Assistant (under Dr. Sayan Ranu)- Data Science and Information Retrieval Lab (DSIRE)
+
+Dec 2023 - Jan 2024 | Delhi, India
+
+Research Intern (under Dr. Tarak Karmakar)- Computational Chemistry, Materials & Biology (CCMB)
+
+Education
+Indian Institute of Technology Delhi
+2023 - 2028 | Delhi, India
+
+Bachelors + Masters in Computer Science Engineering 
+
+Swaraj India Public School
+2013 - 2023 | Uttar Pradesh, India
+
+Higher Secondary Education (ICSE) | GPA - 9.65/10
+
+Secondary Education (ICSE) | GPA- 9.54/10
+
+Publications
+Bonsai: Gradient-free Graph Distillation for Node Classification
+Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana and Sayan Ranu
+
+The Thirteenth International Conference on Learning Representations, 2025
+
+Graph Neural Networks for Predicting Solubility in Diverse Solvents Using
+ MolMerger Incorporating Solute–Solvent Interactions 
+Vansh Ramani and Tarak Karmakar  
+
+Journal of Chemical Theory and Computation 2024, 20 (15), 6549-6558 DOI: 10.1021/acs.jctc.4c00382
+
+Scholastic Achievements
+Citadel Securities 2024: Awarded First Position in Quants Arena Data Challenge 
+
+Goldman Sachs 2024: Achieved Rank 4/7000 participants in Goldman Sachs India Hackathon 24’.
+
+Eightfold AI 2024: Curated problem and judged hackathon with a prize pool of 4,25,000 INR.
+
+Lam Research 2024: Achieved 1st Position in Robotic arm design and prize of 5,00,000 INR.
+
+Danish Data Science Academy: Awarded Research Visit Grant of 15,000 DKK 2024
+
+Digital Enigma @ TRYST-IIT Delhi: Awarded 2ndPosition and 5,000 INR for CS problem solving 
+
+Codewar @ BECon-IIT Delhi: Awarded 1sr Position, and 50,000 INR for deepfake detection model
+
+IIT Delhi 2024: Awarded Merit Prize of 2500 INR and Certificate, for being in top 7% Merit List 
+
+Swaraj India Public School: Awarded Gold Medal, for Academic Excellence 2023
+
+JEE Advanced 2023: Among Top 0.5% in 1.2 million candidates 
+
+JEE Mains 2023: Among Top 1% in 1.2 million candidates
+
+UGEE 2023: Achieved All India Rank 153 in IIIT-Hyderabad entrance examination 2023
+
+N
+
+Experience
+Algorithms Research Intern @ DIKU, University Of Copenhagen
+June 24' - Present
+
+Developed an advanced nearest neighbor search algorithm for All k-NN queries in high-dimensional spaces, using wavelet transforms for innovative space pruning. Optimized spatial indexing with k-d trees, R-trees, and locality-sensitive hashing, significantly improving query efficiency and scalability. Conducted extensive benchmarking, dimensionality reduction research, and data preprocessing for large-scale datasets. Collaborated with senior researchers, authored technical reports, and presented findings in seminars, contributing to advancements in high-dimensional data processing.
+
+Graph Deep Learning Learning Research Intern @ DSIRE Lab, IIT Delhi
+Feb 24' - Present
+
+Developed novel graph distillation algorithms to efficiently extract key patterns from large-scale networks. Conducted research on node centrality, community detection, and graph embeddings, enhancing network analytics. Built scalable data pipelines for massive graph datasets like Reddit and PubMed, enabling efficient preprocessing and storage. Applied exploratory analysis and visualization techniques, using k-NN classifiers to interpret GNN predictions. Authored research publications, presented at major conferences, and collaborated with researchers to balance model accuracy, interpretability, and real-world applicability.
+
+Machine Learning & Molecular Chemistry Intern @ CCMB Lab, IIT Delhi
+Dec '23 - Jan '24
+
+Developed neural network models for accurate prediction of chemical properties and biomolecular interactions. Curated datasets from molecular simulations and quantum calculations, integrating chemical domain knowledge into graph-based architectures. Implemented GCNs, GATs, and message-passing networks using PyTorch and PyG, improving protein-ligand binding predictions with physicochemical feature engineering. Collaborated with researchers to refine strategies, balancing model accuracy, interpretability, and practical applicability.
+
+Projects
+XG-TREE: Decision Tree-GNN Hybrid Architecture with XGBoost
+Currently developing an advanced machine learning model that integrates the TREE-G architecture with XGBoost's gradient boosting framework. This integration aims to use the strengths of both approaches: TREE-G's hierarchical tree structures and XGBoost's efficient gradient boosting algorithms. By combining these methodologies, we anticipate enhanced predictive performance and faster convergence rates, particularly in complex datasets where traditional models may struggle. 
+
+https://github.com/VanshRamani/TreeXG  (Under Progress)
+Erudite: Agentic Knowledge Graph System
+Developed a multi-agent RAG pipeline for dynamic expanding knowledge graphs integrating 5+ sources (Semantic Scholar/YouTube) using Claude Haiku, achieving interactive graph generation in 130s. Designed fault-tolerant architecture with parallel agent execution (3 retries + exponential backoff) and modular templates for new data sources.
+
+https://github.com/VanshRamani/ERUDITE
+Panorama: Scalable Nearest Neighbor Search In High Dimensions
+Designed Panorama, an exact k-nearest neighbor search algorithm that mitigates the curse of dimensionality via DCT energy compaction and Cauchy-Schwarz bounds. It achieves O(n log d) query complexity by progressively pruning distance computations in high-dimensional spaces (d ≈ 106 ), demonstrating a 10× speedup over ANNOY, HNSW baselines on image classification and location-based service datasets. Extended to Panorama Parallel with a shared memory architecture for linear scalability (achieving over k-fold speedup with k workers), particularly effective for transient data in machine learning distillation pipelines. (Under review at ICML)
+
+Paper Under Review
+Bonsai: Model Agnostic Graph Condensation
+Created Bonsai, a model-agnostic graph condensation framework through Weisfeiler-Lehman Kernel-based exemplar trees, achieving 14/18 SOTA results (+5% accuracy) across 7 real-world datasets. The gradient-free method condenses graphs in O(n) time by selecting maximally representative computation trees, outperforming GCOND/GDEM/GCSR etc on billion-edge graphs while being 22× faster than gradient-based approaches and being architecture independant, enabling direct reuse across GAT/GCN/GraphSAGE without recondensing. Published in ICLR 2025.
+
+https://anonymous.4open.science/r/bonsai
+Meta-Agent: Dynamic Agent Generation Framework
+Developing a Meta-Agentic Framework to generate domain-specific AI agents without weight tuning, reducing computational costs. Implementing progressive learning for autonomous self-improvement via feedback loops. Integrating real-time Web Info Fetcher for up-to-date knowledge and combining LLMs with knowledge graphs for enhanced reasoning. Designing dynamic prompt engineering for efficient multi-step task execution. Building an evaluation framework to assess agent performance across NLP and decision-making domains.
+
+Optimised 2-D Bin Packing 
+Optimized VLSI gate packing by benchmarking approximation methods and developing a visualization pipeline for the 2D packing and wiring problem. Designed a greedy and annealing algorithm achieving over 96% packing efficiency while minimizing wire length. Implemented and analyzed multiple sorting heuristics, evaluating algorithm complexity and performance on edge cases.
+
+https://github.com/VanshRamani/Gate-Packing
+Molmerger: Molecular Solubility Prediction in Diverse Solvents
+Developed a state-of-the-art GNN framework for solubility prediction using a novel Merged-Molecule approach. Implemented attention mechanisms with GRUs on graphs, achieving an R² score of 0.94 for aqueous solubility prediction. Designed MolMerger to represent solute-solvent pairs with virtual bonds, modeling molecular interactions. Achieved an R² of 0.767 and MAE of 0.78 on the test set, with an average MAE of 0.79 across 65 solvents. Performed SHAP analysis for explainability, identifying atom type, formal charge, and aromatic rings as key factors.
+
+https://github.com/VanshRamani/Molmerger-Solubility-Prediction
+Molecular Solubility Prediction with Graph Attention Networks
+Comprehensive Deepfake Detection System with MTCNN and "Fact-Checking"
+Developed a robust Deepfake detection model by optimizing two key components: an MTCNN-based frame-by-frame classifier with EfficientNet and a fact-checking approach that matches audio to visual features. Designed a streamlined pipeline combining both components using a weighted mean, achieving an award-winning 93% accuracy in Deepfake detection.
+
+https://github.com/jdhruv1503/deepfake-detection
+Molecular Solubility Prediction with Graph Attention Networks
+Contact
+Google Scholar
+Website (Yes it redirects to the same page)
+LinkedIn
+Email

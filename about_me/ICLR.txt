@@ -1,0 +1,121 @@
+My ICLR 2025 Experience: From Computation Trees to
+Singapore's Skyline
+Attending ICLR 2025 in Singapore felt like stepping into the beating heart of the machine learning
+research community. As a second-year undergraduate from IIT Delhi, walking through the Singapore
+EXPO from April 24-28 and seeing my poster displayed among the world's best research was nothing
+short of surreal. The conference brought together brilliant minds from across the globe, and I was
+privileged to witness cutting-edge research while presenting our own work on graph neural networks.
+Our Research: Bonsai - Redefining Graph Condensation
+Our paper, "Bonsai: Gradient-Free Graph Condensation for Node Classification," addressed a fundamental
+scalability challenge in graph neural network training. Traditional graph condensation methods suffer
+from a critical flaw: they require training a full GNN on the original dataset to extract gradients, defeating
+the very purpose of condensation. Our approach took a different path entirely.
+Bonsai introduces a novel gradient-free methodology that constructs condensed graphs by selecting
+representative computation trees. These trees capture how GNNs propagate information during
+message-passing operations. By leveraging the Weisfeiler-Lehman kernel to measure structural similarity
+between computation trees, we developed a greedy selection algorithm that identifies exemplar trees
+with high representative power and diversity. This approach, grounded in submodular optimization
+theory, generates compact graphs that maintain the learning capacity of the original dataset while being
+completely model-agnostic.
+The results were compelling. Across seven benchmark datasets including Reddit, PubMed, and OGBNArxiv, Bonsai consistently outperformed state-of-the-art baselines while being at least 7x faster in
+condensation time. The method requires no GPU acceleration, consumes 17x less energy, and generalizes
+seamlessly across different GNN architectures like GCN, GAT, and GIN. More importantly, our theoretical
+analysis provides guarantees on the approximation quality, something missing from previous gradientbased approaches.
+The Conference Experience: Ideas at Every Turn
+The poster session on Day 2 was transformative. Standing beside our work, I engaged with researchers
+whose papers I had studied extensively. The questions were probing and insightful: How does the
+Weisfeiler-Lehman kernel handle edge attributes? What are the memory requirements for large-scale
+graphs? How sensitive is the method to the choice of distance threshold? These conversations weren't
+just about our work; they were about the future of graph learning itself. Among the distinguished visitors
+to our poster were Prof. Johannes Lutzeyer and Prof. Filippo Maria Bianchi, each bringing unique
+perspectives on graph neural networks and their applications.
+One particularly memorable discussion involved researchers from both ETH Zurich and Google
+DeepMind, who were fascinated by our theoretical guarantees. They spent considerable time
+understanding our reverse k-NN approach and its implications for graph sparsification. Later, a team from
+Microsoft Research engaged us in a deep dive about the computational complexity of our tree
+enumeration process, leading to suggestions for potential optimizations.
+The keynote speakers provided remarkable insights into the field's trajectory. Zico Kolter's opening talk
+on building safe and robust AI systems set the tone for the entire conference. His exploration of
+adversarial robustness and the challenges of jailbreaking large language models was both technically
+rigorous and deeply practical. Danqi Chen's keynote, "Training Language Models in Academia: Challenge
+or Calling?" resonated particularly strongly with me as a student researcher. Her message about
+innovation thriving under constraints and the importance of academic contributions to model training
+was inspiring.
+Dawn Song's presentation on AI safety and security highlighted the growing importance of building
+trustworthy systems. Her discussion of adversarial attacks, model vulnerabilities, and the need for
+standardized safety protocols painted a sobering picture of the challenges ahead. The technical depth of
+her talk, combined with policy implications, demonstrated how research must evolve to address realworld deployment concerns.
+Special Encounters and Unexpected Connections
+One of the most memorable moments came when I noticed Prof. Michael Bronstein and his group
+positioned right across from our poster #186. After a brief conversation, he walked over to examine our
+work on Bonsai. A few minutes into our discussion, he called his students over to see what we had built.
+Standing there, explaining our gradient-free approach to one of the pioneers of geometric deep learning,
+felt like a defining moment of the conference. The validation from someone whose work had
+fundamentally shaped the field of graph neural networks was both humbling and energizing.
+The industry presence was overwhelming in the best possible way. Corporate booths from Jump Trading,
+Citadel, Jane Street, Google, Meta, and dozens of other companies created a vibrant ecosystem where
+academic research met real-world applications. The Citadel dinner was particularly memorable, featuring
+deep technical discussions with Hunter Morris and Xiaoyu Zhang about floating-point arithmetic
+optimizations and FPGA implementations. What started as a conversation about quantized neural
+networks somehow evolved into a spirited debate about Indian traffic patterns and distributed systems,
+showcasing the intellectual curiosity that defines this community.
+Singapore: The Perfect Backdrop
+Between sessions, Singapore revealed its wonders. Gardens by the Bay provided a surreal backdrop for
+evening strolls, where conversations about neural architecture search continued under the towering
+Supertrees. The marriage of technology and nature in that space felt symbolic of the conference itself.
+Sentosa Island offered a welcome respite from the intensity of technical discussions. Beach walks with
+Samyak Jain turned into impromptu whiteboard sessions in the sand, sketching graph structures and
+discussing the future of AI research.
+The late-night walks through Singapore's immaculate streets with Mridul Gupta became a cherished
+ritual. We'd recap the day's highlights, debate the merits of different approaches, and often lose track of
+time discussing everything from transformer architectures to the philosophical implications of artificial
+general intelligence. Yes, I lost my debit card during one of these adventures, but the memories far
+outweighed the inconvenience. These midnight strolls through the city, combined with our Sentosa Island
+excursions, created the perfect counterbalance to the intense technical discussions of the conference
+days.
+Marina Bay Sands became our unofficial evening headquarters, where informal discussions continued
+well past official conference hours. The juxtaposition of cutting-edge AI research discussions against
+Singapore's futuristic skyline felt perfectly appropriate. Some of the most insightful conversations
+happened in the hotel lobbies and coffee shops, where the formal barriers of academia dissolved into
+genuine intellectual exchange.
+Beyond the Technical: Community and Growth
+The conference reinforced that research is fundamentally a social endeavor. Coffee chats with Wei Siang
+provided insights into both technical challenges and the human aspects of academic life. Discussions with
+Sourav Medya, Hariprasad Kodamana, and Sayan Ranu enriched my understanding not just of specific
+papers, but of how research communities form and evolve.
+Every day brought new perspectives. The workshops were particularly valuable, covering everything from
+world models to climate change applications of machine learning. The diversity of applications and
+methodologies demonstrated the breadth of impact that learning representations can have across
+disciplines.
+The experience also highlighted the importance of mentorship and collaboration. Our advisors didn't just
+support our technical work; they helped navigate the social and professional aspects of academic
+conferences. Their guidance on everything from poster presentations to networking conversations was
+invaluable.
+Reflections and Future Directions
+ICLR 2025 was more than a conference; it was a glimpse into the future of artificial intelligence research.
+The convergence of theoretical insights, practical applications, and ethical considerations showcased a
+field grappling with its own rapid evolution. From gradient-free optimization to AI safety protocols, from
+geometric deep learning to large language model training, the breadth of topics reflected both the
+maturity and the boundless potential of the field.
+As I returned to Delhi, I carried with me not just memories of presentations and conversations, but a
+transformed understanding of what it means to be part of the global AI research community. The
+technical knowledge gained was substantial, but the human connections and insights into the research
+process were equally valuable.
+This experience would not have been possible without the generous support of the CSE Department at IIT
+Delhi and the CSE Alumni Research Acceleration Fund. Their investment in student research and
+conference participation creates opportunities that extend far beyond individual papers or presentations.
+Looking ahead, the ideas sparked at ICLR 2025 will undoubtedly influence my future research directions.
+The feedback on our graph condensation work has already suggested several promising extensions, and
+the broader conversations about AI safety and scalability have highlighted important areas for
+exploration.
+ICLR 2025 reminded me why I fell in love with research in the first place: the thrill of pushing boundaries,
+the joy of intellectual discovery, and the satisfaction of contributing to humanity's collective
+understanding. As I prepare for the next phase of my academic journey, I carry these experiences as both
+inspiration and foundation for the work ahead.
+Until we meet again at ICLR 2026, the ideas and connections from Singapore will continue to shape my
+research and my understanding of what it means to be part of this remarkable community.
+Authors: Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu
+Paper: Bonsai: Gradient-Free Graph Condensation for Node Classification
+Code: Available on GitHub
+Special thanks to all the researchers, organizers, and fellow attendees who made ICLR 2025 an
+unforgettable experience.
