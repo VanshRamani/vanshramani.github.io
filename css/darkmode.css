@@ -1,0 +1,101 @@
+/* Dark mode toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #1772d0;
+}
+
+/* Light mode (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #1772d0;
+  --link-hover-color: #f5b461;
+  --border-color: #e0e0e0;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --link-color: #4a9eff;
+  --link-hover-color: #ffb366;
+  --border-color: #404040;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+body,td,th {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+heading {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+strong {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+strongred {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: 'red' ;
+  font-size: 16px
+}
+
+sectionheading {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+pageheading {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+table {
+  background-color: var(--bg-color);
+}
+
+td {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} 
