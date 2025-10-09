@@ -131,21 +131,24 @@
   <tr>
 		<td width="100%" valign="top">
 			<p>
-        <a href="#panorama" id="panorama">
-          <heading>Panorama: Scalable Nearest Neighbor Search In High Dimensions</heading></a>
+        <a href="https://arxiv.org/abs/2510.00566" target="_blank" id="panorama">
+          <heading>Panorama: Fast-Track Nearest Neighbors</heading></a>
         <span class="status-underreview">UNDER REVIEW</span><br>
-        <em>Collaborators: <a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank">Dr. Panagiotis Karras</a>, University of Copenhagen</em><br><br>
+        <em>Collaborators: Alexis Schlomer, Akash Nayar, <a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank">Dr. Panagiotis Karras</a> (University of Copenhagen), 
+        <a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank">Dr. Sayan Ranu</a> (IIT Delhi), 
+        <a href="https://pages.cs.wisc.edu/~jignesh/" target="_blank">Dr. Jignesh M. Patel</a> (University of Wisconsin-Madison)</em><br><br>
         
-        Designed Panorama, an exact k-nearest neighbor search algorithm that mitigates the curse of dimensionality 
-        via DCT energy compaction and Cauchy-Schwarz bounds. The algorithm achieves O(n log d) query complexity by 
-        progressively pruning distance computations in high-dimensional spaces (d ≈ 10⁶).
+        PANORAMA is a machine learning-driven approach that tackles the ANNS verification bottleneck through data-adaptive 
+        learned orthogonal transforms that facilitate accretive refinement of distance bounds. Our transforms compact over 90% 
+        of signal energy into the first half of dimensions, enabling early candidate pruning with partial distance computations.
         
         <br><br>
         <strong>Key Contributions:</strong><br>
-        • Novel dimension pruning using DCT and Haar Wavelets<br>
-        • 10× speedup over ANNOY, HNSW baselines on standard datasets<br>
-        • Linear scalability with parallel architecture (k-fold speedup with k workers)<br>
-        • Particularly effective for transient data in ML distillation pipelines
+        • Data-adaptive learned orthogonal transforms for dimension reduction<br>
+        • 2-30× end-to-end speedup with no recall loss across diverse datasets<br>
+        • Integration with state-of-the-art ANNS methods (IVFPQ, HNSW, MRPT, Annoy)<br>
+        • Evaluation on modern embedding spaces including OpenAI's Ada 2 and Large 3<br>
+        • <a href="https://arxiv.org/abs/2510.00566" target="_blank">[arXiv Paper]</a>
         
         <br><br>
         <strong>Technical Innovation:</strong><br>
