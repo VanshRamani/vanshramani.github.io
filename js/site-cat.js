@@ -193,6 +193,7 @@
     cat.style.left = x + "px";
     cat.style.top = y + "px";
     cat.classList.toggle("site-cat--chat-below", y < 190);
+    cat.classList.toggle("site-cat--align-right", x + cat.offsetWidth / 2 > window.innerWidth * 0.5);
 
     if (moved && !reducedMotion.matches) {
       wakeCat(cat);
@@ -417,6 +418,7 @@
     form.hidden = !shouldOpen;
     cat.classList.toggle("site-cat--chatting", shouldOpen);
     cat.classList.toggle("site-cat--chat-below", y < 190);
+    cat.classList.toggle("site-cat--align-right", x + cat.offsetWidth / 2 > window.innerWidth * 0.5);
 
     if (shouldOpen) {
       wakeCat(cat);
@@ -516,6 +518,7 @@
     const cat = createCat();
     document.body.appendChild(cat);
     document.body.appendChild(createManual(cat));
+    setPosition(cat, x, y);
     const petZone = cat.querySelector(".site-cat__pet-zone");
     const laser = cat.querySelector(".site-cat__laser");
 

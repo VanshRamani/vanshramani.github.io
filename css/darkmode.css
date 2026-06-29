@@ -2214,6 +2214,22 @@ td {
   top: 78px;
 }
 
+/* Open bubble + chat leftward when the cat is on the right half of the screen */
+.site-cat--align-right .site-cat__bubble,
+.site-cat--align-right .site-cat-chat {
+  left: auto;
+  right: 0;
+}
+
+.site-cat--align-right .site-cat__bubble {
+  border-radius: 18px 18px 5px 18px;
+}
+
+.site-cat--align-right .site-cat__bubble::after {
+  left: auto;
+  right: 14px;
+}
+
 @keyframes pixel-svg-idle {
   0%, 100% {
     translate: 0 0;
