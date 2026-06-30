@@ -1,6 +1,6 @@
 // Static-site research cat: cute interactions first, optional LLM endpoint second.
 (function () {
-  const CAT_CHAT_ENDPOINT = window.CAT_CHAT_ENDPOINT || "/api/cat-chat";
+  const CAT_CHAT_ENDPOINT = window.CAT_CHAT_ENDPOINT || "https://vanshramani-github-io.vercel.app/api/cat-chat";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const facts = [
