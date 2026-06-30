@@ -97,53 +97,66 @@
       '<button class="site-cat__pet-zone" type="button" aria-label="Pet the research cat">',
       '  <span class="site-cat__shadow" aria-hidden="true"></span>',
       '  <span class="site-cat__body-wrap" aria-hidden="true">',
-      '    <svg class="site-cat__sprite" viewBox="0 0 28 28" role="img" aria-label="pixel orange cat">',
+      '    <svg class="site-cat__sprite" viewBox="0 0 22 24" role="img" aria-label="pixel orange cat">',
       '      <g class="site-cat__tail-pixels">',
-      '        <rect x="18" y="20" width="3" height="2"></rect>',
-      '        <rect x="21" y="17" width="2" height="3"></rect>',
-      '        <rect x="21" y="14" width="2" height="3"></rect>',
-      '        <rect x="20" y="13" width="2" height="1"></rect>',
-      '        <rect x="20" y="12" width="2" height="1" class="fur-light"></rect>',
+      '        <rect x="15" y="20" width="3" height="2"></rect>',
+      '        <rect x="18" y="17" width="2" height="3"></rect>',
+      '        <rect x="18" y="14" width="2" height="3"></rect>',
+      '        <rect x="17" y="13" width="2" height="1"></rect>',
+      '        <rect x="16" y="12" width="1" height="2" class="fur-light"></rect>',
       '      </g>',
       '      <g class="site-cat__body-pixels">',
-      '        <rect x="8" y="15" width="11" height="8"></rect>',
-      '        <rect x="9" y="14" width="9" height="1" class="fur-light"></rect>',
-      '        <rect x="10" y="17" width="7" height="6" class="cream"></rect>',
-      '        <rect x="12" y="15" width="3" height="2" class="fur-light"></rect>',
-      '      </g>',
-      '      <g class="site-cat__head-pixels">',
-      '        <rect x="8" y="4" width="4" height="1" class="ear"></rect>',
-      '        <rect x="8" y="3" width="3" height="1" class="ear"></rect>',
-      '        <rect x="8" y="2" width="2" height="1" class="ear"></rect>',
-      '        <rect x="9" y="3" width="1" height="1" class="pink"></rect>',
-      '        <rect x="16" y="4" width="4" height="1" class="ear"></rect>',
-      '        <rect x="17" y="3" width="3" height="1" class="ear"></rect>',
-      '        <rect x="18" y="2" width="2" height="1" class="ear"></rect>',
-      '        <rect x="18" y="3" width="1" height="1" class="pink"></rect>',
-      '        <rect x="10" y="4" width="8" height="1"></rect>',
-      '        <rect x="8" y="5" width="12" height="9"></rect>',
-      '        <rect x="9" y="14" width="10" height="1"></rect>',
-      '        <rect x="10" y="8" width="2" height="3" class="eye eye-left"></rect>',
-      '        <rect x="16" y="8" width="2" height="3" class="eye eye-right"></rect>',
-      '        <rect x="11" y="8" width="1" height="1" class="eye-hl"></rect>',
-      '        <rect x="17" y="8" width="1" height="1" class="eye-hl"></rect>',
-      '        <rect x="13" y="11" width="2" height="1" class="pink nose"></rect>',
-      '        <rect x="12" y="12" width="1" height="1" class="outline mouth"></rect>',
-      '        <rect x="15" y="12" width="1" height="1" class="outline mouth"></rect>',
-      '        <rect x="7" y="10" width="2" height="1" class="blush"></rect>',
-      '        <rect x="19" y="10" width="2" height="1" class="blush"></rect>',
+      '        <rect x="5" y="12" width="11" height="1"></rect>',
+      '        <rect x="4" y="13" width="13" height="1"></rect>',
+      '        <rect x="4" y="14" width="13" height="7"></rect>',
+      '        <rect x="5" y="21" width="11" height="1"></rect>',
+      '        <rect x="6" y="22" width="9" height="1"></rect>',
+      '        <rect x="16" y="14" width="1" height="7" class="shade"></rect>',
+      '        <rect x="8" y="14" width="5" height="1" class="cream"></rect>',
+      '        <rect x="7" y="15" width="7" height="6" class="cream"></rect>',
+      '        <rect x="8" y="21" width="5" height="1" class="cream"></rect>',
       '      </g>',
       '      <g class="site-cat__paw-pixels">',
-      '        <rect x="8" y="21" width="4" height="2"></rect>',
-      '        <rect x="15" y="21" width="4" height="2"></rect>',
+      '        <rect x="6" y="20" width="3" height="3" class="cream"></rect>',
+      '        <rect x="11" y="20" width="3" height="3" class="cream"></rect>',
+      '        <rect x="9" y="20" width="2" height="3"></rect>',
+      '      </g>',
+      '      <g class="site-cat__head-pixels">',
+      '        <rect x="3" y="3" width="4" height="1" class="ear"></rect>',
+      '        <rect x="4" y="2" width="3" height="1" class="ear"></rect>',
+      '        <rect x="4" y="1" width="2" height="1" class="ear"></rect>',
+      '        <rect x="5" y="0" width="1" height="1" class="ear"></rect>',
+      '        <rect x="5" y="2" width="1" height="1" class="pink"></rect>',
+      '        <rect x="14" y="3" width="4" height="1" class="ear"></rect>',
+      '        <rect x="14" y="2" width="3" height="1" class="ear"></rect>',
+      '        <rect x="15" y="1" width="2" height="1" class="ear"></rect>',
+      '        <rect x="15" y="0" width="1" height="1" class="ear"></rect>',
+      '        <rect x="15" y="2" width="1" height="1" class="pink"></rect>',
+      '        <rect x="5" y="3" width="11" height="1"></rect>',
+      '        <rect x="4" y="4" width="13" height="1"></rect>',
+      '        <rect x="3" y="5" width="15" height="6"></rect>',
+      '        <rect x="4" y="11" width="13" height="1"></rect>',
+      '        <rect x="5" y="12" width="11" height="1"></rect>',
+      '        <rect x="16" y="5" width="1" height="6" class="shade"></rect>',
+      '        <rect x="9" y="4" width="3" height="3" class="cream"></rect>',
+      '        <rect x="8" y="9" width="6" height="3" class="cream"></rect>',
+      '        <rect x="6" y="6" width="2" height="3" class="eye eye-left"></rect>',
+      '        <rect x="13" y="6" width="2" height="3" class="eye eye-right"></rect>',
+      '        <rect x="7" y="6" width="1" height="1" class="eye-hl"></rect>',
+      '        <rect x="14" y="6" width="1" height="1" class="eye-hl"></rect>',
+      '        <rect x="4" y="8" width="2" height="1" class="blush"></rect>',
+      '        <rect x="15" y="8" width="2" height="1" class="blush"></rect>',
+      '        <rect x="10" y="9" width="2" height="1" class="ink nose"></rect>',
+      '        <rect x="10" y="10" width="2" height="1" class="ink"></rect>',
+      '        <rect x="9" y="11" width="4" height="1" class="ink mouth"></rect>',
       '      </g>',
       '      <g class="site-cat__sleep-pixels">',
-      '        <rect x="21" y="4" width="3" height="1"></rect>',
-      '        <rect x="23" y="5" width="1" height="1"></rect>',
-      '        <rect x="21" y="6" width="3" height="1"></rect>',
-      '        <rect x="24" y="1" width="2" height="1"></rect>',
-      '        <rect x="25" y="2" width="1" height="1"></rect>',
-      '        <rect x="24" y="3" width="2" height="1"></rect>',
+      '        <rect x="18" y="4" width="3" height="1"></rect>',
+      '        <rect x="20" y="5" width="1" height="1"></rect>',
+      '        <rect x="18" y="6" width="3" height="1"></rect>',
+      '        <rect x="19" y="1" width="2" height="1"></rect>',
+      '        <rect x="20" y="2" width="1" height="1"></rect>',
+      '        <rect x="19" y="3" width="2" height="1"></rect>',
       '      </g>',
       '    </svg>',
       '  </span>',
@@ -355,8 +368,10 @@
     }
     const maxX = Math.max(24, window.innerWidth - cat.offsetWidth - 24);
     const maxY = Math.max(24, window.innerHeight - cat.offsetHeight - 24);
-    const nextX = 24 + Math.random() * (maxX - 24);
-    const nextY = 40 + Math.random() * Math.max(80, maxY - 80);
+    const stepX = (Math.random() * 2 - 1) * 70;
+    const stepY = (Math.random() * 2 - 1) * 55;
+    const nextX = clamp(x + stepX, 24, maxX);
+    const nextY = clamp(y + stepY, 40, maxY);
     face(cat, nextX - x);
     setPosition(cat, nextX, nextY);
   }
@@ -365,6 +380,9 @@
     if (reducedMotion.matches) {
       return;
     }
+    if (cat.classList.contains("site-cat--chatting")) {
+      toggleChat(cat, false);
+    }
     wakeCat(cat);
     const magnitude = Math.hypot(velocityX, velocityY) || 1;
     const awayX = velocityX / magnitude;
@@ -372,8 +390,8 @@
     face(cat, awayX);
     setPosition(
       cat,
-      x + awayX * (170 + Math.random() * 90),
-      y + awayY * (120 + Math.random() * 70)
+      x + awayX * (80 + Math.random() * 40),
+      y + awayY * (60 + Math.random() * 30)
     );
     cat.classList.add("site-cat--zoom");
     cat.classList.add("site-cat--startled");
@@ -389,8 +407,13 @@
     const rect = cat.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    const eyeX = clamp((pointerX - centerX) / 45, -3, 3);
+    const facingLeft = pointerX - centerX < 0;
+    let eyeX = clamp((pointerX - centerX) / 45, -3, 3);
     const eyeY = clamp((pointerY - centerY) / 65, -2, 3);
+    // The sprite mirrors (scaleX(-1)) when facing left, so flip the eye offset back
+    if (facingLeft) {
+      eyeX = -eyeX;
+    }
     cat.style.setProperty("--eye-x", eyeX + "px");
     cat.style.setProperty("--eye-y", eyeY + "px");
     face(cat, pointerX - centerX);
@@ -603,6 +626,20 @@
 
     window.addEventListener("resize", function () {
       setPosition(cat, x, y);
+    });
+
+    // Close the chat when clicking/tapping anywhere outside the cat
+    document.addEventListener("pointerdown", function (event) {
+      if (cat.classList.contains("site-cat--chatting") && !cat.contains(event.target)) {
+        toggleChat(cat, false);
+      }
+    });
+
+    // Close the chat on Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && cat.classList.contains("site-cat--chatting")) {
+        toggleChat(cat, false);
+      }
     });
 
     setupChat(cat);
