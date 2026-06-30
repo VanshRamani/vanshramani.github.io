@@ -1,4 +1,4 @@
-const DEFAULT_MODEL = "gemini-2.0-flash-lite";
+const DEFAULT_MODEL = "gemini-2.5-flash-lite";
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
