@@ -67,7 +67,23 @@ async function callGemini({ apiKey, model, question, context }) {
   return data.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("").trim();
 }
 
+function setCors(res) {
+  // CORS_ORIGIN can restrict to a specific site (e.g. https://vanshramani.github.io).
+  // Defaults to "*" so it also works when the site and API share an origin.
+  res.setHeader("Access-Control-Allow-Origin", process.env.CORS_ORIGIN || "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+}
+
 async function handler(req, res) {
+  setCors(res);
+
+  if (req.method === "OPTIONS") {
+    res.statusCode = 204;
+    res.end();
+    return;
+  }
+
   if (req.method !== "POST") {
     sendJson(res, 405, { error: "Method not allowed" });
     return;
