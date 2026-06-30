@@ -198,16 +198,62 @@
     return manual;
   }
 
+  // The cat's "sandbox": the side margins around the centered content panel,
+  // so it never roams over the text or gets stuck behind the corners.
+  function sandbox(cat) {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const cw = cat.offsetWidth || 104;
+    const ch = cat.offsetHeight || 92;
+    const m = 10;
+    const panelW = Math.min(860, vw);
+    const gutter = Math.max(0, (vw - panelW) / 2);
+    const wideEnough = gutter >= cw + m * 2;
+    return {
+      vw: vw,
+      vh: vh,
+      cw: cw,
+      ch: ch,
+      m: m,
+      wideEnough: wideEnough,
+      leftMin: m,
+      leftMax: Math.max(m, gutter - cw - m),
+      rightMin: vw - gutter + m,
+      rightMax: vw - cw - m,
+      topMin: 84,
+      topMax: Math.max(120, vh - ch - 16),
+      bottomMin: Math.max(120, vh - ch - 96),
+      bottomMax: Math.max(140, vh - ch - 16)
+    };
+  }
+
+  function clampToSandbox(cat, nx, ny) {
+    const s = sandbox(cat);
+    if (s.wideEnough) {
+      const center = nx + s.cw / 2;
+      if (center < s.vw / 2) {
+        nx = clamp(nx, s.leftMin, s.leftMax);
+      } else {
+        nx = clamp(nx, s.rightMin, s.rightMax);
+      }
+      ny = clamp(ny, s.topMin, s.topMax);
+    } else {
+      // Narrow screens have no gutters: keep the cat in a bottom band
+      nx = clamp(nx, s.m, s.vw - s.cw - s.m);
+      ny = clamp(ny, s.bottomMin, s.bottomMax);
+    }
+    return { x: nx, y: ny };
+  }
+
   function setPosition(cat, nextX, nextY) {
-    const maxX = Math.max(24, window.innerWidth - cat.offsetWidth - 24);
-    const maxY = Math.max(24, window.innerHeight - cat.offsetHeight - 24);
-    const moved = Math.hypot((nextX === undefined ? x : nextX) - x, (nextY === undefined ? y : nextY) - y) > 8;
-    x = clamp(nextX, 16, maxX);
-    y = clamp(nextY === undefined ? y : nextY, 16, maxY);
+    const targetX = nextX === undefined ? x : nextX;
+    const targetY = nextY === undefined ? y : nextY;
+    const clamped = clampToSandbox(cat, targetX, targetY);
+    const moved = Math.hypot(clamped.x - x, clamped.y - y) > 8;
+    x = clamped.x;
+    y = clamped.y;
     cat.style.left = x + "px";
     cat.style.top = y + "px";
-    cat.classList.toggle("site-cat--chat-below", y < 190);
-    cat.classList.toggle("site-cat--align-right", x + cat.offsetWidth / 2 > window.innerWidth * 0.5);
 
     if (moved && !reducedMotion.matches) {
       wakeCat(cat);
@@ -610,6 +656,11 @@
 
     document.addEventListener("pointermove", function (event) {
       lookAt(cat, event.clientX, event.clientY);
+
+      // Stay put while the chat is open so it stays anchored
+      if (cat.classList.contains("site-cat--chatting")) {
+        return;
+      }
 
       if (toyMode) {
         laser.style.left = event.clientX + "px";
