@@ -74,6 +74,7 @@
   let longPressOpened = false;
   let audioContext;
   let lastPointer = null;
+  let chatForm = null;
 
   function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
@@ -432,24 +433,49 @@
     }, 12000);
   }
 
+  function positionChat(cat) {
+    const form = chatForm;
+    if (!form || form.hidden) {
+      return;
+    }
+
+    const margin = 10;
+    const catRect = cat.getBoundingClientRect();
+    const w = form.offsetWidth;
+    const h = form.offsetHeight;
+
+    let left = catRect.left + catRect.width / 2 - w / 2;
+    left = Math.max(margin, Math.min(left, window.innerWidth - w - margin));
+
+    // Prefer opening above the cat; drop below if there isn't room
+    let top = catRect.top - h - 10;
+    if (top < margin) {
+      top = catRect.bottom + 10;
+    }
+    top = Math.max(margin, Math.min(top, window.innerHeight - h - margin));
+
+    form.style.left = left + "px";
+    form.style.top = top + "px";
+  }
+
   function toggleChat(cat, forceOpen) {
-    const form = cat.querySelector(".site-cat-chat");
-    const log = cat.querySelector(".site-cat-chat__log");
-    const input = cat.querySelector(".site-cat-chat__input");
+    const form = chatForm;
+    const log = form.querySelector(".site-cat-chat__log");
+    const input = form.querySelector(".site-cat-chat__input");
     const shouldOpen = forceOpen === undefined ? form.hidden : forceOpen;
 
     form.hidden = !shouldOpen;
     cat.classList.toggle("site-cat--chatting", shouldOpen);
-    cat.classList.toggle("site-cat--chat-below", y < 190);
-    cat.classList.toggle("site-cat--align-right", x + cat.offsetWidth / 2 > window.innerWidth * 0.5);
 
     if (shouldOpen) {
       wakeCat(cat);
-      speak(cat, "ask me about Vansh. I have notes.");
+      speak(cat, "meow? ask me about Vansh.");
       if (!log.children.length) {
-        addChatMessage(log, "cat", "Hi. I can answer from the page now, and from Gemini once the secret backend is connected.");
+        addChatMessage(log, "cat", "meow! ask me about Vansh's research, papers, or work.");
       }
+      positionChat(cat);
       window.setTimeout(function () {
+        positionChat(cat);
         input.focus();
       }, 60);
     }
@@ -464,10 +490,11 @@
     });
 
     if (match) {
-      return match.answer;
+      return "meow~ " + match.answer;
     }
 
-    return "I know the homepage lore: Vansh is into AI research, graph learning, nearest-neighbor search, machine unlearning, and building ramAIn. Ask me about research, papers, CMU, Copenhagen, YC, or contact.";
+    // Unrelated / off-topic / unanswerable: the cat just meows.
+    return "meow meow";
   }
 
   function collectSiteContext() {
@@ -476,7 +503,8 @@
         return node.textContent.replace(/\s+/g, " ").trim();
       })
       .filter(Boolean);
-    return Array.from(new Set(chunks)).join("\n").slice(0, 9000);
+    // Keep context small (~1k tokens) to limit cost/latency
+    return Array.from(new Set(chunks)).join("\n").slice(0, 3500);
   }
 
   function addChatMessage(log, role, text) {
@@ -506,13 +534,13 @@
   }
 
   function setupChat(cat) {
-    const form = cat.querySelector(".site-cat-chat");
-    const log = cat.querySelector(".site-cat-chat__log");
-    const input = cat.querySelector(".site-cat-chat__input");
+    const form = chatForm;
+    const log = form.querySelector(".site-cat-chat__log");
+    const input = form.querySelector(".site-cat-chat__input");
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
-      const question = input.value.trim();
+      const question = input.value.trim().slice(0, 400);
       if (!question) {
         return;
       }
@@ -541,6 +569,11 @@
     const cat = createCat();
     document.body.appendChild(cat);
     document.body.appendChild(createManual(cat));
+    // Move the chat out of the cat (which has transform/filter) so it can be
+    // positioned freely against the viewport without clipping off-screen.
+    chatForm = cat.querySelector(".site-cat-chat");
+    chatForm.classList.add("site-cat-chat--floating");
+    document.body.appendChild(chatForm);
     setPosition(cat, x, y);
     const petZone = cat.querySelector(".site-cat__pet-zone");
     const laser = cat.querySelector(".site-cat__laser");
@@ -626,11 +659,20 @@
 
     window.addEventListener("resize", function () {
       setPosition(cat, x, y);
+      positionChat(cat);
     });
 
-    // Close the chat when clicking/tapping anywhere outside the cat
+    window.addEventListener("scroll", function () {
+      positionChat(cat);
+    }, { passive: true });
+
+    // Close the chat when clicking/tapping outside both the cat and the chat box
     document.addEventListener("pointerdown", function (event) {
-      if (cat.classList.contains("site-cat--chatting") && !cat.contains(event.target)) {
+      if (
+        cat.classList.contains("site-cat--chatting") &&
+        !cat.contains(event.target) &&
+        !chatForm.contains(event.target)
+      ) {
         toggleChat(cat, false);
       }
     });
