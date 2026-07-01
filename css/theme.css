@@ -354,22 +354,98 @@ font[size="2"] {
 
 /* ---- Mobile ---- */
 @media (max-width: 720px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body::before,
   body::after {
     display: none;
   }
 
   body > table {
+    width: 100% !important;
     border-width: 3px;
-    box-shadow: 6px 6px 0 var(--hard-shadow);
-    margin: 14px auto 24px;
+    box-shadow: 4px 4px 0 var(--hard-shadow);
+    margin: 52px auto 24px;
+  }
+
+  /* No side margins on phones, so retire the roaming cat + its UI here */
+  .site-cat,
+  .site-cat-manual,
+  .site-cat-chat--floating {
+    display: none !important;
+  }
+
+  /* Table-based layout: stack every cell vertically so nothing is cramped */
+  body > table table {
+    width: 100% !important;
+  }
+
+  body > table tr,
+  body > table td,
+  body > table th {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  body > table td {
+    padding: 8px 14px !important;
+    text-align: left;
+  }
+
+  /* Cap and center big images (profile photo + paper figures) */
+  body > table img[width="100%"] {
+    display: block;
+    width: auto;
+    max-width: min(240px, 80%);
+    margin: 8px auto;
+  }
+
+  /* Center the profile column contents */
+  body > table td[width="32%"],
+  body > table td[width="33%"],
+  body > table td[width="25%"] {
+    text-align: center;
+  }
+
+  body > table td[width="25%"] {
+    padding-top: 14px !important;
+    font-weight: 700;
   }
 
   pageheading {
     text-shadow: 2px 2px 0 var(--accent);
+    word-break: break-word;
   }
 
   sectionheading {
     font-size: 11px;
+  }
+
+  heading {
+    font-size: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  /* Keep the cat small and unobtrusive on phones */
+  .site-cat {
+    transform: scale(0.55);
+  }
+
+  .site-cat-manual__button {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
 }
