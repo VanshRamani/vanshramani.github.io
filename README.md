@@ -26,7 +26,7 @@ Open http://127.0.0.1:8000/.
 
 ## Interactions
 
-- The news banner advances every eight seconds. Hover, keyboard focus, leaving the viewport, and hidden browser tabs suspend rotation. Pause, Next, and Dismiss controls are available; dismissal lasts for the browser session. Reduced motion starts rotation paused. The full archive is static HTML and works without JavaScript.
+- The news banner advances every eight seconds. Hover, keyboard focus, leaving the viewport, and hidden browser tabs suspend rotation. The banner has no controls; reduced motion keeps the latest headline static. The News archive uses compact dated rows without duplicate summaries. The full archive is static HTML and works without JavaScript.
 
 - Hover an atom to highlight its bonded neighborhood with smooth contour fields and a small research card on the right. Click the atom to pin it; use Unpin, the close button, or Escape to clear it. On touch screens, tapping pins the view. Six focusable atom targets provide keyboard access: focus previews and Enter pins.
 - Drag the molecule or focus it and use the arrow keys to rotate. Rotation pauses while exploring an atom.

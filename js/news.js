@@ -7,16 +7,13 @@
   content.setAttribute('aria-atomic', 'true');
   const story = banner.querySelector('.news-banner-story');
   const date = banner.querySelector('.news-banner-date');
-  const pause = banner.querySelector('.news-banner-pause');
-  const count = banner.querySelector('.news-banner-count');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const root = location.pathname.includes('/content/') ? '../' : '';
   let index = 0, timer = 0, paused = reduced.matches, hovering = false, focused = false, visible = true;
-  try { banner.hidden = sessionStorage.getItem('vansh-news-dismissed') === '1'; } catch (_) {}
   function schedule() {
     content.setAttribute('aria-live', paused || focused ? 'polite' : 'off');
     clearTimeout(timer);
-    if (!banner.hidden && !paused && !hovering && !focused && visible && !document.hidden) {
+    if (!paused && !hovering && !focused && visible && !document.hidden) {
       timer = setTimeout(() => { show(index + 1); schedule(); }, 8000);
     }
   }
@@ -30,29 +27,14 @@
     const monthNames = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     const month = monthNames.indexOf(entry.date.slice(0, 3));
     date.dateTime = month < 0 ? entry.date : `${entry.date.slice(-4)}-${String(month + 1).padStart(2, '0')}`;
-    count.textContent = `${index + 1} of ${entries.length} updates`;
     if (!reduced.matches) story.animate([{opacity: 0, transform: 'translateY(4px)'}, {opacity: 1, transform: 'translateY(0)'}], {duration: 220, easing: 'ease-out'});
   }
-  function syncPause() {
-    pause.textContent = paused ? '▷' : 'Ⅱ';
-    pause.setAttribute('aria-label', paused ? 'Play news rotation' : 'Pause news rotation');
-    pause.setAttribute('aria-pressed', String(paused));
-    schedule();
-  }
-  banner.querySelector('.news-banner-next').addEventListener('click', () => { show(index + 1); schedule(); });
-  pause.addEventListener('click', () => { paused = !paused; syncPause(); });
-  banner.querySelector('.news-banner-close').addEventListener('click', () => {
-    banner.hidden = true;
-    clearTimeout(timer);
-    try { sessionStorage.setItem('vansh-news-dismissed', '1'); } catch (_) {}
-    document.querySelector('.nav .brand').focus({preventScroll: true});
-  });
   banner.addEventListener('pointerenter', () => { hovering = true; schedule(); });
   banner.addEventListener('pointerleave', () => { hovering = false; schedule(); });
   banner.addEventListener('focusin', () => { focused = true; schedule(); });
   banner.addEventListener('focusout', () => { requestAnimationFrame(() => { focused = banner.contains(document.activeElement); schedule(); }); });
   document.addEventListener('visibilitychange', schedule);
-  reduced.addEventListener('change', event => { paused = event.matches; syncPause(); });
+  reduced.addEventListener('change', event => { paused = event.matches; schedule(); });
   if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; schedule(); }).observe(banner);
-  syncPause();
+  schedule();
 })();
