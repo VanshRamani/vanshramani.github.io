@@ -46,14 +46,7 @@ body:has(dialog[open]) { overflow: hidden; }
   .molecule-heading .mono { font-size: 9px; }
   .molecule-stage { touch-action: pan-y; }
   .atom-target { width: 44px; height: 44px; border-color: transparent; }
-  .molecule-controls { flex-wrap: wrap; gap: 4px 8px; padding: 8px 12px; }
-  .molecule-controls [data-molecule-mode] { min-height: 44px; min-width: 54px; padding: 8px; font-size: 12px; }
-  .molecule-controls label { min-height: 44px; gap: 7px; font-size: 12px; }
-  .molecule-controls input { width: 16px; height: 16px; margin: 0; }
-  #molecule-reset { min-width: 44px; min-height: 44px; font-size: 25px; }
-  #molecule-motion { min-width: 60px; min-height: 44px; font-size: 12px; }
-  .molecule-panel figcaption { font-size: 11px; }
-  .molecule-panel figcaption > a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 2px; }
+
   .molecule-stage[data-layout='compact'] .molecule-hover-inspector { width: calc(100% - 24px); max-width: 360px; }
   .molecule-thread > p { font-size: 14px; line-height: 1.6; }
   .molecule-thread-links a { min-height: 48px; font-size: 15px; }
@@ -115,6 +108,5 @@ body:has(dialog[open]) { overflow: hidden; }
   .hero-links .solid-link { gap: 18px; padding-inline: 13px; }
   .bio-v2-index { grid-template-columns: minmax(0, 1fr); }
   .bio-v2-index-name { font-size: 16px; }
-  .molecule-controls { gap: 4px; padding-inline: 8px; }
-  #molecule-motion { margin-left: 0; }
+
 }

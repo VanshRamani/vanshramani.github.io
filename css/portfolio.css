@@ -29,7 +29,7 @@ html { scroll-padding-top:76px; }
 .molecule-heading .mono { font-size:10px; color:#536788; }
 .molecule-heading h2 { font-size:32px; letter-spacing:-1.4px; margin-top:7px; }
 .molecule-heading h2 span { color:var(--blue); }
-.molecule-formula { font:16px var(--mono); letter-spacing:-.5px; color:#405c96; align-self:flex-end; padding-bottom:5px; }
+
 .molecule-stage { position:relative; height:362px; }
 #molecule-canvas { display:block; width:100%; height:100%; cursor:grab; touch-action:pan-y; }
 #molecule-canvas:active { cursor:grabbing; }
@@ -37,19 +37,7 @@ html { scroll-padding-top:76px; }
 .molecule-corner { position:absolute; width:18px; height:18px; pointer-events:none; opacity:.55; }
 .molecule-corner.top-left { left:21px; top:17px; border-left:1px solid #3c65b8; border-top:1px solid #3c65b8; }
 .molecule-corner.bottom-right { right:21px; bottom:12px; border-right:1px solid #3c65b8; border-bottom:1px solid #3c65b8; }
-.molecule-controls { display:flex; align-items:center; gap:16px; padding:15px 22px; border-top:1px solid #b9c9e7; background:#eef4ff; }
-.molecule-controls [role='group'] { display:flex; border:1px solid #bfcae4; }
-.molecule-controls [data-molecule-mode] { padding:7px 11px; font-size:12px; color:#405570; }
-.molecule-controls [data-molecule-mode].active { background:#234ddc; color:white; }
-.molecule-controls label { display:flex; align-items:center; gap:5px; font-size:11px; color:#405570; }
-.molecule-controls input { accent-color:var(--blue); }
-#molecule-reset { padding:0; font-size:22px; line-height:1; color:#405570; }
-#molecule-motion { margin-left:auto; padding:0; font-size:11px; white-space:nowrap; color:#405570; }
-.molecule-panel figcaption { display:flex; justify-content:space-between; gap:12px; padding:13px 22px; border-top:1px solid #c6d1ed; background:#f3f6ff; font-size:10px; color:#4b5c7a; }
-.atom-legend { display:flex; gap:13px; flex-wrap:wrap; }
-.atom-legend span { display:flex; gap:5px; align-items:center; }
-.atom-legend i { display:block; width:7px; height:7px; border-radius:50%; }
-.atom-c { background:#394455; }.atom-n { background:#456eff; }.atom-o { background:#ef6a9b; }.atom-h { background:#fff; border:1px solid #879abe; }
+
 .section-label .mono { font-size:11px; }
 .building { background:#141a2a; padding:60px 0; }
 .build-grid { gap:52px; }
@@ -117,8 +105,8 @@ html { scroll-padding-top:76px; }
 .contact { background:#141a2a; }
 @media (max-width:1100px) {
  .hero-grid { gap:26px; }.hero h1 { font-size:10vw; }
- .molecule-stage { height:315px; }.molecule-heading { padding:19px 18px 0; }.molecule-controls { gap:9px; padding:13px 15px; }
- .molecule-controls [data-molecule-mode] { padding:6px 8px; }.molecule-panel figcaption { padding:12px 15px; font-size:9px; }.atom-legend { gap:8px; }
+ .molecule-stage { height:315px; }.molecule-heading { padding:19px 18px 0; }
+
  .hero-role { font-size:18px; }.intro>p:nth-child(2) { font-size:14px; }
  .research-gallery { gap:18px; }.poster-caption { padding:12px; }.poster-caption h3 { font-size:20px; }
  .poster-caption p { font-size:10px; }.trajectory { padding:20px; }.trajectory-grid .mono { font-size:8px; }
@@ -130,10 +118,9 @@ html { scroll-padding-top:76px; }
  .hero-grid { gap:29px; margin-top:30px; }.hero h1 { font-size:20vw; margin-bottom:23px; }
  .hero-role { font-size:16px; }.intro>p:nth-child(2) { font-size:14px; }.hero-links .solid-link { padding:13px 16px; font-size:12px; }
  .hero-links .under-link { font-size:12px; }.hero-socials { font-size:11px; }
- .molecule-heading { padding:18px 17px 0; }.molecule-heading .mono { font-size:8px; }.molecule-heading h2 { font-size:28px; }.molecule-formula { font-size:12px; }
- .molecule-stage { height:300px; }.molecule-controls { padding:12px 13px; gap:11px; }.molecule-controls [data-molecule-mode] { font-size:11px; padding:6px 9px; }
- .molecule-controls label, #molecule-motion { font-size:10px; }.molecule-panel figcaption { display:block; padding:12px 13px; font-size:9px; }
- .atom-legend { gap:12px; }.molecule-panel figcaption>a { display:block; margin-top:9px; }
+ .molecule-heading { padding:18px 17px 0; }.molecule-heading .mono { font-size:8px; }.molecule-heading h2 { font-size:28px; }
+ .molecule-stage { height:300px; }
+
  .section-label .mono { font-size:8px; }.building { padding:44px 0; }.build-copy>p:not(.build-lead) { font-size:14px; }.build-tags { font-size:8px; }
  .diagram-top { font-size:8px; }.diagram-caption { font-size:10px; }.diagram-bottom .mono { font-size:7px; }
  .research { padding-top:45px; padding-bottom:42px; }.research-heading p { font-size:13px; }

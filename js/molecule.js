@@ -9,7 +9,7 @@
   const phone = matchMedia('(max-width: 760px)');
   function describeInteraction() {
     document.querySelector('.molecule-heading .mono').textContent = phone.matches ? 'TAP AN ATOM TO EXPLORE' : 'HOVER TO EXPLORE / CLICK TO PIN';
-    canvas.setAttribute('aria-label', phone.matches ? 'Molecular research map. Tap an atom to pin its neighborhood contours and research card. Swipe horizontally to rotate; swipe vertically to scroll.' : 'Molecular research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate.');
+    canvas.setAttribute('aria-label', phone.matches ? 'Caffeine research map. Tap an atom to pin its neighborhood contours and research card. Swipe horizontally to rotate; swipe vertically to scroll.' : 'Caffeine research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate.');
   }
   phone.addEventListener('change', describeInteraction);
   describeInteraction();
@@ -22,7 +22,6 @@
   let width=0,height=0,yaw=-.26,pitch=.30,paused=reduced.matches,mode='atoms',labels=false;
   let raf=0,last=0,visible=true,dragging=false,previous=null;
   let projected=[];
-  const motion=document.getElementById('molecule-motion');
   function project(atom) {
     const [x,y,z]=atom.position;
     const xx=x*Math.cos(yaw)+z*Math.sin(yaw),zz=-x*Math.sin(yaw)+z*Math.cos(yaw);
@@ -93,17 +92,9 @@
     raf=requestAnimationFrame(tick);
   }
   function sync() {
-    motion.setAttribute('aria-label',paused?'Play molecule animation':'Pause molecule animation');motion.textContent=paused?'Play ▷':'Pause Ⅱ';
     if(raf)cancelAnimationFrame(raf);raf=0;
     if(!paused&&visible&&!document.hidden){last=performance.now();raf=requestAnimationFrame(tick);}draw();
   }
-  motion.addEventListener('click',()=>{const next=!paused;if(selectedIndex>=0)clearInspection();paused=next;sync();});
-  document.querySelectorAll('[data-molecule-mode]').forEach(button=>button.addEventListener('click',()=>{
-    mode=button.dataset.moleculeMode;
-    document.querySelectorAll('[data-molecule-mode]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});draw();
-  }));
-  document.getElementById('molecule-labels').addEventListener('change',event=>{labels=event.target.checked;draw();});
-  document.getElementById('molecule-reset').addEventListener('click',()=>{clearInspection();yaw=-.26;pitch=.30;draw();});
   const stage=canvas.parentElement;
   let pointerOrigin=null, moved=false, pointerTarget=null;
   stage.addEventListener('pointerdown',event=>{if(event.button!==0||event.target.closest('.molecule-hover-inspector'))return;dragging=true;moved=false;pointerTarget=event.target.closest('.atom-target');pointerOrigin=[event.clientX,event.clientY];previous=pointerOrigin;stage.setPointerCapture(event.pointerId);});

@@ -12,11 +12,11 @@ Open http://127.0.0.1:8000/.
 
 ## Design and files
 
-- `index.html`: molecular opening, ramAIn, illustrated research gallery, publication index, an editorial biography and research-experience index, illustrated writing, and contact.
+- `index.html`: caffeine opening, ramAIn, illustrated research gallery, publication index, an editorial biography and research-experience index, illustrated writing, and contact.
 - `images/posters/`: eight standalone vector illustrations, one for each research paper and ramAIn. These illustrate concepts; original paper figures remain in publication details.
 - `images/molecular-field.svg`: custom contour field behind the molecule.
 - `js/caffeine-data.js`: local atom coordinates and bonds from [PubChem CID 2519](https://pubchem.ncbi.nlm.nih.gov/compound/2519), downloaded from the PUG REST 3D record. Caffeine contains 24 atoms including hydrogens and 25 bonded atom pairs.
-- `js/molecule.js`: perspective projection, shaded atoms and bonds, pointer and keyboard rotation, atom picking, neighborhood contour fields, research-direction cards, and motion control.
+- `js/molecule.js`: perspective projection, shaded atoms and bonds, pointer and keyboard rotation, atom picking, neighborhood contour fields, research-direction cards, and automatic rotation.
 - `css/site.css`, `css/portfolio.css`, `css/lower-site.css`, `css/mobile.css`: responsive typography, color fields, layouts, motion, and phone controls.
 - `js/site.js`: local search, navigation, poster enlargement, and publication filtering.
 - `content/`: original writing, projects, coursework, achievements, personal notes, and experience/news.
@@ -24,8 +24,8 @@ Open http://127.0.0.1:8000/.
 
 ## Interactions
 
-- Hover an atom to highlight its bonded neighborhood with smooth contour fields and a small research card on the right. Click the atom to pin it; use Unpin, the close button, or Escape to clear it. On touch screens, tapping pins the view. Six focusable atom controls provide keyboard access: focus previews and Enter pins.
-- Drag the molecule or focus it and use the arrow keys to rotate. Switch between atoms and bonds, show labels, reset the orientation, or pause rotation.
+- Hover an atom to highlight its bonded neighborhood with smooth contour fields and a small research card on the right. Click the atom to pin it; use Unpin, the close button, or Escape to clear it. On touch screens, tapping pins the view. Six focusable atom targets provide keyboard access: focus previews and Enter pins.
+- Drag the molecule or focus it and use the arrow keys to rotate. Rotation pauses while exploring an atom.
 - Open any poster to view it at a larger size. Escape closes the viewer. The publication link opens its entry in the index; ramAIn links to the company.
 - Search with the header icon, Cmd/Ctrl+K, or `/`. Arrow keys select results; Enter opens them; Escape closes search.
 - Category filters narrow the publication index.
