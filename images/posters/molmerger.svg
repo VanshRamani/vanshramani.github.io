@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">MolMerger — Solute–Solvent Interaction Graphs</title>
+  <desc id="desc">Separate solute and solvent molecular graphs retain their internal bonds as they are represented together. Dashed virtual interaction edges connect the two components before Attention and GRU layers predict log solubility.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff9f5"/><stop offset="1" stop-color="#dcefe9"/></linearGradient>
+    <linearGradient id="mergePlate" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e5f5ef"/><stop offset="1" stop-color="#c7e8df"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#173a43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <g id="soluteGraph" fill="none" stroke="#173a43" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-68 0 -38-52 23-51 54 0 26 51-35 50Z"/>
+      <path d="M-38-52 -58-83M23-51 43-82M54 0 88 12M26 51 44 83M-35 50-61 80"/>
+      <g fill="#54bbaa" stroke="#f2fff9" stroke-width="2.1"><circle cx="-68" cy="0" r="8"/><circle cx="-38" cy="-52" r="8"/><circle cx="23" cy="-51" r="8"/><circle cx="54" cy="0" r="8"/><circle cx="26" cy="51" r="8"/><circle cx="-35" cy="50" r="8"/><circle cx="-58" cy="-83" r="7"/><circle cx="43" cy="-82" r="7"/><circle cx="88" cy="12" r="7"/><circle cx="44" cy="83" r="7"/><circle cx="-61" cy="80" r="7"/></g>
+    </g>
+    <g id="solventGraph" fill="none" stroke="#486bd1" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-50-6 -20-42 26-24 49 17 17 47-29 37Z"/>
+      <path d="M26-24 51-55M-29 37-51 62"/>
+      <g fill="#486bd1" stroke="#f2fff9" stroke-width="2.1"><circle cx="-50" cy="-6" r="8"/><circle cx="-20" cy="-42" r="8"/><circle cx="26" cy="-24" r="8"/><circle cx="49" cy="17" r="8"/><circle cx="17" cy="47" r="8"/><circle cx="-29" cy="37" r="8"/><circle cx="51" cy="-55" r="7"/><circle cx="-51" cy="62" r="7"/></g>
+    </g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M0 0H1200V13H0Z" fill="#246f69"/>
+  <text x="56" y="47" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="2.5">MOLECULAR GRAPH LEARNING</text>
+  <text x="1144" y="47" text-anchor="end" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="2">JCTC · 2024</text>
+  <text x="48" y="157" fill="#123640" font-family="Arial,Helvetica,sans-serif" font-size="103" font-weight="900" letter-spacing="-7">MOLMERGER</text>
+  <text x="58" y="194" fill="#3c706f" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="600" letter-spacing=".3">Solute–solvent interactions become edges in a merged molecular graph</text>
+  <path d="M56 218H1144" stroke="#74aaa2" stroke-width="1.4"/>
+
+  <text x="62" y="259" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2">SEPARATE INPUT GRAPHS</text>
+  <text x="366" y="259" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2">MERGED REPRESENTATION</text>
+  <text x="875" y="259" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2">PREDICTION</text>
+
+  <!-- Distinct source graphs, both shown at readable scale. -->
+  <path d="M55 279H317V468H55Z" fill="#f9fffc" stroke="#b7d8cf" stroke-width="1.2"/>
+  <path d="M55 279H317" stroke="#43ad9e" stroke-width="5"/>
+  <text x="76" y="314" fill="#236f69" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" letter-spacing="1.5">SOLUTE</text>
+  <g transform="translate(182 394) scale(.83)"><use href="#soluteGraph"/></g>
+  <path d="M55 485H317V674H55Z" fill="#f9fffc" stroke="#b7d8cf" stroke-width="1.2"/>
+  <path d="M55 485H317" stroke="#5a78d5" stroke-width="5"/>
+  <text x="76" y="520" fill="#405fc4" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" letter-spacing="1.5">SOLVENT</text>
+  <g transform="translate(182 591) scale(1.04)"><use href="#solventGraph"/></g>
+  <path d="M324 373H354" fill="none" stroke="#173a43" stroke-width="2.8" marker-end="url(#arrow)"/>
+  <path d="M324 580H354" fill="none" stroke="#173a43" stroke-width="2.8" marker-end="url(#arrow)"/>
+
+  <!-- Large merged graph: the original solid bonds remain inside each component;
+       dashed bridges denote virtual interactions between components. -->
+  <path d="M365 279H843V674H365Z" fill="url(#mergePlate)" stroke="#8fc9bd" stroke-width="1.4"/>
+  <path d="M365 279H843" stroke="#173a43" stroke-width="5"/>
+  <text x="390" y="314" fill="#173a43" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800" letter-spacing="1.1">ONE GRAPH REPRESENTATION</text>
+  <text x="390" y="339" fill="#4f7777" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="600" letter-spacing="1.1">SOLUTE + SOLVENT COMPONENTS</text>
+  <g transform="translate(511 481) scale(1.12)"><use href="#soluteGraph"/></g>
+  <g transform="translate(706 484) scale(1.08)"><use href="#solventGraph"/></g>
+  <g fill="none" stroke="#315bd6" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="3 10">
+    <path d="M536.76 423.88 684.4 438.64"/><path d="M571.48 481 652 477.52"/><path d="M540.12 538.12 674.68 523.96"/>
+  </g>
+  <g fill="none" stroke="#315bd6" stroke-width="2">
+    <circle cx="536.76" cy="423.88" r="10"/><circle cx="571.48" cy="481" r="10"/><circle cx="540.12" cy="538.12" r="10"/>
+    <circle cx="684.4" cy="438.64" r="10"/><circle cx="652" cy="477.52" r="10"/><circle cx="674.68" cy="523.96" r="10"/>
+  </g>
+  <text x="506" y="618" text-anchor="middle" fill="#236f69" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">SOLUTE BONDS</text>
+  <text x="714" y="618" text-anchor="middle" fill="#405fc4" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">SOLVENT BONDS</text>
+  <path d="M390 642H817" stroke="#a2cfc6" stroke-width="1.2"/>
+  <path d="M394 657H440" stroke="#315bd6" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 9"/>
+  <text x="451" y="662" fill="#3d5fc2" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing=".5">VIRTUAL INTERACTION EDGE</text>
+  <path d="M817 476H867" fill="none" stroke="#173a43" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Model stages and output: Attention → GRU → log solubility. -->
+  <path d="M877 279H1144V674H877Z" fill="#f7fffc" stroke="#b7d8cf" stroke-width="1.2"/>
+  <path d="M877 279H1144" stroke="#43ad9e" stroke-width="5"/>
+  <text x="902" y="314" fill="#173a43" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" letter-spacing="1.2">ATTENTION</text>
+  <g stroke="#173a43" stroke-width="1.6" opacity=".62">
+    <path d="M916 373 960 350 1004 373M916 373 1004 373M960 350V386M960 386 916 373M960 386 1004 373"/>
+  </g>
+  <g fill="#52bbaa" stroke="#f7fffc" stroke-width="2"><circle cx="916" cy="373" r="9"/><circle cx="960" cy="350" r="9"/><circle cx="1004" cy="373" r="9"/></g>
+  <path d="M1030 369H1102" stroke="#78a9a2" stroke-width="1.2"/>
+  <text x="1066" y="358" text-anchor="middle" fill="#5c7777" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" letter-spacing="1">WEIGHTED</text>
+  <text x="1066" y="384" text-anchor="middle" fill="#5c7777" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" letter-spacing="1">MESSAGE</text>
+  <path d="M1017 410V431" stroke="#173a43" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <text x="902" y="457" fill="#173a43" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" letter-spacing="1.2">GRU</text>
+  <g fill="#e6f5ef" stroke="#357e77" stroke-width="1.6">
+    <rect x="903" y="474" width="57" height="47" rx="7"/><rect x="978" y="474" width="57" height="47" rx="7"/><rect x="1053" y="474" width="57" height="47" rx="7"/>
+  </g>
+  <g fill="none" stroke="#357e77" stroke-width="1.8" marker-end="url(#arrow)"><path d="M960 497H975"/><path d="M1035 497H1050"/></g>
+  <text x="931" y="503" text-anchor="middle" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700">h₁</text>
+  <text x="1006" y="503" text-anchor="middle" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700">h₂</text>
+  <text x="1081" y="503" text-anchor="middle" fill="#357e77" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700">hₜ</text>
+  <path d="M1017 535V553" stroke="#173a43" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <rect x="923" y="567" width="188" height="74" rx="8" fill="#173a43"/>
+  <text x="1017" y="596" text-anchor="middle" fill="#d8f3eb" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.7">PREDICTED</text>
+  <text x="1017" y="627" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" letter-spacing=".3">log S</text>
+
+  <path d="M56 715H1144" stroke="#7eaaa4" stroke-width="1.2"/>
+  <text x="58" y="754" fill="#397b75" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="1.9">SOLID = WITHIN-MOLECULE BOND</text>
+  <path d="M369 750H418" stroke="#315bd6" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <text x="430" y="754" fill="#4668c5" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="1.3">DASHED = VIRTUAL SOLUTE–SOLVENT INTERACTION</text>
+  <text x="1142" y="783" text-anchor="end" fill="#56847f" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" letter-spacing="1.6">CONCEPTUAL GRAPH REPRESENTATION</text>
+</svg>

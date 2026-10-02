@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Panorama: Fast-Track Nearest Neighbors</title>
+  <desc id="desc">A three-part research diagram follows a query through a vector point cloud, an orthogonal spectral projection with progressively tightening distance bounds, and a selected nearest-neighbor set.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f5f4ff"/><stop offset="1" stop-color="#e8edff"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#f0efff"/><stop offset="1" stop-color="#e7eaff"/>
+    </linearGradient>
+    <pattern id="microgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#6576b7" stroke-opacity=".1" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L10 5L0 10Z" fill="#3159e8"/>
+    </marker>
+    <filter id="queryGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <clipPath id="bodyClip"><rect x="44" y="225" width="1112" height="520" rx="7"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <path d="M54 43H1146" stroke="#aeb9df" stroke-width="2"/>
+  <text x="57" y="78" fill="#43527f" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="2.3">HIGH-DIMENSIONAL SIMILARITY SEARCH</text>
+  <text x="49" y="185" fill="#151a32" font-family="Arial, Helvetica, sans-serif" font-size="132" font-weight="800" letter-spacing="-7.5">PANORAMA</text>
+  <text x="1142" y="78" fill="#263664" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="1.05" text-anchor="end">FAST-TRACK NEAREST NEIGHBORS</text>
+  <path d="M55 207H1145" stroke="#192342" stroke-width="2.5"/>
+  <circle cx="55" cy="207" r="5" fill="#3159e8"/><circle cx="1145" cy="207" r="5" fill="#3159e8"/>
+
+  <rect x="44" y="225" width="1112" height="520" rx="7" fill="#fffefa" stroke="#192342" stroke-width="2.5"/>
+  <g clip-path="url(#bodyClip)">
+    <rect x="44" y="225" width="1112" height="520" fill="url(#microgrid)"/>
+    <path d="M374 225V745M822 225V745" stroke="#28345a" stroke-opacity=".42" stroke-width="1.6"/>
+    <path d="M44 292H1156" stroke="#28345a" stroke-opacity=".35" stroke-width="1.4"/>
+
+    <!-- Stage 1: a real query embedded in a vector-space neighborhood. -->
+    <g font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="1.2" fill="#192342">
+      <text x="71" y="270" font-size="25">01 / VECTOR SPACE</text>
+    </g>
+    <g fill="none" stroke="#596894" stroke-opacity=".34" stroke-width="1.3">
+      <path d="M83 616L142 360L330 616Z"/>
+      <path d="M83 616H330M98 552H315M113 488H301M127 424H286M142 360H271"/>
+      <path d="M112 589L171 333M174 616L232 360M236 616L294 360"/>
+      <path d="M94 577C149 536 253 534 316 579M108 515C159 482 242 477 301 517M124 451C168 424 230 419 287 455"/>
+    </g>
+    <g fill="#737eaa">
+      <circle cx="100" cy="511" r="5"/><circle cx="120" cy="594" r="5"/><circle cx="133" cy="431" r="5"/>
+      <circle cx="151" cy="558" r="5"/><circle cx="163" cy="391" r="5"/><circle cx="178" cy="617" r="5"/>
+      <circle cx="190" cy="476" r="5"/><circle cx="202" cy="577" r="5"/><circle cx="216" cy="422" r="5"/>
+      <circle cx="229" cy="367" r="5"/><circle cx="242" cy="616" r="5"/><circle cx="254" cy="532" r="5"/>
+      <circle cx="270" cy="454" r="5"/><circle cx="285" cy="593" r="5"/><circle cx="299" cy="414" r="5"/>
+      <circle cx="314" cy="523" r="5"/><circle cx="323" cy="574" r="5"/>
+    </g>
+    <g fill="none" stroke="#3159e8" stroke-width="2.2" stroke-dasharray="5 6" opacity=".78">
+      <path d="M208 501L151 558M208 501L190 476M208 501L254 532M208 501L202 577M208 501L270 454"/>
+    </g>
+    <circle cx="208" cy="501" r="27" fill="#3159e8" opacity=".15" filter="url(#queryGlow)"/>
+    <circle cx="208" cy="501" r="12" fill="#fffefa" stroke="#3159e8" stroke-width="4"/>
+    <circle cx="208" cy="501" r="4" fill="#3159e8"/>
+    <text x="81" y="661" fill="#263664" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing=".8">QUERY VECTOR</text>
+
+    <!-- The pipeline is explicit, with the orthogonal basis mapping into a decaying spectrum. -->
+    <path d="M342 496H401" fill="none" stroke="#3159e8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="1.05" fill="#192342">
+      <text x="398" y="270" font-size="25">02 / SPECTRAL PROJECTION</text>
+    </g>
+    <g fill="#3159e8" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing=".8">
+      <text x="416" y="324" font-size="20">ORTHOGONAL</text>
+      <text x="610" y="324" font-size="20">SPECTRAL DECAY</text>
+    </g>
+    <!-- An oblique coordinate sheet is straightened into basis coordinates. -->
+    <g fill="none" stroke="#5f6d9a" stroke-width="1.6" stroke-opacity=".68">
+      <path d="M414 357L492 338L541 361L463 380Z"/>
+      <path d="M414 383L492 364L541 387L463 406Z"/>
+      <path d="M414 409L492 390L541 413L463 432Z"/>
+      <path d="M414 357V409M440 350V419M466 344V425M492 338V390M516 350V402M541 361V413"/>
+      <path d="M463 380V432M440 369V419M490 373V425"/>
+    </g>
+    <g fill="#3159e8">
+      <circle cx="440" cy="369" r="4.5"/><circle cx="490" cy="373" r="4.5"/><circle cx="466" cy="398" r="4.5"/>
+    </g>
+    <path d="M548 386H584" fill="none" stroke="#3159e8" stroke-width="2.6" marker-end="url(#arrow)"/>
+    <path d="M594 348V431" stroke="#263664" stroke-opacity=".5" stroke-width="1.3"/>
+    <g stroke-linecap="round">
+      <path d="M608 352H775" stroke="#3159e8" stroke-width="9"/>
+      <path d="M608 366H754" stroke="#4168ec" stroke-width="8"/>
+      <path d="M608 380H728" stroke="#5878ef" stroke-width="7"/>
+      <path d="M608 394H698" stroke="#728ced" stroke-width="6"/>
+      <path d="M608 408H669" stroke="#8999e8" stroke-width="5"/>
+      <path d="M608 422H642" stroke="#a6b0e3" stroke-width="4"/>
+    </g>
+    <path d="M600 441H780" stroke="#c3c9e4" stroke-width="1.4"/>
+    <text x="590" y="465" fill="#4d5c89" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600">energy concentrates early</text>
+
+    <!-- Spectral partial sums tighten bounds. Rejected traces stop; only live candidates continue. -->
+    <path d="M400 482H800" stroke="#aab4d6" stroke-width="1.5"/>
+    <text x="410" y="516" fill="#192342" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">INCREMENTAL DISTANCE BOUNDS</text>
+    <text x="410" y="545" fill="#596894" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600">partial distance → tighter bound → prune</text>
+    <g fill="none" stroke="#6777aa" stroke-opacity=".43" stroke-width="1.7" stroke-dasharray="5 5">
+      <path d="M415 569C476 566 513 552 558 556"/>
+      <path d="M415 590C478 590 511 598 555 603"/>
+      <path d="M415 612C474 612 510 612 555 612"/>
+      <path d="M415 634C470 634 507 627 553 623"/>
+      <path d="M415 656C471 658 507 666 555 669"/>
+    </g>
+    <g fill="none" stroke="#3159e8" stroke-width="2.5" stroke-linecap="round">
+      <path d="M555 556C610 556 650 568 706 570S760 575 790 579"/>
+      <path d="M555 612C613 612 654 605 706 607S757 610 790 612"/>
+      <path d="M555 669C614 669 654 650 706 647S756 642 790 638"/>
+    </g>
+    <g fill="none" stroke="#7580a8" stroke-width="1.8">
+      <path d="M559 556L578 556"/><path d="M556 603L574 603"/><path d="M556 623L572 623"/><path d="M555 669L571 669"/>
+    </g>
+    <g stroke="#64719a" stroke-width="2.3" stroke-linecap="round">
+      <path d="M578 549L590 561M590 549L578 561"/><path d="M574 596L586 608M586 596L574 608"/>
+      <path d="M572 617L584 629M584 617L572 629"/><path d="M571 663L583 675M583 663L571 675"/>
+    </g>
+    <g fill="none" stroke="#b4bedf" stroke-width="2.2">
+      <path d="M650 552V675"/><path d="M708 570V648"/>
+    </g>
+    <g fill="#3159e8"><circle cx="791" cy="579" r="4.5"/><circle cx="791" cy="612" r="4.5"/><circle cx="791" cy="638" r="4.5"/></g>
+    <text x="414" y="714" fill="#68749b" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">EARLY CANDIDATE PRUNING</text>
+
+    <!-- Survivors flow into an exact local ranking around the query. -->
+    <path d="M800 612H851" fill="none" stroke="#3159e8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1" fill="#192342">
+      <text x="846" y="270" font-size="25">03 / NEAREST SET</text>
+    </g>
+    <text x="846" y="324" fill="#3159e8" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">EXACT VERIFY</text>
+    <g fill="none" stroke="#536492" stroke-opacity=".27" stroke-width="1.4">
+      <path d="M868 610L910 393L1090 610Z"/>
+      <path d="M868 610H1090M878 556H1080M889 502H1069M899 447H1059M910 393H1049"/>
+      <path d="M891 583L932 365M954 610L995 393M1017 610L1058 393"/>
+    </g>
+    <ellipse cx="978" cy="506" rx="116" ry="103" fill="url(#wash)" stroke="#3159e8" stroke-width="2.4" stroke-dasharray="8 7"/>
+    <g fill="none" stroke="#3159e8" stroke-width="2.3" opacity=".8">
+      <path d="M978 506L924 470M978 506L1027 455M978 506L1041 524M978 506L948 561"/>
+    </g>
+    <g fill="#3159e8" stroke="#fffefa" stroke-width="2.5">
+      <circle cx="924" cy="470" r="9"/><circle cx="1027" cy="455" r="9"/>
+      <circle cx="1041" cy="524" r="9"/><circle cx="948" cy="561" r="9"/>
+    </g>
+    <g fill="#7480a9">
+      <circle cx="898" cy="527" r="6"/><circle cx="955" cy="423" r="6"/><circle cx="1071" cy="474" r="6"/>
+      <circle cx="1015" cy="585" r="6"/><circle cx="1075" cy="569" r="6"/><circle cx="920" cy="588" r="6"/>
+    </g>
+    <circle cx="978" cy="506" r="24" fill="#3159e8" opacity=".15" filter="url(#queryGlow)"/>
+    <circle cx="978" cy="506" r="12" fill="#fffefa" stroke="#192342" stroke-width="3"/>
+    <circle cx="978" cy="506" r="4.5" fill="#192342"/>
+    <path d="M862 635H1094" stroke="#3159e8" stroke-width="3"/>
+    <text x="862" y="656" fill="#192342" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing=".8">k NEAREST</text>
+    <text x="862" y="683" fill="#192342" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing=".8">NEIGHBORS</text>
+  </g>
+  <text x="60" y="782" fill="#344674" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.8">SPECTRAL PROJECTION → DISTANCE BOUNDS → PRUNING → EXACT VERIFICATION.</text>
+  <text x="1140" y="782" fill="#536492" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="end">PANORAMA  /  2026</text>
+</svg>

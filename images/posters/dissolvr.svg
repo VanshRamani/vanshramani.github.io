@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">DISSOLVR — interpretable aqueous and organic solubility prediction</title>
+  <desc id="desc">An illustrative glycerol skeletal structure feeds into topological, polarity, and thermodynamic feature evidence, then branches to predicted aqueous and organic solubility. One hydroxyl group is highlighted and connected to a local detail view.</desc>
+  <defs>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f5fcff"/>
+      <stop offset="1" stop-color="#dceef6"/>
+    </linearGradient>
+    <linearGradient id="aqueous" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e2fbfc"/>
+      <stop offset="1" stop-color="#b9e8ee"/>
+    </linearGradient>
+    <linearGradient id="organic" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#edf3ff"/>
+      <stop offset="1" stop-color="#cfddf7"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#5686a0" stroke-width=".65" opacity=".13"/>
+    </pattern>
+    <pattern id="finegrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#628da6" stroke-width=".6" opacity=".22"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.2" refY="4" orient="auto">
+      <path d="M0 0 8 4 0 8Z" fill="#345d88"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif}
+      .eyebrow{font-size:13px;font-weight:700;letter-spacing:2px}
+      .label{font-size:14px;font-weight:800;letter-spacing:1.5px}
+      .body{font-size:15px;font-weight:500}
+      .wire{fill:none;stroke:#426d91;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .fine{fill:none;stroke:#3376a4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+      .bond{fill:none;stroke:#153b59;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- Pale, print-like ground -->
+  <rect width="1200" height="800" fill="url(#ice)"/>
+  <path d="M0 209H1200" stroke="#183b56" stroke-opacity=".18"/>
+  <path d="M0 209H322" stroke="#168eae" stroke-width="4"/>
+
+  <!-- Oversized title and restrained publication mark -->
+  <text x="60" y="53" class="eyebrow" fill="#376580">MOLECULAR MACHINE LEARNING</text>
+  <text x="54" y="160" fill="#102d49" font-size="112" font-weight="900" letter-spacing="-7">DISSOLVR</text>
+  <text x="67" y="192" fill="#355b75" font-size="19" font-weight="500">An interpretable framework for aqueous and organic solubility prediction</text>
+  <text x="1137" y="65" text-anchor="end" fill="#285b7d" class="eyebrow">ICML 2026</text>
+  <path d="M1020 82H1137" stroke="#3e7e9d" stroke-width="1.5"/>
+  <text x="1137" y="111" text-anchor="end" fill="#587991" font-size="12" font-weight="700" letter-spacing="1.7">STRUCTURE → EVIDENCE → PREDICTION</text>
+
+  <!-- One continuous diagram field, organized as structure, evidence, outputs. -->
+  <rect x="48" y="231" width="1104" height="431" rx="10" fill="#f8fcfe" stroke="#a9c7d5" stroke-width="1.4"/>
+  <rect x="48" y="231" width="1104" height="431" rx="10" fill="url(#grid)"/>
+  <path d="M358 248V645M853 248V645" stroke="#96b6c7" stroke-width="1" stroke-dasharray="3 7"/>
+  <text x="68" y="269" class="label" fill="#244c68">01 / SOLUTE STRUCTURE</text>
+  <text x="385" y="269" class="label" fill="#244c68">02 / FEATURE EVIDENCE</text>
+  <text x="880" y="269" class="label" fill="#244c68">03 / SOLUBILITY OUTPUTS</text>
+
+  <!-- Illustrative glycerol skeleton: HO–CH2–CH(OH)–CH2–OH -->
+  <g class="bond">
+    <path d="M140 420 205 458 270 420"/>
+    <path d="M140 420V382M205 458V524M270 420V382"/>
+  </g>
+  <g fill="#f8fcfe" stroke="#153b59" stroke-width="2.6">
+    <circle cx="140" cy="420" r="5.5"/><circle cx="205" cy="458" r="5.5"/><circle cx="270" cy="420" r="5.5"/>
+  </g>
+  <text x="140" y="378" text-anchor="middle" fill="#087f99" font-size="20" font-weight="700">OH</text>
+  <text x="205" y="542" text-anchor="middle" fill="#087f99" font-size="20" font-weight="700">OH</text>
+  <text x="270" y="378" text-anchor="middle" fill="#087f99" font-size="20" font-weight="700">OH</text>
+  <text x="68" y="310" fill="#58778b" font-size="12" font-weight="700" letter-spacing="1.1">ILLUSTRATIVE SOLUTE · GLYCEROL</text>
+
+  <!-- One hydroxyl is selected; its connector leads to an enlarged local view. -->
+  <rect x="105" y="330" width="70" height="111" rx="7" fill="#dcf8fc" fill-opacity=".45" stroke="#08a5bd" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M105 330C78 334 67 350 67 372V554H82" fill="none" stroke="#168da9" stroke-width="1.7"/>
+  <circle cx="105" cy="330" r="3.5" fill="#168da9"/>
+  <rect x="68" y="554" width="266" height="75" rx="6" fill="#f5fbfd" stroke="#94bacb" stroke-width="1.2"/>
+  <text x="82" y="575" fill="#47728a" font-size="11" font-weight="700" letter-spacing="1.4">LOCAL HYDROXYL MOTIF</text>
+  <path d="M102 606H179" stroke="#153b59" stroke-width="3" stroke-linecap="round"/>
+  <text x="98" y="611" text-anchor="end" fill="#153b59" font-size="15" font-weight="600">C</text>
+  <text x="181" y="611" fill="#087f99" font-size="17" font-weight="700">OH</text>
+  <path d="M224 606H311" stroke="#aac4d1" stroke-width="1.3"/>
+
+  <!-- Fine, gently flowing paths gather the molecular evidence into descriptors. -->
+  <path class="fine" d="M270 420C295 411 313 410 334 410"/>
+  <path class="fine" d="M334 410C357 410 360 332 386 332"/>
+  <path class="fine" d="M334 410C359 410 361 438 386 438"/>
+  <path class="fine" d="M334 410C357 410 360 544 386 544"/>
+  <circle cx="334" cy="410" r="5" fill="#f8fcfe" stroke="#168eae" stroke-width="2"/>
+
+  <!-- Descriptor contribution rows: visual tokens are categorical, not scaled values. -->
+  <g>
+    <rect x="386" y="292" width="438" height="81" rx="7" fill="#f3f9fc" stroke="#b3cbd7"/>
+    <rect x="386" y="398" width="438" height="81" rx="7" fill="#eff9fb" stroke="#9ec9d3"/>
+    <rect x="386" y="504" width="438" height="81" rx="7" fill="#f1f5fc" stroke="#b1bfd8"/>
+    <path d="M386 292H392V373H386Z" fill="#617da9"/>
+    <path d="M386 398H392V479H386Z" fill="#0b9ab1"/>
+    <path d="M386 504H392V585H386Z" fill="#375ec0"/>
+  </g>
+
+  <!-- Topology glyph: connectivity, not a quantitative graph. -->
+  <g fill="none" stroke="#42698a" stroke-width="2.1" stroke-linecap="round">
+    <path d="M426 332 448 317 472 332 448 349Z M426 332 426 354M472 332 472 354M448 349 448 361"/>
+  </g>
+  <g fill="#f8fcfe" stroke="#42698a" stroke-width="2">
+    <circle cx="426" cy="332" r="4.5"/><circle cx="448" cy="317" r="4.5"/><circle cx="472" cy="332" r="4.5"/>
+    <circle cx="448" cy="349" r="4.5"/><circle cx="426" cy="354" r="4.5"/><circle cx="472" cy="354" r="4.5"/><circle cx="448" cy="361" r="4.5"/>
+  </g>
+  <text x="500" y="326" fill="#193f5d" font-size="17" font-weight="800">TOPOLOGICAL STRUCTURE</text>
+  <text x="500" y="350" fill="#5a7689" class="body">Connectivity · local patterns</text>
+  <path d="M748 332H801" stroke="#9bb8c8" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="801" cy="332" r="4" fill="#617da9"/>
+
+  <!-- Polarity glyph echoes the selected hydroxyl at the source structure. -->
+  <circle cx="450" cy="438" r="24" fill="#def7fa" stroke="#36a9bb" stroke-width="1.5"/>
+  <text x="450" y="444" text-anchor="middle" fill="#087f99" font-size="17" font-weight="800">OH</text>
+  <path d="M478 438H490" stroke="#08a5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="500" y="432" fill="#193f5d" font-size="17" font-weight="800">POLARITY</text>
+  <text x="500" y="456" fill="#5a7689" class="body">Functional-group features</text>
+  <path d="M748 438H801" stroke="#8dbcc7" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="801" cy="438" r="4" fill="#08a5bd"/>
+
+  <!-- Thermodynamic glyph: an unscaled energy projection sketch. -->
+  <path d="M420 559V524H437V541H454V516H471" fill="none" stroke="#365fc1" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M418 564H475" stroke="#a8b9d4" stroke-width="1.2"/>
+  <text x="500" y="538" fill="#193f5d" font-size="16" font-weight="800">THERMODYNAMIC RECONSTRUCTION</text>
+  <text x="500" y="562" fill="#5a7689" class="body">Energetic projections · temperature</text>
+  <path d="M748 544H801" stroke="#9baed1" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="801" cy="544" r="4" fill="#365fc1"/>
+
+  <!-- Descriptor traces gather, then divide into solvent-specific predictions. -->
+  <path d="M801 332C840 332 828 407 858 425" fill="none" stroke="#617da9" stroke-width="1.8" opacity=".7"/>
+  <path d="M801 438H858" fill="none" stroke="#08a5bd" stroke-width="2" opacity=".8"/>
+  <path d="M801 544C840 544 828 469 858 451" fill="none" stroke="#365fc1" stroke-width="1.8" opacity=".7"/>
+  <circle cx="858" cy="438" r="7" fill="#f8fcfe" stroke="#345d88" stroke-width="2.2"/>
+  <path d="M865 435C878 421 870 373 894 373M865 441C880 455 872 526 894 526" fill="none" stroke="#345d88" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- Two clear model outputs; no fabricated values or rankings. -->
+  <rect x="894" y="304" width="232" height="137" rx="8" fill="url(#aqueous)" stroke="#7cbac5" stroke-width="1.4"/>
+  <rect x="894" y="460" width="232" height="137" rx="8" fill="url(#organic)" stroke="#8fa9cf" stroke-width="1.4"/>
+  <path d="M894 304H1126" stroke="#0b9bb2" stroke-width="4"/>
+  <path d="M894 460H1126" stroke="#3b64c1" stroke-width="4"/>
+  <text x="916" y="339" fill="#087f99" class="eyebrow">AQUEOUS</text>
+  <text x="916" y="374" fill="#143b57" font-size="22" font-weight="750">Predicted solubility</text>
+  <text x="916" y="406" fill="#345f79" font-size="15" font-weight="600">log S</text>
+  <path d="M1000 405C1020 390 1037 414 1055 396S1090 407 1105 387" fill="none" stroke="#149cb1" stroke-width="2.1" stroke-linecap="round"/>
+  <text x="916" y="495" fill="#365f9f" class="eyebrow">ORGANIC</text>
+  <text x="916" y="530" fill="#193b68" font-size="22" font-weight="750">Predicted solubility</text>
+  <text x="916" y="562" fill="#4c6589" font-size="15" font-weight="600">log S</text>
+  <path d="M1000 561C1018 543 1036 570 1053 548S1087 566 1105 542" fill="none" stroke="#4167bd" stroke-width="2.1" stroke-linecap="round"/>
+
+  <!-- Footer key clarifies what the structural highlight denotes. -->
+  <path d="M60 695H1140" stroke="#183b56" stroke-opacity=".2"/>
+  <rect x="66" y="720" width="24" height="17" rx="3" fill="none" stroke="#08a5bd" stroke-width="1.7" stroke-dasharray="4 3"/>
+  <text x="103" y="734" fill="#3a6078" font-size="13" font-weight="700" letter-spacing="1.2">LOCAL STRUCTURE HIGHLIGHT</text>
+  <path d="M368 728H430" stroke="#3376a4" stroke-width="1.7"/>
+  <text x="448" y="734" fill="#3a6078" font-size="13" font-weight="700" letter-spacing="1.2">DESCRIPTOR CONTRIBUTIONS</text>
+  <text x="1136" y="734" text-anchor="end" fill="#6b8798" font-size="12" font-weight="700" letter-spacing="1.3">ICML · 2026</text>
+</svg>

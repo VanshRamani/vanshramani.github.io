@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="#102d2a" role="img" aria-labelledby="title desc">
+  <title id="title">BONSAI — representative computation trees</title>
+  <desc id="desc">A dense graph of connected nodes resolves into three selected, rooted computation trees. The illustration explains Bonsai's gradient-free graph distillation approach for node classification.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f8cf"/><stop offset="1" stop-color="#d8f0d8"/></linearGradient>
+    <linearGradient id="treeFill" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#245f50"/><stop offset="1" stop-color="#17463f"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#245f50" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif}
+      .eyebrow{font-size:14px;font-weight:700;letter-spacing:2.7px}
+      .small{font-size:15px;font-weight:700;letter-spacing:1.7px}
+      .body{font-size:18px;font-weight:500}
+      .node{fill:#f4f8d9;stroke:#183c37;stroke-width:2.2}
+      .selected{fill:#3659d9;stroke:#f4f8d9;stroke-width:3.5}
+      .edge{fill:none;stroke:#315a4d;stroke-width:2.1;stroke-linecap:round;opacity:.55}
+      .faint{fill:none;stroke:#557b68;stroke-width:1.4;stroke-linecap:round;opacity:.36}
+      .tree-edge{fill:none;stroke:#23584a;stroke-width:3;stroke-linecap:round}
+      .leaf{fill:#f4f8d9;stroke:#23584a;stroke-width:2.4}
+      .tree-root{fill:#3659d9;stroke:#f4f8d9;stroke-width:3.2}
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#field)"/>
+  <path d="M0 151H1200" stroke="#183c37" stroke-opacity=".16"/>
+  <text x="70" y="49" class="eyebrow">GRAPH DISTILLATION / NODE CLASSIFICATION</text>
+  <text x="66" y="137" font-size="108" font-weight="800" letter-spacing="-7">BONSAI</text>
+  <text x="1106" y="112" text-anchor="end" class="eyebrow" fill="#3659d9">GRADIENT-FREE</text>
+  <text x="1106" y="136" text-anchor="end" font-size="15" font-weight="600" fill="#3659d9">NODE CLASSIFICATION</text>
+
+  <!-- Graph field: deliberately irregular, connected, and non-quantitative. -->
+  <text x="70" y="203" class="small">FULL GRAPH</text>
+  <text x="70" y="226" font-size="14" font-weight="500" opacity=".68">many linked neighborhoods</text>
+  <g class="faint">
+    <path d="M105 345 160 280 219 315 275 258 331 307 389 270 445 333 502 297"/>
+    <path d="M90 413 145 367 205 401 262 353 319 393 376 350 433 395 490 355"/>
+    <path d="M111 486 164 444 222 478 278 430 335 469 392 426 449 470 505 423"/>
+    <path d="M143 552 196 514 251 546 307 501 365 540 420 495 477 536"/>
+    <path d="M105 345 90 413 111 486 143 552 M160 280 145 367 164 444 196 514 M219 315 205 401 222 478 251 546 M275 258 262 353 278 430 307 501 M331 307 319 393 335 469 365 540 M389 270 376 350 392 426 420 495 M445 333 433 395 449 470 477 536 M502 297 490 355 505 423"/>
+    <path d="M105 345 205 401 275 258 319 393 445 333 392 426 505 423 M160 280 262 353 331 307 376 350 449 470 365 540 M90 413 164 444 275 430 389 270 433 395 307 501"/>
+  </g>
+  <g class="edge">
+    <path d="M105 345 205 401 319 393 433 395 M160 280 262 353 376 350 490 355 M111 486 222 478 335 469 449 470 M196 514 307 501 420 495"/>
+    <path d="M219 315 205 401 222 478 M331 307 319 393 335 469 M445 333 433 395 449 470 M275 258 262 353 278 430 M389 270 376 350 392 426"/>
+    <path d="M105 345 160 280 219 315 275 258 331 307 M145 367 205 401 262 353 319 393 376 350 M164 444 222 478 278 430 335 469 392 426"/>
+  </g>
+  <g>
+    <circle class="node" cx="105" cy="345" r="8"/><circle class="node" cx="160" cy="280" r="8"/><circle class="node" cx="219" cy="315" r="8"/><circle class="node" cx="275" cy="258" r="8"/><circle class="node" cx="331" cy="307" r="8"/><circle class="node" cx="389" cy="270" r="8"/><circle class="node" cx="445" cy="333" r="8"/><circle class="node" cx="502" cy="297" r="8"/>
+    <circle class="node" cx="90" cy="413" r="8"/><circle class="node" cx="145" cy="367" r="8"/><circle class="node" cx="205" cy="401" r="8"/><circle class="node" cx="262" cy="353" r="8"/><circle class="node" cx="319" cy="393" r="8"/><circle class="node" cx="376" cy="350" r="8"/><circle class="node" cx="433" cy="395" r="8"/><circle class="node" cx="490" cy="355" r="8"/>
+    <circle class="node" cx="111" cy="486" r="8"/><circle class="node" cx="164" cy="444" r="8"/><circle class="node" cx="222" cy="478" r="8"/><circle class="node" cx="278" cy="430" r="8"/><circle class="node" cx="335" cy="469" r="8"/><circle class="node" cx="392" cy="426" r="8"/><circle class="node" cx="449" cy="470" r="8"/><circle class="node" cx="505" cy="423" r="8"/>
+    <circle class="node" cx="143" cy="552" r="8"/><circle class="node" cx="196" cy="514" r="8"/><circle class="node" cx="251" cy="546" r="8"/><circle class="node" cx="307" cy="501" r="8"/><circle class="node" cx="365" cy="540" r="8"/><circle class="node" cx="420" cy="495" r="8"/><circle class="node" cx="477" cy="536" r="8"/>
+    <circle class="selected" cx="205" cy="401" r="11"/><circle class="selected" cx="319" cy="393" r="11"/><circle class="selected" cx="433" cy="395" r="11"/>
+  </g>
+  <path d="M523 396 C566 396 575 396 609 396" fill="none" stroke="#245f50" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="564" y="371" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.2" fill="#245f50">SELECT</text>
+
+  <!-- Three representative rooted computation trees -->
+  <text x="637" y="203" class="small">REPRESENTATIVE COMPUTATION TREES</text>
+  <text x="637" y="226" font-size="14" font-weight="500" opacity=".68">small structures stand in for the whole</text>
+
+  <!-- tree one -->
+  <g class="tree-edge">
+    <path d="M735 350 694 411 M735 350 776 411 M694 411 669 468 M694 411 717 468 M776 411 755 468 M776 411 799 468"/>
+  </g>
+  <g><circle class="tree-root" cx="735" cy="350" r="17"/><circle class="leaf" cx="694" cy="411" r="11"/><circle class="leaf" cx="776" cy="411" r="11"/><circle class="leaf" cx="669" cy="468" r="8"/><circle class="leaf" cx="717" cy="468" r="8"/><circle class="leaf" cx="755" cy="468" r="8"/><circle class="leaf" cx="799" cy="468" r="8"/></g>
+  <path d="M735 371v14" stroke="#3659d9" stroke-width="2"/><text x="735" y="519" text-anchor="middle" class="eyebrow" fill="#3659d9">01</text>
+  <!-- tree two -->
+  <g class="tree-edge"><path d="M910 328 875 389 M910 328 948 389 M875 389 849 446 M875 389 898 446 M948 389 928 446 M948 389 974 446 M898 446 885 496 M898 446 911 496"/></g>
+  <g><circle class="tree-root" cx="910" cy="328" r="17"/><circle class="leaf" cx="875" cy="389" r="11"/><circle class="leaf" cx="948" cy="389" r="11"/><circle class="leaf" cx="849" cy="446" r="8"/><circle class="leaf" cx="898" cy="446" r="8"/><circle class="leaf" cx="928" cy="446" r="8"/><circle class="leaf" cx="974" cy="446" r="8"/><circle class="leaf" cx="885" cy="496" r="7"/><circle class="leaf" cx="911" cy="496" r="7"/></g>
+  <text x="910" y="551" text-anchor="middle" class="eyebrow" fill="#3659d9">02</text>
+  <!-- tree three -->
+  <g class="tree-edge"><path d="M1070 353 1038 414 M1070 353 1105 414 M1038 414 1018 471 M1038 414 1059 471 M1105 414 1085 471 M1105 414 1125 471"/></g>
+  <g><circle class="tree-root" cx="1070" cy="353" r="17"/><circle class="leaf" cx="1038" cy="414" r="11"/><circle class="leaf" cx="1105" cy="414" r="11"/><circle class="leaf" cx="1018" cy="471" r="8"/><circle class="leaf" cx="1059" cy="471" r="8"/><circle class="leaf" cx="1085" cy="471" r="8"/><circle class="leaf" cx="1125" cy="471" r="8"/></g>
+  <text x="1070" y="519" text-anchor="middle" class="eyebrow" fill="#3659d9">03</text>
+
+  <path d="M70 606H1130" stroke="#183c37" stroke-opacity=".2"/>
+  <text x="70" y="654" font-size="29" font-weight="700" letter-spacing="-.5">Gradient-free graph distillation.</text>
+  <text x="70" y="692" class="body" opacity=".78">Bonsai selects representative computation trees for node classification, without gradient-based distillation.</text>
+  <g transform="translate(70 744)">
+    <circle cx="7" cy="0" r="7" fill="#3659d9"/><text x="24" y="5" font-size="13" font-weight="700" letter-spacing="1.6">SELECTED NODE</text>
+    <path d="M204 0h42" stroke="#315a4d" stroke-width="2" opacity=".6"/><text x="258" y="5" font-size="13" font-weight="700" letter-spacing="1.6">NEIGHBOR RELATION</text>
+    <circle cx="469" cy="0" r="6" fill="#f4f8d9" stroke="#23584a" stroke-width="2"/><text x="486" y="5" font-size="13" font-weight="700" letter-spacing="1.6">TREE NODE</text>
+  </g>
+  <text x="1130" y="750" text-anchor="end" font-size="13" font-weight="700" letter-spacing="1.5" opacity=".58">CONCEPT DIAGRAM · NOT TO SCALE</text>
+</svg>

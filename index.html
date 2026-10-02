@@ -1,491 +1,749 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
 
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vansh Ramani's personal academic website: research, publications, projects, and updates.">
-  <meta property="og:title" content="Vansh Ramani">
-  <meta property="og:description" content="Research, publications, projects, and updates from Vansh Ramani.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vanshramani.github.io/">
-  <meta property="og:image" content="https://vanshramani.github.io/images/vansh_profile_pic.jpg">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-  /* Design Credits: Arnav Jain, Nilesh Gupta, Aditya Kusupati, Jon Barron, Deepak Pathak and Saurabh Gupta*/
-  
-  /* Dark mode toggle button */
-  .theme-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    transition: color 0.2s ease;
-  }
-  
-  .theme-toggle:hover {
-    color: #1772d0;
-  }
-  
-  /* Light mode (default) */
-  :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --link-color: #1772d0;
-    --link-hover-color: #f5b461;
-    --border-color: #e0e0e0;
-  }
-  
-  /* Dark mode */
-  [data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --link-color: #4a9eff;
-    --link-hover-color: #ffb366;
-    --border-color: #404040;
-  }
-  
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  a:focus, a:hover {
-    color: var(--link-hover-color);
-    text-decoration: none;
-  }
-  
-  body,td,th {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     font-size: 16px;
-     font-weight: 400;
-     color: var(--text-color);
-  }
-  
-  heading {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     font-size: 19px;
-     font-weight: 600;
-     color: var(--text-color);
-  }
-  
-  strong {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     font-size: 16px;
-     font-weight: 800;
-     color: var(--text-color);
-  }
-  
-  strongred {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     color: 'red' ;
-     font-size: 16px
-  }
-  
-  sectionheading {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     font-size: 22px;
-     font-weight: 600;
-     color: var(--text-color);
-  }
-  
-  pageheading {
-     font-family: 'Source Sans Pro', Arial, sans-serif;
-     font-size: 60px;
-     font-weight: 400;
-     color: var(--text-color);
-  }
-  
-  table {
-    background-color: var(--bg-color);
-  }
-  
-  td {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  </style>
-  <!-- <link rel="icon" type="image/png" href="images/W.png"> -->
-  <!-- <script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=871dF8aWgRZTPcreDIgsgSm9bKNiARUklmoWvqiRVbs"></script> -->
-
-  <title>Vansh Ramani</title>
-  <link rel="icon" href="images/vansh_profile_pic.jpg" type="image/jpeg">
-  <!-- link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'> -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/darkmode.css?v=9">
-  <link rel="stylesheet" href="css/theme.css?v=9">
-  <script src="js/darkmode.js?v=7" defer></script>
-  <script src="js/site-cat.js?v=11" defer></script>
-  <!-- Start : Google Analytics Code -->
-  <!-- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-90394621-1', 'auto');
-  ga('send', 'pageview');
-
-  </script> -->
-  <!-- End : Google Analytics Code -->
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f7f8fa" name="theme-color"/>
+<meta content="Founder of ramAIn. Researcher working on efficient, reliable AI." name="description"/>
+<meta content="Vansh Ramani — Founder &amp; Researcher" property="og:title"/>
+<meta content="Founder of ramAIn. Researcher working on efficient, reliable AI." property="og:description"/>
+<meta content="https://vanshramani.github.io/images/vansh_profile_pic.jpg" property="og:image"/>
+<title>
+   Vansh Ramani — Founder &amp; Researcher
+  </title>
+<link href="images/monogram.svg" rel="icon" type="image/svg+xml"/>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/site.js">
+</script>
+<noscript><style>.molecule-controls, .atom-targets, .molecule-hover-inspector, .search-open, #molecule-canvas { display:none; }</style></noscript><script defer="" src="js/caffeine-data.js"></script><script defer="" src="js/molecule.js"></script><link href="css/portfolio.css" rel="stylesheet"/><link href="css/lower-site.css?v=3" rel="stylesheet"/></head>
 <body>
-  <!-- Dark mode toggle button -->
-  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-    <i class="fa fa-moon-o" id="theme-icon"></i>
-  </button>
-<table width="840" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
-<tr><td>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-	<p align="left">
-		<center><pageheading>Vansh Ramani</pageheading><br>
-		<b>&nbsp;Email</b>: <a href="mailto:vanshramani27@gmail.com">vanshramani27@gmail.com</a> | <a href="mailto:cs5230804@iitd.ac.in">cs5230804@iitd.ac.in</a></center>
-	</p>
-
-	<tr>
-		<td width="32%" valign="top"><a href="#Bio">
-			<img src="images/vansh_profile_pic.jpg" alt="Vansh Ramani profile photo" width="100%" style="border-radius:15px"></a>
-			<p align=center class="nav-links">
-				<a href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="https://github.com/VanshRamani" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/ramanivansh/" target="_blank">LinkedIn</a>
-      </p>
-      <p align=center class="nav-links">
-        <span class="nav-links__label">More about me</span>
-        <a href="content/blogs.html" target="_blank">Blog Posts &amp; Tutorials</a>
-        <a href="content/coursework.html" target="_blank">Coursework</a>
-      </p>
-		</td>
-
-		<td width="68%" valign="top" align="justify" id="Bio">
-			I am an undergraduate in Computer Science Engineering at <a href="https://www.iitd.ac.in/" target="_blank">Indian Institute of Technology Delhi</a> 
-      with a deep interest in Artificial Intelligence and its applications. My work spans graph deep learning, spatio-temporal data analytics, data distillation, 
-      and high-dimensional nearest neighbor search. Recently, I've been exploring LLMs and agentic frameworks. 
-      <s>I will be joining <a href="https://www.dtu.dk/english" target="_blank">Technical University of Denmark</a> as an exchange student for the Spring 2026 semester.</s>
-      <span style="color:#FF6600; font-weight:bold;">I got selected into Y Combinator</span>'s Winter 26 batch to build <a href="https://ramain.ai" target="_blank">ramAIn</a> and am on a break from IIT Delhi.
-      
-      <br><br>
-      I recently completed a Research Internship at <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a> 
-      working with <a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank">Prof. Pradeep Ravikumar</a> in the 
-      <a href="https://www.ml.cmu.edu/" target="_blank">Machine Learning Department</a>. My research focused on causal representation learning, 
-      neurosymbolic AI, and machine unlearning with provable guarantees.
-      
-      <br><br>
-      Previously, I was a Research Intern at the <a href="https://www.ku.dk/english/" target="_blank">University of Copenhagen</a> 
-      working with <a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank">Dr. Panagiotis Karras</a> in the 
-      <a href="https://di.ku.dk/english/" target="_blank">Department of Computer Science, DIKU</a> on developing high dimensional nearest neighbor search algorithms. 
-      I am also a Research Assistant at <a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a> with 
-      <a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank">Dr. Sayan Ranu</a> in the 
-      <a href="https://www.cse.iitd.ac.in/~sayan/dsire.html" target="_blank">Data Science and Information Retrieval Lab (DSIRE)</a>, 
-      working on graph neural networks and data distillation.
-     
-      <br><br>
-      I have also worked with <a href="https://chemistry.iitd.ac.in/faculty/tarak-karmakar" target="_blank">Dr. Tarak Karmakar</a> in the 
-      <a href="https://chemistry.iitd.ac.in/" target="_blank">Computational Chemistry, Materials & Biology (CCMB)</a> lab at IIT Delhi 
-      on molecular solubility prediction using graph neural networks.
-
-      <br><br>
-      I love reading random facts, listening to jazz music, and right now, I'm just trying to work my way through quizzes and academics. :3
-
-      <br><br>
-      I am always open to collaborations and discussions. Please feel free to reach out!
-
-      <p align=center class="nav-links">
-        <span class="nav-links__label">Other</span>
-        <a href="content/achievements.html" target="_blank">Achievements</a>
-        <a href="content/fun.html" target="_blank">Fun/Favorites</a>
-			</p>
-		</td>
-	</tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-	<tr><td id="News"> <sectionheading>&nbsp;&nbsp;Recent News</sectionheading><div style="float: right;"></div></td></tr>
-</table>
-<table width="100%" align="center">
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Nov 25]</td>
-    <td width="85%">
-      <img src="images/Ycoomb.png" alt="YC" style="height:18px; vertical-align:middle; margin-right:6px;">
-      <span style="color:#FF6600; font-weight:bold;">Accepted into Y Combinator!</span> Building 
-      <img src="images/ramain_logo.png" alt="ramAIn" style="height:18px; vertical-align:middle; margin:0 4px;">
-      <a href="https://ramain.ai" target="_blank">ramAIn</a> — building super fast computer use agents.
-    </td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Oct 25]</td>
-    <td width="85%">First-author paper "Panorama: Fast-Track Nearest Neighbors" submitted to arXiv! Developed data-adaptive learned transforms for 2-30× speedup in nearest neighbor search. <a href="https://arxiv.org/abs/2510.00566" target="_blank">[arXiv]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Jul 25]</td>
-    <td width="85%">Completed summer internship at <a href="https://www.cmu.edu/ml/" target="_blank">RAIL - Carnegie Mellon University</a>! Worked on machine unlearning, concept forgetting, and neurosymbolic architectures. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Apr 25]</td>
-    <td width="85%">Presented "Bonsai" to <a href="https://scholar.google.com/citations?user=UZ5wscMAAAAJ" target="_blank">Prof. Michael Bronstein</a> at <a href="https://iclr.cc/" target="_blank">ICLR 2025</a> Singapore! <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [May 25]</td>
-    <td width="85%">Received CSE Research Acceleration Fund (RAF) grant for research with <a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank">Dr. Sayan Ranu</a> to present at <a href="https://iclr.cc/" target="_blank">ICLR 2025</a>. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Feb 25]</td>
-    <td width="85%">Paper "Bonsai: Gradient-free Graph Distillation for Node Classification" accepted at <a href="https://iclr.cc/" target="_blank">ICLR 2025</a>! <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Nov 24]</td>
-    <td width="85%">Spoke at <a href="https://www.acs.org/" target="_blank">American Chemical Society</a> and BioPractify's 38th Students Journal Club on AI for Applied Sciences. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Dec 24]</td>
-    <td width="85%">Team Pi Propulsion wins <span style="color:red">National Champions</span> at <a href="https://www.lamresearch.com/" target="_blank">Lam Research Challenge 2024</a> - prize of INR 5,00,000. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Nov 24]</td>
-    <td width="85%">Achieved <span style="color:red">4th place nationally</span> at <a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs India Hackathon 2024</a> among 8,000 participants. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Sep 24]</td>
-    <td width="85%">Won <span style="color:red">First Position</span> in <a href="https://www.citadel.com/" target="_blank">Citadel's Quants Arena Challenge</a>! <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Aug 25]</td>
-    <td width="85%">Received Danish Data Science Academy Scholarship to work with <a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank">Dr. Panagiotis Karras</a> at the <a href="https://www.ku.dk/english/" target="_blank">University of Copenhagen</a> on high-dimensional similarity search. <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-  <tr>
-    <td width="15%">&nbsp;&nbsp;&nbsp;&nbsp; [Jul 24]</td>
-    <td width="85%">First-author paper published in <a href="https://pubs.acs.org/" target="_blank">ACS Journal of Chemical Theory and Computation</a>! <a href="https://www.linkedin.com/in/ramanivansh/recent-activity/all/" target="_blank">[LinkedIn]</a></td>
-  </tr>
-</table>
-
-
-
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-	<tr><td id="Publications"> <sectionheading>&nbsp;&nbsp;Publications</sectionheading><div style="float: right;"></div></td></tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-		<td width="33%" valign="top" align="center"><img src="images/dissolvr.png" alt="DISSOLVR2026" width="100%" style="border-radius:1px"></td>
-		<td width="67%" valign="top">
-			<p>
-          <heading>DISSOLVR: An Interpretable and Fast Framework for Aqueous and Organic Solubility Prediction</heading><br>
-				  <strong>Vansh Ramani</strong>, A. Arora, D. Kuchhal, Sayan Ranu, Tarak Karmakar<br>
-          International Conference on Machine Learning (<b>ICML</b>) 2026, Seoul<br>
-			</p>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" target="_self"><img src="images/molmerger.jpg" alt="MolMerger2024" width="100%" style="border-radius:1px"></a></td>
-		<td width="67%" valign="top">
-			<p>
-        <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" target="_blank" id="ramani2024molmerger">
-          <heading>Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions</heading></a><br>
-				  <strong>Vansh Ramani</strong>, Tarak Karmakar<br>
-          Journal of Chemical Theory and Computation 2024, 20 (15), 6549-6558<br>
-			</p>
-			<div class="paper" id="ramani2024molmerger">
-				<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" target="_blank">paper</a> 
-        / <a href="https://github.com/VanshRamani/Molmerger-Solubility-Prediction" target="_blank">code</a>
-				<br>
-	    </div>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><img src="images/graph_condensation.png" alt="GraphCondensation2026" width="100%" style="border-radius:1px"></td>
-		<td width="67%" valign="top">
-			<p>
-          <heading>Position: Graph Condensation Needs a Reset — Move Beyond Full-dataset Training and Model-Dependence</heading><br>
-				  Mridul Gupta, Samyak Jain, <strong>Vansh Ramani</strong>, Hariprasad Kodamana, Sayan Ranu<br>
-          International Conference on Machine Learning (<b>ICML</b>) 2026, Seoul - <b>Spotlight</b><br>
-			</p>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><img src="images/bonsai.jpg" alt="Bonsai2025" width="100%" style="border-radius:1px"></td>
-		<td width="67%" valign="top">
-			<p>
-          <heading>Bonsai: Gradient-free Graph Distillation for Node Classification</heading><br>
-				  Mridul Gupta, Samyak Jain, <strong>Vansh Ramani</strong>, Hariprasad Kodamana, Sayan Ranu<br>
-          The Thirteenth International Conference on Learning Representations (<b>ICLR</b>) 2025, Singapore<br>
-			</p>
-			<div class="paper" id="gupta2025bonsai">
-				<a href="https://anonymous.4open.science/r/bonsai" target="_blank">paper</a> 
-        / <a href="https://anonymous.4open.science/r/bonsai" target="_blank">code</a>
-				<br>
-	    </div>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2510.00566" target="_blank"><img src="images/panorama.png" alt="Panorama2025" width="100%" style="border-radius:1px"></a></td>
-		<td width="67%" valign="top">
-			<p>
-        <a href="https://arxiv.org/abs/2510.00566" target="_blank" id="ramani2025panorama">
-          <heading>Panorama: Fast-Track Nearest Neighbors</heading></a><br>
-				  <strong>Vansh Ramani</strong>, Alexis Schlomer, Akash Nayar, Panagiotis Karras, Sayan Ranu, Jignesh M. Patel<br>
-          Meta FAISS / arXiv:2510.00566 (2025)<br>
-			</p>
-			<div class="paper" id="ramani2025panorama">
-				<a href="https://arxiv.org/abs/2510.00566" target="_blank">paper</a> 
-        / <a href="https://github.com/fasttrack-nn/panorama" target="_blank">code</a>
-				<br>
-	    </div>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><img src="images/reasonbench.png" alt="ReasonBENCH2026" width="100%" style="border-radius:1px"></td>
-		<td width="67%" valign="top">
-			<p>
-          <heading>ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning</heading><br>
-				  <strong>Vansh Ramani</strong>, N. Potamitis, H. A. Arora, D. Kuchhal, L. H. Klein, A. Arora<br>
-          EIML Workshop, <b>ICML</b> 2026<br>
-			</p>
-    </td>
-  </tr>
-
-  <tr>
-		<td width="33%" valign="top" align="center"><img src="images/sc3.png" alt="SC32026" width="100%" style="border-radius:1px"></td>
-		<td width="67%" valign="top">
-			<p>
-          <heading>SC3: The Multi-Solvent Solubility Challenge and Benchmark</heading><br>
-				  <strong>Vansh Ramani</strong>, H. A. Arora, D. Kuchhal, S. Tatarin, L. Krasnov, Sayan Ranu, Tarak Karmakar<br>
-          arXiv preprint (2026)<br>
-			</p>
-    </td>
-  </tr>
-
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-	<tr><td id="Experience"> <sectionheading>&nbsp;&nbsp;Experience</sectionheading><div style="float: right;"></div></td></tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Co-founder &amp; CTO</strong><br>
-      Nov 2025 - Present<br>
-      <a href="https://ramain.ai" target="_blank">ramAIn</a><br>
-      Y Combinator W26
-    </td>
-		<td width="75%" valign="top">
-      Building <a href="https://ramain.ai" target="_blank">ramAIn</a>: AI agents that automate any manual UI task across web portals and legacy systems &mdash; deployed in minutes, not months. Backed by <a href="https://www.ycombinator.com/" target="_blank">Y Combinator</a> (W26).
-    </td>
-  </tr>
-
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Researcher</strong><br>
-      2025 - Present<br>
-      CLAN, <a href="https://www.au.dk/en/" target="_blank">Aarhus University</a><br>
-      Aarhus, Denmark
-    </td>
-		<td width="75%" valign="top">
-      Working with <strong>Prof. Akhil Arora</strong> at CLAN, Aarhus University, and <strong>Dr. Lars Klein</strong> (<a href="https://www.epfl.ch/en/" target="_blank">EPFL</a>) on adaptive reasoning, multi-agent systems, and post-training of large language models.
-      Investigating the stability and reliability of LLM reasoning, including the ReasonBENCH benchmark.
-    </td>
-  </tr>
-
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Research Assistant</strong><br>
-      May 2024 - Aug 2024<br>
-      <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a><br>
-      Pittsburgh, PA, USA
-    </td>
-		<td width="75%" valign="top">
-      Worked with <a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank">Prof. Pradeep Ravikumar</a> in the Statistical & Symbolic Learning Group, MLD.
-      Research focus on formalizing unlearning, designing mechanisms with provable removal guarantees for data and representations.
-      Developing NeuroSymbolic architecture for lifting neural models via symbolic modules for interpretability and convergence.
-    </td>
-  </tr>
-
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Research Intern</strong><br>
-      May 2024 - June 2024<br>
-      <a href="https://www.ku.dk/english/" target="_blank">University of Copenhagen</a><br>
-      Copenhagen, Denmark
-    </td>
-		<td width="75%" valign="top">
-      Worked with <a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank">Dr. Panagiotis Karras</a> in Software, Data, People & Society, DIKU.
-      Developed PANORAMA: a machine learning-driven approach that tackles the ANNS verification bottleneck through data-adaptive learned orthogonal transforms.
-      Achieved 2-30× end-to-end speedup with no recall loss across diverse datasets from CIFAR-10 to modern embedding spaces including OpenAI's Ada 2 and Large 3.
-    </td>
-  </tr>
-
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Research Assistant</strong><br>
-      Feb 2024 - Present<br>
-      <a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a><br>
-      Delhi, India
-    </td>
-		<td width="75%" valign="top">
-      Working with <a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank">Dr. Sayan Ranu</a> in Data Science and Information Retrieval Lab (DSIRE).
-      Developed Bonsai: linear-time graph distillation algorithm achieving 22x faster processing across 6 real-world datasets.
-      Achieved state-of-the-art accuracy in 14/18 test scenarios, outperforming other baselines by ≥5% in multiple cases.
-    </td>
-  </tr>
-
-  <tr>
-		<td width="25%" valign="top">
-      <strong>Research Intern</strong><br>
-      Dec 2023 - Jan 2024<br>
-      <a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a><br>
-      Delhi, India
-    </td>
-		<td width="75%" valign="top">
-      Worked with <a href="https://chemistry.iitd.ac.in/faculty/tarak-karmakar" target="_blank">Dr. Tarak Karmakar</a> in Computational Chemistry, Materials & Biology (CCMB).
-      Developed state-of-the-art GNN framework for solubility prediction using novel Merged-Molecule approach.
-      Achieved R² of 0.767 and MAE of 0.78 on test set; average MAE of 0.79 across 65 solvents.
-    </td>
-  </tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td>
-        <div style="width:100%;text-align:left;">
-          <a href="https://clustrmaps.com/site/1btcf" title="Visit tracker"><img src="https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=871dF8aWgRZTPcreDIgsgSm9bKNiARUklmoWvqiRVbs" /></a>
-        </div>
-      </td>
-      <td>
-        <br>
-        <p align="right"><font size="2">
-        Template: <a href="https://sibasmarak.github.io/">Siba Smarak Panigrahi</a> 
-        </font>
+<a class="skip" href="#main">
+   Skip to content
+  </a>
+<header class="nav">
+<a aria-label="Vansh Ramani home" class="brand" href="index.html">
+<span>
+     v
+    </span>
+<span>
+     r
+    </span>
+<i>
+     ↗
+    </i>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html#building">
+<span>
+      01
+     </span>
+     Building
+    </a>
+<a href="index.html#research">
+<span>
+      02
+     </span>
+     Research
+    </a>
+<a href="index.html#about">
+<span>
+      03
+     </span>
+     About
+    </a>
+<a href="index.html#writing"><span>04</span> Writing</a>
+</nav>
+<div class="nav-tools">
+<button aria-label="Search this site" class="search-open" title="Search (⌘K)">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17">
+<circle cx="10" cy="10" r="6.5">
+</circle>
+<path d="m15 15 5 5">
+</path>
+</svg>
+<span>
+      ⌘ K
+     </span>
+</button>
+<a class="nav-contact" href="mailto:vanshramani27@gmail.com">
+     Email ↗
+    </a>
+</div>
+<div aria-hidden="true" class="reading-progress">
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-name" class="hero wrap">
+<div class="hero-prelude">
+<span class="mono">VANSH RAMANI / SELECTED WORK</span>
+<span class="hero-status">
+<span class="status-dot">
+</span>
+      Building ramAIn
+      <span class="mono">
+       YC W26
+      </span>
+</span>
+</div>
+<div class="hero-grid">
+<div class="hero-copy">
+<h1 id="hero-name">
+<span class="name-line">Vansh</span>
+<span class="name-line">Ramani<span class="name-period">.</span></span>
+</h1>
+<div class="intro">
+<p class="hero-role">
+        Co-founder &amp; CTO,
+        <a href="https://ramain.ai" rel="noopener noreferrer" target="_blank">
+         ramAIn ↗
+        </a>
+</p>
+<p>
+        I work on computer-use agents, efficient learning,
+        <br class="desktop-break"/>
+        and reasoning systems.
+       </p>
+<div class="hero-links">
+<a class="solid-link" href="#building">
+         What I'm building
+         <span>
+          ↗
+         </span>
+</a>
+<a class="under-link" href="#research">
+         Research
+         <span>
+          ↓
+         </span>
+</a>
+</div>
+</div>
+</div>
+<figure class="molecule-panel"><div class="molecule-heading"><div><span class="mono">HOVER TO EXPLORE / CLICK TO PIN</span><h2>Research map<span>.</span></h2></div><span class="molecule-formula">Caffeine</span></div><div class="molecule-stage"><canvas aria-label="Molecular research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate." id="molecule-canvas" role="img" tabindex="0"></canvas><div class="molecule-corner top-left"></div><div class="molecule-corner bottom-right"></div><noscript><img alt="Ball-and-stick molecular model of caffeine" class="molecule-fallback" height="362" src="images/caffeine-fallback.svg" width="600"/></noscript><div aria-label="Research directions" class="atom-targets"><button aria-label="Explore Molecular learning" class="atom-target" data-direction="0">1</button><button aria-label="Explore Graph distillation" class="atom-target" data-direction="1">2</button><button aria-label="Explore Similarity search" class="atom-target" data-direction="2">3</button><button aria-label="Explore Reasoning stability" class="atom-target" data-direction="3">4</button><button aria-label="Explore Computer-use agents" class="atom-target" data-direction="4">5</button><button aria-label="Explore Unlearning &amp; neurosymbolic AI" class="atom-target" data-direction="5">6</button></div><aside aria-labelledby="molecule-thread-title" class="molecule-hover-inspector" hidden=""><article class="molecule-thread"><div class="molecule-hover-heading"><span id="molecule-thread-eyebrow">RESEARCH DIRECTION</span><button aria-label="Dismiss atom preview" class="molecule-hover-close">×</button></div><h2 id="molecule-thread-title">Molecular learning</h2><p id="molecule-thread-description"></p><div class="molecule-thread-links" id="molecule-thread-links"></div><div class="molecule-hover-footer"><button id="molecule-pin">Pin this view</button><span id="molecule-neighborhood"></span></div></article></aside></div><div class="molecule-controls"><div aria-label="Molecule rendering style" role="group"><button aria-pressed="true" class="active" data-molecule-mode="atoms">Atoms</button><button aria-pressed="false" data-molecule-mode="bonds">Bonds</button></div><label><input id="molecule-labels" type="checkbox"/>Labels</label><button aria-label="Reset molecule rotation" id="molecule-reset">↺</button><button aria-label="Pause molecule animation" id="molecule-motion">Pause Ⅱ</button></div><figcaption><div class="atom-legend"><span><i class="atom-c"></i>Carbon</span><span><i class="atom-n"></i>Nitrogen</span><span><i class="atom-o"></i>Oxygen</span><span><i class="atom-h"></i>Hydrogen</span></div><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2519" rel="noopener noreferrer" target="_blank">PubChem ↗</a></figcaption></figure>
+</div>
+<div class="hero-bottom">
+<div class="hero-socials">
+<a href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">
+       Scholar ↗
+      </a>
+<a href="https://github.com/VanshRamani" rel="noopener noreferrer" target="_blank">
+       GitHub ↗
+      </a>
+<a href="https://www.linkedin.com/in/ramanivansh/" rel="noopener noreferrer" target="_blank">
+       LinkedIn ↗
+      </a>
+</div>
+<span class="map-hint mono">HOVER AN ATOM · CLICK TO FREEZE ↖</span>
+<a aria-label="Scroll to building" class="scroll-cue" href="#building">
+      ↓
+     </a>
+</div>
+</section>
+<section class="building dark-section" id="building">
+<div class="wrap">
+<div class="section-label">
+<span class="mono">
+       01 / BUILDING
+      </span>
+<span class="mono">
+       CO-FOUNDER &amp; CTO · NOV 2025—
+      </span>
+</div>
+<div class="build-grid">
+<div class="build-copy">
+<div class="build-heading">
+<h2>ramAIn</h2>
+<span class="yc-tag">
+<b>
+          Y
+         </b>
+         W26
+        </span>
+</div>
+<p class="build-lead">
+        Computer-use agents.
+       </p>
+<p>
+        We build AI agents that operate across web portals and legacy systems. Describe the work in natural language; ramAIn executes it through the software your team already uses.
+       </p>
+<a class="solid-link white-link" href="https://ramain.ai" rel="noopener noreferrer" target="_blank">
+        Visit ramain.ai
+        <span>
+         ↗
+        </span>
+</a>
+<div class="build-tags mono">
+<span>
+         COMPUTER USE
+        </span>
+<span>
+         ORCHESTRATION
+        </span>
+<span>
+         AUTOMATION
+        </span>
+</div>
+</div>
+<div class="building-visual"><a aria-label="View ramAIn poster" class="poster-link" data-poster="ramain" data-title="ramAIn" href="images/posters/ramain.svg"><img alt="Layered application windows within the Observe, Reason, Act, Verify computer-use loop" height="800" loading="lazy" src="images/posters/ramain.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="building-visual-caption">Observe <i>→</i> Reason <i>→</i> Act <i>→</i> Verify <i>↺</i></div></div>
+</div>
+</div>
+</section>
+<section class="research wrap" id="research">
+<div class="section-label">
+<span class="mono">
+      02 / RESEARCH
+     </span>
+<a class="mono" href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">
+      FULL PROFILE ON SCHOLAR ↗
+     </a>
+</div>
+<div class="research-heading">
+<h2>Research<span class="blue">.</span></h2>
+<p>
+      Graphs, geometry, molecules, and reasoning.
+      <br/>
+      Selected work from 2024–2026.
+     </p>
+</div>
+<div class="research-gallery"><article class="project-card" style="--card-tint:#e4eaff"><a aria-label="View Panorama poster" class="poster-link" data-poster="panorama" data-title="Panorama" href="images/posters/panorama.svg?v=8"><img alt="A query point moves through spectral distance bounds and candidate pruning to a selected nearest-neighbor set." height="800" loading="lazy" src="images/posters/panorama.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Panorama</h3><p>Nearest-neighbor search · 2026 revision</p></div><a aria-label="Read Panorama publication details" class="poster-open" data-open-paper="paper-panorama" href="#paper-panorama">↗</a></div></article><article class="project-card" style="--card-tint:#e6f8ff"><a aria-label="View DISSOLVR poster" class="poster-link" data-poster="dissolvr" data-title="DISSOLVR" href="images/posters/dissolvr.svg?v=8"><img alt="A molecular structure feeds topological, polarity, and thermodynamic descriptors into aqueous and organic solubility predictions." height="800" loading="lazy" src="images/posters/dissolvr.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>DISSOLVR</h3><p>Solubility prediction · ICML 2026</p></div><a aria-label="Read DISSOLVR publication details" class="poster-open" data-open-paper="paper-dissolvr" href="#paper-dissolvr">↗</a></div></article><article class="project-card" style="--card-tint:#edf6df"><a aria-label="View Bonsai poster" class="poster-link" data-poster="bonsai" data-title="Bonsai" href="images/posters/bonsai.svg"><img alt="A dense graph resolves into selected representative computation trees." height="800" loading="lazy" src="images/posters/bonsai.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Bonsai</h3><p>Graph distillation · ICLR 2025</p></div><a aria-label="Read Bonsai publication details" class="poster-open" data-open-paper="paper-bonsai" href="#paper-bonsai">↗</a></div></article><article class="project-card" style="--card-tint:#f7f6cf"><a aria-label="View Graph Condensation poster" class="poster-link" data-poster="condensation" data-title="Graph Condensation" href="images/posters/condensation.svg"><img alt="A full graph training loop connects to a compact graph and several model branches." height="800" loading="lazy" src="images/posters/condensation.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Graph Condensation</h3><p>Position paper · ICML 2026 Spotlight</p></div><a aria-label="Read Graph Condensation publication details" class="poster-open" data-open-paper="paper-condensation" href="#paper-condensation">↗</a></div></article><article class="project-card" style="--card-tint:#efeafa"><a aria-label="View ReasonBENCH poster" class="poster-link" data-poster="reasonbench" data-title="ReasonBENCH" href="images/posters/reasonbench.svg"><img alt="Reasoning paths from a fixed prompt converge and diverge across answers." height="800" loading="lazy" src="images/posters/reasonbench.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>ReasonBENCH</h3><p>Reasoning stability · ICML 2026 workshop</p></div><a aria-label="Read ReasonBENCH publication details" class="poster-open" data-open-paper="paper-reasonbench" href="#paper-reasonbench">↗</a></div></article><article class="project-card" style="--card-tint:#f7e9f1"><a aria-label="View SC³ poster" class="poster-link" data-poster="sc3" data-title="SC³" href="images/posters/sc3.svg?v=8"><img alt="One solute is compared across a matrix of solvent environments in a multi-solvent benchmark." height="800" loading="lazy" src="images/posters/sc3.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>SC³</h3><p>Multi-solvent benchmark · NeurIPS 2026</p></div><a aria-label="Read SC³ publication details" class="poster-open" data-open-paper="paper-sc3" href="#paper-sc3">↗</a></div></article><article class="project-card" style="--card-tint:#e1f4f1"><a aria-label="View MolMerger poster" class="poster-link" data-poster="molmerger" data-title="MolMerger" href="images/posters/molmerger.svg?v=8"><img alt="Separate solute and solvent graphs combine through virtual interaction edges in a merged graph." height="800" loading="lazy" src="images/posters/molmerger.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>MolMerger</h3><p>Molecular graph learning · JCTC 2024</p></div><a aria-label="Read MolMerger publication details" class="poster-open" data-open-paper="paper-molmerger" href="#paper-molmerger">↗</a></div></article></div>
+<div class="research-toolbar">
+<div aria-label="Filter publications" class="filters" role="group">
+<button aria-pressed="true" class="active" data-filter="all">
+       All
+       <span>
+        07
+       </span>
+</button>
+<button aria-pressed="false" data-filter="learning">
+       Learning &amp; reasoning
+      </button>
+<button aria-pressed="false" data-filter="search">
+       Search
+      </button>
+<button aria-pressed="false" data-filter="molecular">
+       Molecular ML
+      </button>
+</div>
+<span class="mono research-hint">
+      PUBLICATION INDEX
+     </span>
+</div>
+<div class="paper-list">
+<details class="paper-row" data-category="search" id="paper-panorama">
+<summary>
+<span class="paper-number mono">
+        01
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         arXiv · 2026 revision / FAISS
+        </span>
+<h3>
+         Panorama: Fast-Track Nearest Neighbors
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="Panorama research figure" loading="lazy" src="images/panorama.png"/>
+<div>
+<p>
+         Fast search starts with doing less work. PANORAMA uses spectral decay to evaluate distances incrementally and prune candidates early. The July 2026 revision reports up to 28.9× end-to-end speedups and integration into FAISS.
         </p>
-      </td>
-    </tr>
-</table>
+<p class="authors">
+         Vansh Ramani, Alexis Schlomer, Akash Nayar, Sayan Ranu, Jignesh M. Patel, Panagiotis Karras
+        </p>
+<div class="paper-links">
+<a href="https://arxiv.org/abs/2510.00566" rel="noopener noreferrer" target="_blank">
+          Paper ↗
+         </a>
+<a href="https://github.com/fasttrack-nn/panorama" rel="noopener noreferrer" target="_blank">
+          Code ↗
+         </a>
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="molecular" id="paper-dissolvr">
+<summary>
+<span class="paper-number mono">
+        02
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         ICML 2026
+        </span>
+<h3>
+         DISSOLVR: An Interpretable and Fast Framework for Aqueous and Organic Solubility Prediction
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="DISSOLVR research figure" loading="lazy" src="images/dissolvr.png"/>
+<div>
+<p>
+         An interpretable and fast framework for predicting solubility in aqueous and organic solvents.
+        </p>
+<p class="authors">
+         Vansh Ramani, A. Arora, D. Kuchhal, Sayan Ranu, Tarak Karmakar
+        </p>
+<div class="paper-links">
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="learning" id="paper-condensation">
+<summary>
+<span class="paper-number mono">
+        03
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         ICML 2026 · Spotlight
+        </span>
+<h3>
+         Position: Graph Condensation Needs a Reset — Move Beyond Full-dataset Training and Model-Dependence
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="Graph condensation research figure" loading="lazy" src="images/graph_condensation.png"/>
+<div>
+<p>
+         A position paper arguing for graph condensation methods that move beyond full-dataset training and model dependence.
+        </p>
+<p class="authors">
+         Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu
+        </p>
+<div class="paper-links">
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="learning" id="paper-reasonbench">
+<summary>
+<span class="paper-number mono">
+        04
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         EIML · ICML 2026
+        </span>
+<h3>
+         ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="ReasonBENCH research figure" loading="lazy" src="images/reasonbench.png"/>
+<div>
+<p>
+         Investigating the stability of large language model reasoning: how reliably do reasoning systems behave when their inputs change?
+        </p>
+<p class="authors">
+         Vansh Ramani, N. Potamitis, H. A. Arora, D. Kuchhal, L. H. Klein, A. Arora
+        </p>
+<div class="paper-links">
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="learning" id="paper-bonsai">
+<summary>
+<span class="paper-number mono">
+        05
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         ICLR 2025
+        </span>
+<h3>
+         Bonsai: Gradient-free Graph Distillation for Node Classification
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="Bonsai research figure" loading="lazy" src="images/bonsai.jpg"/>
+<div>
+<p>
+         Graph distillation without the expensive full-dataset training loop. Representative computation trees capture the structure that matters for node classification.
+        </p>
+<p class="authors">
+         Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu
+        </p>
+<div class="paper-links">
+<a href="https://anonymous.4open.science/r/bonsai" rel="noopener noreferrer" target="_blank">
+          Code ↗
+         </a>
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="molecular" id="paper-sc3">
+<summary>
+<span class="paper-number mono">
+        06
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         NeurIPS 2026
+        </span>
+<h3>
+         SC3: The Multi-Solvent Solubility Challenge and Benchmark
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="SC3 research figure" loading="lazy" src="images/sc3.png"/>
+<div>
+<p>
+         A multi-solvent challenge and benchmark for evaluating solubility prediction beyond a single solvent.
+        </p>
+<p class="authors">
+         Vansh Ramani, H. A. Arora, D. Kuchhal, S. Tatarin, L. Krasnov, Sayan Ranu, Tarak Karmakar
+        </p>
+<div class="paper-links">
+</div>
+</div>
+</div>
+</details>
+<details class="paper-row" data-category="molecular" id="paper-molmerger">
+<summary>
+<span class="paper-number mono">
+        07
+       </span>
+<div class="paper-title">
+<span class="paper-venue mono">
+         JCTC 2024
+        </span>
+<h3>
+         Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions
+        </h3>
+</div>
+<span aria-hidden="true" class="paper-plus">
+        ↗
+       </span>
+</summary>
+<div class="paper-body">
+<img alt="MolMerger research figure" loading="lazy" src="images/molmerger.jpg"/>
+<div>
+<p>
+         Modeling solute–solvent interactions with a merged-molecule graph representation, rather than treating each molecule in isolation.
+        </p>
+<p class="authors">
+         Vansh Ramani, Tarak Karmakar
+        </p>
+<div class="paper-links">
+<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" rel="noopener noreferrer" target="_blank">
+          Paper ↗
+         </a>
+<a href="https://github.com/VanshRamani/Molmerger-Solubility-Prediction" rel="noopener noreferrer" target="_blank">
+          Code ↗
+         </a>
+</div>
+</div>
+</div>
+</details>
+</div>
+<p aria-live="polite" class="research-note mono" id="research-count">
+     7 WORKS / 2024–2026
+    </p>
+</section>
+<section class="bio-v2" id="about" aria-labelledby="bio-v2-heading">
+  <div class="bio-v2-inner">
+    <header class="bio-v2-kicker">
+      <span class="bio-v2-section-number">03 / ABOUT</span>
+      <a class="bio-v2-archive-link" href="content/background.html">EXPERIENCE &amp; NEWS <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="bio-v2-intro">
+      <figure class="bio-v2-portrait">
+        <div class="bio-v2-photo-mat">
+          <img src="images/vansh_profile_pic.jpg" alt="Portrait of Vansh Ramani" loading="lazy">
+          <svg class="bio-v2-photo-linework" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M-8 82C18 82 22 55 47 55S74 27 108 27"/>
+            <path d="M-8 91C20 91 25 65 49 65S78 38 108 38"/>
+            <circle cx="47" cy="55" r="3"/><circle cx="77" cy="37" r="3"/>
+          </svg>
+        </div>
+        <figcaption class="bio-v2-photo-caption">
+          <span>VANSH RAMANI</span><span>PORTRAIT / 01</span>
+        </figcaption>
+      </figure>
+
+      <div class="bio-v2-copy">
+        <p class="bio-v2-overline">COMPUTER SCIENCE · RESEARCH</p>
+        <h2 id="bio-v2-heading">A bit about me<span class="bio-v2-period">.</span></h2>
+        <div class="bio-v2-prose">
+          <p>I'm a computer science undergraduate at IIT Delhi, currently on a break to build ramAIn.</p>
+          <p>My research spans graph learning and distillation, high-dimensional similarity search, molecular prediction, machine unlearning, and the stability of LLM reasoning.</p>
+          <p>I've worked with researchers at IIT Delhi, Carnegie Mellon, the University of Copenhagen, and Aarhus. Outside of work, I like jazz, random facts, and exploring new places.</p>
+        </div>
+
+        <nav class="bio-v2-index" aria-label="More about Vansh">
+          <a href="content/fun.html"><span class="bio-v2-index-no" aria-hidden="true">01</span><span class="bio-v2-index-name">Favorites</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
+          <a href="content/coursework.html"><span class="bio-v2-index-no" aria-hidden="true">02</span><span class="bio-v2-index-name">Coursework</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
+          <a href="content/achievements.html"><span class="bio-v2-index-no" aria-hidden="true">03</span><span class="bio-v2-index-name">Achievements</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
+          <a href="content/projects.html"><span class="bio-v2-index-no" aria-hidden="true">04</span><span class="bio-v2-index-name">Projects</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="experience-v2" aria-labelledby="experience-v2-heading">
+      <header class="experience-v2-heading">
+        <div>
+          <p class="experience-v2-overline">PEOPLE &amp; PLACES</p>
+          <h3 id="experience-v2-heading">Research experience</h3>
+        </div>
+        <p class="experience-v2-aside">Four institutions<br>across my research</p>
+      </header>
+
+      <div class="experience-v2-map">
+        <article class="experience-v2-row experience-v2-row--iit">
+          <div class="experience-v2-place">
+            <p class="experience-v2-location">DELHI / INDIA</p>
+            <h4><a href="https://www.iitd.ac.in/" target="_blank" rel="noopener noreferrer">IIT Delhi <span aria-hidden="true">↗</span></a></h4>
+          </div>
+          <p class="experience-v2-domain">Graphs &amp; molecular ML</p>
+          <p class="experience-v2-people"><a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank" rel="noopener noreferrer">Dr. Sayan Ranu</a><span aria-hidden="true"> · </span><a href="https://chemistry.iitd.ac.in/faculty/tarak-karmakar" target="_blank" rel="noopener noreferrer">Dr. Tarak Karmakar</a></p>
+        </article>
+        <article class="experience-v2-row experience-v2-row--cmu">
+          <div class="experience-v2-place">
+            <p class="experience-v2-location">PITTSBURGH / USA</p>
+            <h4><a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon <span aria-hidden="true">↗</span></a></h4>
+          </div>
+          <p class="experience-v2-domain">Unlearning &amp; neurosymbolic AI</p>
+          <p class="experience-v2-people"><a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank" rel="noopener noreferrer">Prof. Pradeep Ravikumar</a></p>
+        </article>
+        <article class="experience-v2-row experience-v2-row--copenhagen">
+          <div class="experience-v2-place">
+            <p class="experience-v2-location">COPENHAGEN / DENMARK</p>
+            <h4><a href="https://www.ku.dk/english/" target="_blank" rel="noopener noreferrer">University of Copenhagen <span aria-hidden="true">↗</span></a></h4>
+          </div>
+          <p class="experience-v2-domain">High-dimensional search</p>
+          <p class="experience-v2-people"><a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank" rel="noopener noreferrer">Dr. Panagiotis Karras</a></p>
+        </article>
+        <article class="experience-v2-row experience-v2-row--aarhus">
+          <div class="experience-v2-place">
+            <p class="experience-v2-location">AARHUS / DENMARK</p>
+            <h4><a href="https://www.au.dk/en/" target="_blank" rel="noopener noreferrer">CLAN, Aarhus University <span aria-hidden="true">↗</span></a></h4>
+          </div>
+          <p class="experience-v2-domain">Adaptive reasoning</p>
+          <p class="experience-v2-people"><span>Prof. Akhil Arora</span><span aria-hidden="true"> · </span><a href="https://www.epfl.ch/en/" target="_blank" rel="noopener noreferrer">Dr. Lars Klein (EPFL)</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="ending-writing" id="writing" aria-labelledby="ending-writing-title">
+  <div class="ending-writing__inner">
+    <header class="ending-writing__header">
+      <div class="ending-writing__heading">
+        <p class="ending-writing__eyebrow"><span>04</span> / Writing</p>
+        <h2 id="ending-writing-title">Writing<span aria-hidden="true">.</span></h2>
+        <p class="ending-writing__intro">Conference reflections and explainers on graphs and molecular learning.</p>
+      </div>
+      <a class="ending-writing__archive" href="content/blogs.html">
+        <span>Full archive</span><span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <div class="ending-notes-grid">
+      <a class="notes-card notes-card--conference" href="content/blogs.html#iclr2025">
+        <div class="notes-card__art">
+          <svg viewBox="0 0 480 250" role="img" aria-label="ICLR conference badge beside Singapore's layered skyline">
+            <rect width="480" height="250" fill="#e5f1ef"/>
+            <path d="M0 207H480" stroke="#183d42" stroke-opacity=".22"/>
+            <path d="M0 220H480M0 232H480" stroke="#6c9893" stroke-opacity=".18"/>
+            <g fill="none" stroke="#5e8881" stroke-width="1" opacity=".45">
+              <path d="M282 40V208M313 58V208M342 28V208M375 48V208M405 24V208M438 62V208"/>
+              <path d="M273 91H452M278 116H465M267 148H447M281 177H469"/>
+            </g>
+            <g fill="#c2d9d2" stroke="#315b59" stroke-width="1.4">
+              <path d="M265 207V122Q265 105 280 105H299Q314 105 314 122V207Z"/>
+              <path d="M324 207V88Q324 72 341 72H360Q377 72 377 88V207Z"/>
+              <path d="M389 207V129Q389 112 406 112H424Q441 112 441 129V207Z"/>
+            </g>
+            <path d="M296 106Q287 69 302 34M350 73Q343 39 359 18M415 113Q403 74 420 46" fill="none" stroke="#315b59" stroke-width="2"/>
+            <g fill="none" stroke="#315b59" stroke-width="1.1">
+              <path d="M289 54l-18-11m19 18-25 1m29 2 18-16m-19 23 24 7m-23-17-5-25"/>
+              <path d="M346 39l-20-11m22 19-27 1m31-2 19-20m-20 28 25 7m-23-18-3-24"/>
+              <path d="M408 68l-19-12m21 20-26 1m30-3 19-17m-19 26 23 7m-22-17-3-24"/>
+            </g>
+            <rect x="38" y="39" width="174" height="174" rx="4" fill="#173e42"/>
+            <path d="M52 53H198V199H52Z" fill="none" stroke="#c8e8db" stroke-opacity=".5"/>
+            <text x="70" y="92" fill="#a9dcca" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CONFERENCE</text>
+            <text x="67" y="147" fill="#f4f4d4" font-family="Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-2">ICLR</text>
+            <path d="M70 163H180" stroke="#6caa9b"/>
+            <text x="70" y="187" fill="#e0eee5" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3">SINGAPORE · 2025</text>
+            <circle cx="228" cy="198" r="4" fill="#d25d43"/>
+          </svg>
+        </div>
+        <div class="notes-card__body">
+          <div class="notes-card__meta"><time datetime="2025-04">APR 2025</time><span>Conference journal</span></div>
+          <h3>My ICLR 2025 Experience: From Computation Trees to Singapore's Skyline</h3>
+          <p>Presenting Bonsai in Singapore, and the conversations and city beyond the poster.</p>
+          <span class="notes-card__link">Read the reflection <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+
+      <a class="notes-card notes-card--graphs" href="content/blogs.html#graph-distillation-tutorial">
+        <div class="notes-card__art">
+          <svg viewBox="0 0 480 250" role="img" aria-label="A connected graph resolving into a small representative computation tree">
+            <rect width="480" height="250" fill="#edf3d5"/>
+            <path d="M0 207H480" stroke="#21473f" stroke-opacity=".18"/>
+            <g fill="none" stroke="#37685a" stroke-width="1.5" opacity=".47">
+              <path d="M35 67 80 42 122 69 164 37 203 69 244 48 279 82"/>
+              <path d="M30 119 74 94 118 124 160 91 203 123 242 99 282 131"/>
+              <path d="M43 176 82 148 123 178 165 144 205 175 246 148 281 177"/>
+              <path d="M35 67 30 119 43 176M80 42 74 94 82 148M122 69 118 124 123 178M164 37 160 91 165 144M203 69 203 123 205 175M244 48 242 99 246 148M279 82 282 131 281 177"/>
+              <path d="M35 67 118 124 164 37 203 123 279 82 205 175 282 131"/>
+            </g>
+            <g fill="#f5f8e2" stroke="#214b40" stroke-width="1.7">
+              <circle cx="35" cy="67" r="5"/><circle cx="80" cy="42" r="5"/><circle cx="122" cy="69" r="5"/><circle cx="164" cy="37" r="5"/><circle cx="203" cy="69" r="5"/><circle cx="244" cy="48" r="5"/><circle cx="279" cy="82" r="5"/>
+              <circle cx="30" cy="119" r="5"/><circle cx="74" cy="94" r="5"/><circle cx="118" cy="124" r="5"/><circle cx="160" cy="91" r="5"/><circle cx="203" cy="123" r="5"/><circle cx="242" cy="99" r="5"/><circle cx="282" cy="131" r="5"/>
+              <circle cx="43" cy="176" r="5"/><circle cx="82" cy="148" r="5"/><circle cx="123" cy="178" r="5"/><circle cx="165" cy="144" r="5"/><circle cx="205" cy="175" r="5"/><circle cx="246" cy="148" r="5"/><circle cx="281" cy="177" r="5"/>
+            </g>
+            <circle cx="118" cy="124" r="9" fill="#3d67d7" stroke="#f5f8e2" stroke-width="3"/>
+            <path d="M296 124H334" fill="none" stroke="#275b4d" stroke-width="2.3"/>
+            <path d="m327 118 9 6-9 6" fill="none" stroke="#275b4d" stroke-width="2.3"/>
+            <g fill="none" stroke="#275b4d" stroke-width="2.7" stroke-linecap="round">
+              <path d="M393 79 365 124M393 79 421 124M365 124 350 169M365 124 380 169M421 124 406 169M421 124 437 169"/>
+            </g>
+            <g fill="#f6f8dd" stroke="#275b4d" stroke-width="2.2">
+              <circle cx="393" cy="79" r="10"/><circle cx="365" cy="124" r="8"/><circle cx="421" cy="124" r="8"/>
+              <circle cx="350" cy="169" r="6"/><circle cx="380" cy="169" r="6"/><circle cx="406" cy="169" r="6"/><circle cx="437" cy="169" r="6"/>
+            </g>
+            <circle cx="393" cy="79" r="6" fill="#3d67d7"/>
+            <text x="36" y="225" fill="#39594e" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.8">GRAPH</text>
+            <text x="393" y="225" text-anchor="middle" fill="#39594e" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.3">COMPUTATION TREE</text>
+          </svg>
+        </div>
+        <div class="notes-card__body">
+          <div class="notes-card__meta"><time datetime="2025-03">MAR 2025</time><span>Technical guide</span></div>
+          <h3>Understanding Graph Distillation: A Comprehensive Guide</h3>
+          <p>How representative computation trees capture neighborhoods in graph learning.</p>
+          <span class="notes-card__link">Read the guide <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+
+      <a class="notes-card notes-card--molecules" href="content/blogs.html#molecular-gnn-tutorial">
+        <div class="notes-card__art">
+          <svg viewBox="0 0 480 250" role="img" aria-label="Solute and solvent molecular graphs joined by virtual interaction links">
+            <rect width="480" height="250" fill="#e7eff9"/>
+            <path d="M0 207H480" stroke="#203f68" stroke-opacity=".17"/>
+            <rect x="26" y="29" width="194" height="166" rx="8" fill="#f2fafb" stroke="#9ac7d0"/>
+            <rect x="260" y="29" width="194" height="166" rx="8" fill="#f3f6fc" stroke="#aabbd8"/>
+            <text x="43" y="54" fill="#087f99" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">SOLUTE</text>
+            <text x="277" y="54" fill="#3b61a8" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">SOLVENT</text>
+            <g fill="none" stroke="#21485f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M75 118 100 75 150 75 175 118 150 161 100 161Z"/>
+              <path d="M175 118 201 118M75 118 57 150"/>
+              <path d="M312 118 337 75 387 75 412 118 387 161 337 161Z"/>
+            </g>
+            <g fill="#f2fafb" stroke="#087f99" stroke-width="2.3">
+              <circle cx="75" cy="118" r="7"/><circle cx="100" cy="75" r="7"/><circle cx="150" cy="75" r="7"/><circle cx="175" cy="118" r="7"/><circle cx="150" cy="161" r="7"/><circle cx="100" cy="161" r="7"/>
+            </g>
+            <g fill="#f3f6fc" stroke="#3b61a8" stroke-width="2.3">
+              <circle cx="312" cy="118" r="7"/><circle cx="337" cy="75" r="7"/><circle cx="387" cy="75" r="7"/><circle cx="412" cy="118" r="7"/><circle cx="387" cy="161" r="7"/><circle cx="337" cy="161" r="7"/>
+            </g>
+            <path d="M175 118H312M150 75H337M150 161H337" fill="none" stroke="#547ca8" stroke-width="1.8" stroke-dasharray="4 6"/>
+            <text x="46" y="221" fill="#345b73" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">VIRTUAL INTERACTION LINKS</text>
+          </svg>
+        </div>
+        <div class="notes-card__body">
+          <div class="notes-card__meta"><time datetime="2025-02">FEB 2025</time><span>Molecular learning</span></div>
+          <h3>Graph Neural Networks for Molecular Property Prediction</h3>
+          <p>Representing solute–solvent interactions with virtual bonds in MolMerger.</p>
+          <span class="notes-card__link">Read the explainer <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ending-contact" id="contact" aria-labelledby="ending-contact-title">
+  <div class="ending-contact__texture" aria-hidden="true">
+    <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice">
+      <path d="M-80 310C110 110 210 390 390 210S670 72 822 224 1050 376 1280 126"/>
+      <path d="M-80 334C110 134 210 414 390 234S670 96 822 248 1050 400 1280 150"/>
+      <path d="M-80 358C110 158 210 438 390 258S670 120 822 272 1050 424 1280 174"/>
+      <path d="M-80 382C110 182 210 462 390 282S670 144 822 296 1050 448 1280 198"/>
+      <path d="M-80 406C110 206 210 486 390 306S670 168 822 320 1050 472 1280 222"/>
+    </svg>
+  </div>
+  <div class="ending-contact__inner">
+    <div class="ending-contact__topline">
+      <p class="ending-contact__eyebrow"><span>05</span> / Contact</p>
+      <span class="ending-contact__topname">Vansh Ramani</span>
+    </div>
+    <div class="ending-contact__main">
+      <h2 id="ending-contact-title">Vansh<br/><span>Ramani</span></h2>
+      <div class="ending-contact__details">
+        <p class="ending-contact__label">EMAIL</p>
+        <a class="ending-contact__email" href="mailto:vanshramani27@gmail.com">vanshramani27@gmail.com<span aria-hidden="true">↗</span></a>
+        <nav class="ending-contact__socials" aria-label="Contact and research profiles">
+          <a href="https://github.com/VanshRamani" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/ramanivansh/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-</td></tr>
-</table>
+</main>
+<footer class="ending-footer">
+  <div class="ending-footer__inner">
+    <a class="ending-footer__mark" href="index.html#main" aria-label="Vansh Ramani — back to top">v<span>.</span>r<span>↗</span></a>
+    <span class="ending-footer__copyright">© 2026 Vansh Ramani</span>
+    <a class="ending-footer__top" href="index.html#main">Back to top <span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
 
-</body>
-
+<dialog aria-labelledby="search-title" class="search-dialog">
+<div class="search-dialog-head">
+<h2 id="search-title">Find something.</h2>
+<button aria-label="Close search" class="search-close">
+     Esc
+     <span>
+      ×
+     </span>
+</button>
+</div>
+<label class="search-label" for="site-search">
+    SEARCH PAPERS, PAGES, AND PROJECTS
+   </label>
+<input autocomplete="off" id="site-search" placeholder="Try Panorama, graphs, or jazz…" type="search"/>
+<div aria-live="polite" class="search-results" id="search-results">
+</div>
+<p class="search-help">
+    ↑ ↓ to move
+    <span>
+     ↵ to open
+    </span>
+</p>
+</dialog>
+<dialog aria-labelledby="poster-title" class="poster-dialog"><div class="poster-dialog-header"><h2 id="poster-title">Project poster</h2><button aria-label="Close poster" class="poster-dialog-close">Esc <span>×</span></button></div><img alt="" class="poster-dialog-image" height="800" width="1200"/><div class="poster-dialog-footer"><span>Concept illustration · Original paper figures in publication details</span><a class="poster-paper-link" href="#research">Publication details ↗</a></div></dialog></body>
 </html>

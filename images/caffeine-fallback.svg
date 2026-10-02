@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 362" role="img" aria-labelledby="title"><title id="title">Caffeine molecular model from PubChem CID 2519</title><defs>
+<radialGradient id="C" cx="32%" cy="28%" r="80%"><stop stop-color="#8f9bad"/><stop offset=".38" stop-color="#394455"/><stop offset="1" stop-color="#111827"/></radialGradient>
+<radialGradient id="N" cx="32%" cy="28%" r="80%"><stop stop-color="#96c2ff"/><stop offset=".38" stop-color="#456eff"/><stop offset="1" stop-color="#173399"/></radialGradient>
+<radialGradient id="O" cx="32%" cy="28%" r="80%"><stop stop-color="#ffc8e1"/><stop offset=".38" stop-color="#ef6a9b"/><stop offset="1" stop-color="#a72a61"/></radialGradient>
+<radialGradient id="H" cx="32%" cy="28%" r="80%"><stop stop-color="#ffffff"/><stop offset=".38" stop-color="#edf3ff"/><stop offset="1" stop-color="#a5b5d1"/></radialGradient>
+</defs>
+<circle cx="414.72" cy="132.58" r="9.95" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M439.27 144.40L414.72 132.58" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="482.61" cy="166.81" r="10.51" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M439.27 144.40L482.61 166.81" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="439.27" cy="144.40" r="19.80" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="318.41" cy="72.96" r="20.63" fill="url(#O)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M399.56 187.96L439.27 144.40" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M439.27 144.40L450.27 101.75" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="152.04" cy="92.65" r="10.90" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M321.18 74.11L301.24 121.97" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M315.64 71.81L295.70 119.66" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="399.56" cy="187.96" r="21.51" fill="url(#N)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="212.93" cy="34.23" r="11.07" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="450.27" cy="101.75" r="11.10" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M399.56 187.96L337.48 177.48" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="298.47" cy="120.81" r="20.79" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M399.56 187.96L415.30 251.76" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M187.03 74.27L152.04 92.65" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="461.61" cy="272.38" r="11.14" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M337.48 177.48L298.47 120.81" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M415.30 251.76L461.61 272.38" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M187.03 74.27L212.93 34.23" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="337.48" cy="177.48" r="20.99" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="415.30" cy="251.76" r="21.03" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M232.01 129.90L298.47 120.81" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="187.03" cy="74.27" r="21.29" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M340.31 178.49L318.77 238.55" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M334.66 176.46L313.12 236.52" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M232.01 129.90L187.03 74.27" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M364.28 283.13L413.60 249.28" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M367.67 288.08L417.00 254.23" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="232.01" cy="129.90" r="22.44" fill="url(#N)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="315.95" cy="237.54" r="21.74" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M365.98 285.60L315.95 237.54" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="365.98" cy="285.60" r="22.79" fill="url(#N)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M232.01 129.90L201.36 191.35" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="233.40" cy="351.82" r="11.77" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M187.03 74.27L157.66 54.13" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M247.98 248.07L315.95 237.54" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="201.36" cy="191.35" r="22.29" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M247.98 248.07L201.36 191.35" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="247.98" cy="248.07" r="23.47" fill="url(#N)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M135.60 193.47L201.13 188.36" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M136.07 199.46L201.59 194.34" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M221.79 320.50L233.40 351.82" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<path d="M247.98 248.07L221.79 320.50" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="135.83" cy="196.47" r="23.43" fill="url(#O)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="157.66" cy="54.13" r="12.26" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<circle cx="221.79" cy="320.50" r="23.34" fill="url(#C)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M221.79 320.50L161.47 322.38" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="161.47" cy="322.38" r="12.77" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+<path d="M221.79 320.50L250.97 345.22" stroke="#95a6c6" stroke-width="7" stroke-linecap="round"/>
+<circle cx="250.97" cy="345.22" r="13.40" fill="url(#H)" stroke="#8398bc" stroke-width=".4"/>
+</svg>
