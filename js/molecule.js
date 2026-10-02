@@ -6,6 +6,13 @@
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const phone = matchMedia('(max-width: 760px)');
+  function describeInteraction() {
+    document.querySelector('.molecule-heading .mono').textContent = phone.matches ? 'TAP AN ATOM TO EXPLORE' : 'HOVER TO EXPLORE / CLICK TO PIN';
+    canvas.setAttribute('aria-label', phone.matches ? 'Molecular research map. Tap an atom to pin its neighborhood contours and research card. Swipe horizontally to rotate; swipe vertically to scroll.' : 'Molecular research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate.');
+  }
+  phone.addEventListener('change', describeInteraction);
+  describeInteraction();
   const palette = {
     C: {light:'#8f9bad',base:'#394455',dark:'#111827',radius:.43},
     N: {light:'#96c2ff',base:'#456eff',dark:'#173399',radius:.45},
@@ -102,7 +109,14 @@
   stage.addEventListener('pointerdown',event=>{if(event.button!==0||event.target.closest('.molecule-hover-inspector'))return;dragging=true;moved=false;pointerTarget=event.target.closest('.atom-target');pointerOrigin=[event.clientX,event.clientY];previous=pointerOrigin;stage.setPointerCapture(event.pointerId);});
   stage.addEventListener('pointermove',event=>{
     if(!dragging){hoverAtom(event);return;}
-    if(Math.hypot(event.clientX-pointerOrigin[0],event.clientY-pointerOrigin[1])>6)moved=true;
+    const dx=event.clientX-pointerOrigin[0],dy=event.clientY-pointerOrigin[1];
+    // A vertical touch gesture belongs to page scrolling, not molecule rotation.
+    if(event.pointerType==='touch'&&!moved&&Math.abs(dy)>6&&Math.abs(dy)>Math.abs(dx)){
+      dragging=false;
+      if(stage.hasPointerCapture(event.pointerId))stage.releasePointerCapture(event.pointerId);
+      return;
+    }
+    if(Math.hypot(dx,dy)>6)moved=true;
     if(!moved)return;
     if(selectedIndex>=0)clearInspection();
     yaw+=(event.clientX-previous[0])*.009;pitch=Math.max(-1.3,Math.min(1.3,pitch+(event.clientY-previous[1])*.009));previous=[event.clientX,event.clientY];draw();

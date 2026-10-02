@@ -1,0 +1,120 @@
+/* Phone refinements shared by the home page and personal archives. */
+body:has(dialog[open]) { overflow: hidden; }
+@media (max-width: 760px) {
+  html { scroll-padding-top: 100px; }
+  body { -webkit-text-size-adjust: 100%; }
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 48px 44px;
+    height: 92px;
+    padding: 0 18px;
+    gap: 0;
+  }
+  .nav .brand { grid-column: 1; grid-row: 1; width: fit-content; min-height: 44px; align-items: center; }
+  .nav .brand i { align-self: center; }
+  .nav-tools { grid-column: 2; grid-row: 1; }
+  .nav .search-open { width: 44px; height: 44px; justify-content: center; padding: 0; }
+  .nav nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .nav nav a, .nav nav a:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+  }
+  .nav nav a.active { border-bottom-color: #8caaff; }
+  .hero h1 { font-size: clamp(64px, 20vw, 112px); }
+  .hero-prelude { gap: 12px; }
+  .hero-prelude > .mono { font-size: 9px; }
+  .hero-status { flex-shrink: 0; font-size: 10px; }
+  .hero-links { gap: 20px; }
+  .hero-links .solid-link { min-height: 48px; font-size: 13px; }
+  .hero-links .under-link, .hero-socials a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+  .hero-role { font-size: 18px; }
+  .intro .desktop-break { display: none; }
+  .intro > p:nth-child(2) { font-size: 16px; line-height: 1.65; }
+  .molecule-heading .mono { font-size: 9px; }
+  .molecule-stage { touch-action: pan-y; }
+  .atom-target { width: 44px; height: 44px; border-color: transparent; }
+  .molecule-controls { flex-wrap: wrap; gap: 4px 8px; padding: 8px 12px; }
+  .molecule-controls [data-molecule-mode] { min-height: 44px; min-width: 54px; padding: 8px; font-size: 12px; }
+  .molecule-controls label { min-height: 44px; gap: 7px; font-size: 12px; }
+  .molecule-controls input { width: 16px; height: 16px; margin: 0; }
+  #molecule-reset { min-width: 44px; min-height: 44px; font-size: 25px; }
+  #molecule-motion { min-width: 60px; min-height: 44px; font-size: 12px; }
+  .molecule-panel figcaption { font-size: 11px; }
+  .molecule-panel figcaption > a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 2px; }
+  .molecule-stage[data-layout='compact'] .molecule-hover-inspector { width: calc(100% - 24px); max-width: 360px; }
+  .molecule-thread > p { font-size: 14px; line-height: 1.6; }
+  .molecule-thread-links a { min-height: 48px; font-size: 15px; }
+  .molecule-thread-links a small { font-size: 11px; }
+  .molecule-hover-close { min-width: 44px; min-height: 44px; }
+  #molecule-pin { min-height: 44px; font-size: 12px; }
+  .molecule-hover-footer { font-size: 11px; }
+  .section-label { flex-wrap: wrap; gap: 10px; }
+  .section-label .mono { font-size: 10px; line-height: 1.5; }
+  .section-label > a { min-height: 44px; display: inline-flex; align-items: center; }
+  .build-copy > p:not(.build-lead) { font-size: 16px; line-height: 1.7; }
+  .build-tags { font-size: 10px; gap: 12px; }
+  .building-visual-caption { flex-wrap: wrap; gap: 10px; font-size: 12px; }
+  .poster-caption .poster-open { width: 44px; height: 44px; flex-basis: 44px; font-size: 20px; }
+  .poster-caption p { font-size: 12px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filters button { min-height: 44px; padding: 9px 12px; font-size: 12px; }
+  .filters button span { font-size: 10px; }
+  .paper-venue { font-size: 11px; }
+  .paper-row summary { display: grid; grid-template-columns: 20px minmax(0, 1fr) 24px; gap: 10px; min-height: 64px; }
+  .paper-body { padding-left: 0; }
+  .paper-body img { width: 100%; max-width: 100%; height: auto; }
+  .paper-body p { font-size: 16px; line-height: 1.7; }
+  .paper-body .authors { font-size: 13px; }
+  .paper-links { flex-wrap: wrap; gap: 8px 20px; font-size: 14px; }
+  .paper-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .bio-v2-kicker { flex-wrap: wrap; }
+  .bio-v2-archive-link { min-height: 44px; }
+  .bio-v2-intro { gap: 32px; padding-block: 32px 52px; }
+  .bio-v2-portrait { width: min(76%, 300px); }
+  .bio-v2-photo-mat { aspect-ratio: .82; }
+  .bio-v2-photo-caption { padding-top: 15px; }
+  .bio-v2-index a { min-height: 64px; }
+  .bio-v2-index-name { font-size: 15px; }
+  .experience-v2-heading h3 { font-size: clamp(32px, 8.5vw, 50px); }
+  .experience-v2-people a { display: inline-block; padding-block: 5px; }
+  .ending-writing { padding-block: 56px 64px; }
+  .notes-card__meta { flex-wrap: wrap; font-size: 11px; }
+  .notes-card__body p { font-size: 16px; }
+  .ending-writing__archive { min-height: 48px; }
+  .ending-contact__email { font-size: clamp(17px, 4.8vw, 26px); overflow-wrap: anywhere; }
+  .ending-contact__socials { flex-wrap: wrap; gap: 6px 20px; }
+  .ending-contact__socials a, .ending-footer__top { display: inline-flex; align-items: center; min-height: 44px; }
+  .archive-cell { font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; }
+  .archive-entry { min-width: 0; }
+  .archive-cell h3 { font-size: 23px; }
+  .search-dialog, .poster-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); overscroll-behavior: contain; }
+  #site-search { font-size: 16px; min-height: 48px; }
+  .search-close, .poster-dialog-close { min-width: 44px; min-height: 44px; }
+  .search-result { min-height: 56px; }
+  .poster-dialog-footer > span { display: block; }
+  .poster-dialog-footer > a { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
+}
+@media (max-width: 360px) {
+  .nav { padding-inline: 12px; }
+  .wrap { width: calc(100% - 32px); }
+  .hero-prelude > .mono { font-size: 8px; }
+  .hero-links { gap: 14px; }
+  .hero-links .solid-link { gap: 18px; padding-inline: 13px; }
+  .bio-v2-index { grid-template-columns: minmax(0, 1fr); }
+  .bio-v2-index-name { font-size: 16px; }
+  .molecule-controls { gap: 4px; padding-inline: 8px; }
+  #molecule-motion { margin-left: 0; }
+}

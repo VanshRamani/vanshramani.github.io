@@ -17,7 +17,7 @@ Open http://127.0.0.1:8000/.
 - `images/molecular-field.svg`: custom contour field behind the molecule.
 - `js/caffeine-data.js`: local atom coordinates and bonds from [PubChem CID 2519](https://pubchem.ncbi.nlm.nih.gov/compound/2519), downloaded from the PUG REST 3D record. Caffeine contains 24 atoms including hydrogens and 25 bonded atom pairs.
 - `js/molecule.js`: perspective projection, shaded atoms and bonds, pointer and keyboard rotation, atom picking, neighborhood contour fields, research-direction cards, and motion control.
-- `css/site.css`, `css/portfolio.css`, `css/lower-site.css`: responsive typography, color fields, layouts, and motion.
+- `css/site.css`, `css/portfolio.css`, `css/lower-site.css`, `css/mobile.css`: responsive typography, color fields, layouts, motion, and phone controls.
 - `js/site.js`: local search, navigation, poster enlargement, and publication filtering.
 - `content/`: original writing, projects, coursework, achievements, personal notes, and experience/news.
 - `fonts/`: self-hosted typefaces and open-font licenses.
@@ -32,5 +32,7 @@ Open http://127.0.0.1:8000/.
 
 The atom-to-research mapping is a navigation metaphor; the molecular geometry and local bonded neighborhoods come from the stored caffeine record. Contours follow the projected positions of the selected atom and its nearby bonded atoms. They are a visual navigation aid, not a physical force-field calculation.
 
+
+Phone navigation keeps all four sections visible. Touch controls use larger tap targets, vertical swipes scroll past the molecule, and horizontal swipes rotate it. Search uses a 16px input to avoid automatic zoom on iOS; open viewers contain scrolling.
 
 Motion respects reduced-motion preferences. The molecule stops rendering off-screen or in a hidden tab. Without JavaScript, a static caffeine model replaces the canvas, poster links open their SVGs, and native publication details remain usable. Existing `/content/` and `/space/` URLs remain available. The original site is preserved in Git history.
