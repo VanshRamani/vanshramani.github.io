@@ -91,6 +91,7 @@
     ['PAPER', 'ReasonBENCH', 'reason reasoning stability LLM ICML', `${root}index.html#paper-reasonbench`],
     ['PAPER', 'SC3', 'solvents solubility molecular benchmark NeurIPS 2026', `${root}index.html#paper-sc3`],
     ['PAPER', 'MolMerger', 'molecule molecules chemistry solubility GNN JCTC', `${root}index.html#paper-molmerger`],
+    ['PAGE', 'News', 'announcements milestones accepted NeurIPS SC3 YC', `${root}content/news.html`],
     ['PAGE', 'Writing', 'notes blogs tutorials ICLR', `${root}content/blogs.html`],
     ['PAGE', 'Favorites', 'jazz music travel personal', `${root}content/fun.html`],
     ['PAGE', 'Projects', 'erudite packing engineering experiments', `${root}content/projects.html`],
@@ -157,7 +158,7 @@
     if (progress) progress.style.transform = `scaleX(${total > 0 ? Math.max(0, Math.min(1, scrollY / total)) : 0})`;
     let current = '';
     sections.forEach(section => { if (section.getBoundingClientRect().top < 180) current = section.id; });
-    navLinks.forEach(link => { const active = link.hash === `#${current}`; link.classList.toggle('active', active); if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+    navLinks.forEach(link => { const active = link.hash ? link.hash === `#${current}` : link.pathname === location.pathname; link.classList.toggle('active', active); if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
   }
   window.addEventListener('scroll', () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateScroll); }, { passive: true });
   window.addEventListener('resize', updateScroll); updateScroll();
