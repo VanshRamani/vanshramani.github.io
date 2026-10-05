@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Publication index (publications.js)
+   The template's filters, rows and hover stay exactly as they are. JS adds
+   one square blue block that slides behind the active filter, and animates
+   rows instead of snapping them. Without .has-pill the template's own
+   button.active background is used (no JS, reduced motion).
+   ========================================================================== */
+
+/* One 100px square, translated and scaled onto the active button (radius 0). */
+.filters.has-pill .filter-pill { display: block; position: absolute; top: 0; left: 0; z-index: 0; width: 100px; height: 100px; background: var(--blue); border-radius: 0; transform-origin: 0 0; pointer-events: none; }
+.filters.has-pill button.active { background: transparent; }
+/* The label that loses the block darkens at once; the one gaining it turns
+   white only as the block arrives under it (never white on paper). */
+.filters.has-pill button { transition: color .12s ease-out; }
+.filters.has-pill button.active { transition: color .1s ease-in .1s; }
+
+/* Rows clip their content only while a height tween runs. */
+.paper-row { transition: border-color .25s; }
+.paper-row.is-animating { overflow: hidden; }
+
+/* Closing reads as closed at once (arrow and rule) while the height eases shut. */
+.paper-row.is-closing { border-bottom-color: var(--line); }
+.paper-row.is-closing .paper-plus { transform: none; color: inherit; }
