@@ -1,0 +1,16 @@
+/* Research posters: the template's gentle zoom on hover, now shared by the
+   <img> and the inline SVG that posters.js lays over it. Gestures animate
+   inside the SVG and need no styles of their own.
+   The SVG's transition is scoped to .has-svg: borrowPoster() drops that class
+   before the explainer moves the SVG, so a CSS transition never fights its FLIP. */
+@media (hover: hover) {
+  .poster-link > img,
+  .poster-link.has-svg > svg.poster-svg { transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+  .poster-link:hover > img,
+  .poster-link.has-svg:hover > svg.poster-svg { transform: scale(1.025); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster-link > img,
+  .poster-link.has-svg > svg.poster-svg { transition: none; }
+}

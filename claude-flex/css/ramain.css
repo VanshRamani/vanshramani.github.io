@@ -1,0 +1,38 @@
+/* ramAIn demo: the caption's active phase, the square motif marker beneath
+   it, the honest ILLUSTRATIVE label and the real replay button. The caption
+   keeps the template's colours (#e2eaff, #23365c, #456dea arrows); everything
+   here is added by js/ramain.js, so without JS the caption is untouched. */
+
+.building-visual-caption.has-demo { position: relative; container-type: inline-size; }
+
+.building-visual-caption [data-phase] { transition: color .15s; }
+.building-visual-caption [data-phase].is-active { color: var(--blue); }
+
+/* The motif: a 6px blue square that slides beneath the active phase. */
+.ramain-marker { position: absolute; left: 0; top: 0; width: 6px; height: 6px; background: var(--blue); transform: scale(0); pointer-events: none; }
+
+/* Honest labelling at the caption's start edge. */
+.ramain-illustrative { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 9px; line-height: 1; letter-spacing: .9px; color: #23365c; pointer-events: none; }
+
+/* The ↺ as a real control, in the gallery's square-button vocabulary. */
+.building-visual-caption .loop-replay { position: relative; display: inline-grid; place-items: center; width: 24px; height: 24px; margin-block: -3px; border: 1px solid #7d99d5; color: #456dea; font-size: 13px; line-height: 1; transition: background .2s, color .2s, border-color .2s; }
+.building-visual-caption .loop-replay:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@media (hover: hover) {
+  .building-visual-caption .loop-replay:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+}
+.building-visual-caption .loop-replay:active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* Narrow captions (phones, the tablet two-column grid): the label moves into the top-left corner. */
+@container (max-width: 520px) {
+  .ramain-illustrative { top: 6px; left: 8px; transform: none; font-size: 8px; letter-spacing: .7px; }
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  /* 44px touch target without changing the caption's height. */
+  .building-visual-caption .loop-replay::after { content: ''; position: absolute; inset: -10px; }
+}
+
+@media (forced-colors: active) {
+  .ramain-marker { background: CanvasText; }
+  .building-visual-caption [data-phase].is-active { color: Highlight; }
+}

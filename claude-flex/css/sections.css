@@ -1,0 +1,38 @@
+/* ==========================================================================
+   sections — quiet print refinements below the hero
+   Offset-shadow registration, the About rail nodes and portrait frame.
+   Every override is gated by html.motion and only active while a box is
+   registering, so the authored flex.css values are the rest state.
+   ========================================================================== */
+
+/* 0 → 1: how much of the print offset has been laid down. Not inherited, so
+   tweening it never restyles the box's subtree. */
+@property --reg { syntax: '<number>'; inherits: false; initial-value: 1; }
+
+html.motion:not(.motion-failed) .is-registering { --reg-x: 7px; --reg-c: var(--panel-shadow); box-shadow: calc(var(--reg) * var(--reg-x)) calc(var(--reg) * var(--reg-x)) 0 var(--reg-c); }
+html.motion:not(.motion-failed) .building-visual.is-registering { --reg-c: #334267; }
+html.motion:not(.motion-failed) .experience-v2.is-registering { --reg-x: 9px; --reg-c: #e0e6f8; }
+html.motion:not(.motion-failed) .bio-v2-photo-mat.is-registering { --reg-x: 12px; --reg-c: #dfe5f8; }
+/* The mat's second plate (::before frame) slides out with the shadow. */
+html.motion:not(.motion-failed) .bio-v2-photo-mat.is-registering::before { --reg: inherit; transform: translate(calc(var(--reg) * -9px), calc(var(--reg) * 9px)); }
+
+/* The hero panel prints with the hero square (~0.8s). Until the modules are
+   up, keep its plate unlaid; sections.js takes over before this lifts. */
+html.motion:not(.motion-failed):not(.modules-ready):not(.motion-paused) .molecule-panel { box-shadow: 0 0 0 var(--panel-shadow); }
+
+@media (max-width: 760px) {
+  html.motion:not(.motion-failed) .experience-v2.is-registering { --reg-x: 5px; }
+}
+
+/* About timeline: each node fills as the rail passes, then returns to its
+   authored hollow ring. */
+html.motion:not(.motion-failed) .experience-v2-row.is-pulsing::after { animation: sections-node-pulse .46s var(--pulse-delay, 0s) both; }
+@keyframes sections-node-pulse {
+  0% { background: var(--bio-white); transform: scale(1); }
+  28% { background: var(--bio-blue); transform: scale(1.18); }
+  100% { background: var(--bio-white); transform: scale(1); }
+}
+
+@media print {
+  .is-registering, .is-registering::before { --reg: 1 !important; }
+}

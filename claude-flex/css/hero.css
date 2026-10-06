@@ -1,0 +1,60 @@
+/* ==========================================================================
+   hero — the blue-square motif, the hero type and the nav (hero.js)
+   The name's clip-rise and the hero square's stamp are pure CSS keyed on
+   html.motion, so they run at first paint without JS. Everything that hides
+   is gated by html.motion:not(.motion-failed); the rest state is flex.css.
+   ========================================================================== */
+
+@keyframes sq-stamp {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+/* 1. The name is static Instrument Serif type (flex.css); nothing hides it. */
+
+/* 3–4. Heading squares and section bullets: armed (scale 0) only just before
+   they scroll in, stamped once at ~80% of the viewport, then released. */
+html.motion:not(.motion-failed) .sq-armed::before { transform: scale(0); }
+html.motion:not(.motion-failed) .sq-armed.sq-stamping::before { animation: sq-stamp .35s var(--ease-spring) both; }
+
+/* 6. The hand-off. The period hides only while its clone is in flight. */
+html.motion:not(.motion-failed) .hero-name .name-period.sq-away::before { visibility: hidden; }
+.sq-clone { position: fixed; left: 0; top: 0; z-index: 41; background: var(--blue); transform-origin: 0 0; pointer-events: none; visibility: hidden; }
+
+/* 5. Nav. Desktop: the 6px marker (hero.js positions it). Phone: the template's
+   own active tab, a 2px #8caaff rule on the 44px cell, and no marker. */
+@media (max-width: 760px) {
+  .nav nav a { border-bottom: 2px solid transparent; }
+  .nav nav a.active { border-bottom-color: #8caaff; }
+  .nav-marker { display: none; }
+}
+
+/* 7. Over the ramAIn band (same #141a2a) the nav's rule fades so the two read as one surface. */
+.nav { transition: border-color .3s ease; }
+.nav.nav-merged { border-bottom-color: var(--navy); }
+
+/* 8. Pause motion. Desktop: it sits just left of the scroll cue, out of flow, so
+   the template's three-part hero-bottom row (socials · map hint · cue) is untouched. */
+.hero-bottom { position: relative; }
+.motion-toggle { min-height: 27px; padding: 0 10px; font: 10px/1 var(--mono); letter-spacing: .7px; color: var(--muted); background: transparent; border: 1px solid var(--line); white-space: nowrap; }
+.motion-toggle:hover { color: var(--blue); border-color: currentColor; }
+@media (min-width: 761px) {
+  .motion-toggle { position: absolute; top: 50%; right: 37px; transform: translateY(-50%); }
+}
+/* Narrow desktop: the label would meet the map hint, so it folds to a 27px square like the cue. */
+@media (min-width: 761px) and (max-width: 900px) {
+  .motion-toggle { width: 27px; padding: 0; justify-content: center; }
+}
+@media (max-width: 900px) {
+  .motion-toggle-label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+/* Phone: a 44px square beside the 44px cue, the label kept for assistive tech. */
+@media (max-width: 760px) {
+  .hero-bottom { gap: 8px; }
+  .motion-toggle { flex: 0 0 44px; width: 44px; height: 44px; margin-left: auto; padding: 0; justify-content: center; }
+}
+
+
+@media print {
+  .sq-clone { display: none !important; }
+}

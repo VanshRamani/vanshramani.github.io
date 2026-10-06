@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Search (search.js)
+   The template's framed dialog. It scales up from the search button (the
+   transform is inline, from JS), the backdrop fades with it, and one blue
+   fill slides under the active result. Without .has-fill the template's own
+   .search-result.active background is used.
+   ========================================================================== */
+
+.search-dialog[open]::backdrop { animation: search-backdrop-in .18s ease-out; }
+.search-dialog.is-closing::backdrop { animation: search-backdrop-out .18s ease-in forwards; }
+@keyframes search-backdrop-in { from { opacity: 0; } }
+@keyframes search-backdrop-out { to { opacity: 0; } }
+
+/* One 100px-tall block, translated and scaled onto the active row (radius 0). */
+.search-fill { position: absolute; top: 0; left: 0; z-index: 0; width: 0; height: 100px; background: var(--blue); opacity: 0; transform-origin: 0 0; pointer-events: none; }
+.search-result { z-index: 1; transition: color .12s, border-color .12s; }
+.search-result small { transition: color .12s; }
+/* The row gaining the fill turns white as the fill lands (never white on paper). */
+.search-results.has-fill .search-result.active { background: transparent; transition-delay: .05s; }
+.search-results.has-fill .search-result.active small { transition-delay: .05s; }

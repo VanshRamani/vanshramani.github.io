@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Poster explainer — the template's poster dialog (css/portfolio.css
+   .poster-dialog), enlarged to near full screen. Frame: #f8faff, 1px #8fa5ce,
+   12px offset shadow, #10192dd9 backdrop, header "Title · Esc ×",
+   disclaimer footer. Created by js/explainer.js.
+   ========================================================================== */
+
+.explainer {
+  position: fixed; inset: 24px;
+  width: auto; height: auto; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  background: transparent; color: #111827; overflow: visible;
+  font: 15px/1.6 var(--sans);
+}
+.explainer[open] { display: block; }
+.explainer [hidden] { display: none !important; }
+.explainer::backdrop { background: #10192dd9; animation: explainer-fade-in .25s ease-out; }
+.explainer.is-closing::backdrop { animation: explainer-fade-out .3s ease-in forwards; }
+.explainer.is-reduced::backdrop { animation-duration: .15s; }
+@keyframes explainer-fade-in { from { opacity: 0; } }
+@keyframes explainer-fade-out { to { opacity: 0; } }
+
+/* The frame is its own layer, so it can fade and scale in while the vector,
+   which is never inside a transformed or faded ancestor, FLIPs on top. */
+.explainer-frame { position: absolute; inset: 0; background: #f8faff; border: 1px solid #8fa5ce; box-shadow: 12px 12px 0 #0003; transform-origin: 50% 50%; }
+.explainer-layout {
+  position: absolute; inset: 1px; z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 62fr) minmax(300px, 38fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-areas: "head head" "stage side" "foot foot";
+}
+
+/* Header: title + Esc × */
+.explainer-head { grid-area: head; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 8px 10px 8px 20px; border-bottom: 1px solid #c8d3e8; }
+.explainer-head h2 { font-size: 24px; font-weight: 500; line-height: 1.2; letter-spacing: -.7px; min-width: 0; overflow-wrap: anywhere; }
+.explainer-close { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 10px; font-size: 13px; flex-shrink: 0; }
+.explainer-close span { margin-left: 12px; font-size: 24px; line-height: 1; }
+.explainer-close:hover { color: var(--blue); }
+
+/* Stage: the card's tint, with the live vector poster on it */
+.explainer-stage { grid-area: stage; position: relative; z-index: 2; min-width: 0; min-height: 0; border-right: 1px solid #c8d3e8; touch-action: pan-y; }
+.explainer-tint { position: absolute; inset: 0; background: var(--explainer-tint, #e6ecf8); }
+.explainer-stage > svg, .explainer-stage > .explainer-fallback {
+  position: absolute; top: 20px; left: 20px;
+  width: calc(100% - 40px); height: calc(100% - 40px); max-width: none;
+  display: block;
+}
+.explainer-fallback { object-fit: contain; }
+
+/* Side panel: step text + controls */
+.explainer-side { grid-area: side; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.explainer-panel { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 34px 34px 28px; display: flex; flex-direction: column; }
+.explainer-step { max-width: 560px; }
+.explainer-panel.has-more { -webkit-mask-image: linear-gradient(#000 calc(100% - 40px), #0000); mask-image: linear-gradient(#000 calc(100% - 40px), #0000); }
+
+.explainer-figure { margin-bottom: 24px; }
+.explainer-figure img { width: 100%; max-height: 250px; object-fit: contain; background: white; padding: 12px; border: 1px solid var(--line); }
+.explainer-kicker { color: var(--muted); margin-bottom: 14px; }
+.explainer-heading { font-size: clamp(25px, 2.3vw, 34px); font-weight: 500; line-height: 1.12; letter-spacing: -.035em; color: var(--ink); overflow-wrap: anywhere; }
+.explainer-heading:focus { outline: none; }
+.explainer-heading:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.explainer-caption { margin-top: 18px; }
+.explainer-caption p { font-size: 17px; line-height: 1.6; max-width: 46ch; }
+.explainer-caption p + p { margin-top: 10px; }
+.explainer-caption p.is-label { font: 13px/1.6 var(--mono); letter-spacing: .07em; color: var(--ink); }
+.explainer-caption p.explainer-authors { font-size: 13px; line-height: 1.7; color: var(--muted); }
+
+.explainer-terms { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.explainer-terms li { display: flex; flex-direction: column; gap: 2px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.explainer-term { font: 12px/1.5 var(--mono); letter-spacing: .06em; color: var(--ink); }
+.explainer-term-note { font-size: 14px; line-height: 1.5; color: var(--muted); }
+
+.explainer-actions { margin-top: 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.explainer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; }
+.explainer-links a { border-bottom: 1px solid #a5a9b6; padding-bottom: 3px; }
+.explainer .explainer-cta { gap: 30px; }
+
+/* Stage index: the poster's own stage labels, current one in ink (pointer shortcut;
+   hidden by JS whenever it would make the panel scroll) */
+.explainer-index { list-style: none; margin: auto 0 0; padding: 36px 0 0; max-width: 560px; }
+.explainer-index li { display: flex; gap: 16px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line); font: 10px/1.5 var(--mono); letter-spacing: .06em; color: var(--muted); cursor: pointer; transition: color .2s; }
+.explainer-index li:last-child { border-bottom: 1px solid var(--line); }
+.explainer-index li:hover { color: var(--blue); }
+.explainer-index li.is-current { color: var(--ink); }
+.explainer-index li.is-current .explainer-index-no { color: var(--blue); }
+.explainer-index-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Controls: Prev · step squares · count · Next */
+.explainer-controls { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-top: 1px solid #c8d3e8; }
+.explainer-prev, .explainer-next {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-width: 44px; min-height: 44px; padding: 0 14px;
+  font-size: 12px; background: #fff; border: 1px solid #c8d3e8;
+  transition: border-color .2s, color .2s;
+}
+.explainer-prev:hover, .explainer-next:hover { border-color: var(--blue); color: var(--blue); }
+.explainer-prev[aria-disabled="true"], .explainer-next[aria-disabled="true"] { opacity: .4; cursor: default; border-color: #c8d3e8; color: inherit; }
+.explainer-dots { flex: 1; display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; min-width: 0; }
+.explainer-dot { display: grid; place-items: center; width: 26px; height: 44px; }
+.explainer-dot i { display: block; width: 10px; height: 10px; background: #b8c5e0; transition: background-color .2s; }
+.explainer-dot.is-seen i { background: #8fa5ce; }
+.explainer-dot:hover i { background: #8fa5ce; }
+.explainer-dot[aria-current="step"] i { background: var(--blue); }
+.explainer-dot:focus-visible { outline-offset: -2px; }
+.explainer-count { color: var(--muted); min-width: 46px; text-align: right; }
+
+/* Footer: disclaimer + link, as in the template */
+.explainer-foot { grid-area: foot; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 13px 20px; font-size: 12px; border-top: 1px solid #c8d3e8; }
+.explainer-foot > span { color: #63718a; }
+.explainer-foot > a { color: var(--blue); flex-shrink: 0; }
+.explainer-foot > a:hover { color: #153ed9; }
+
+/* Tablet: a little more room for the text */
+@media (max-width: 1100px) {
+  .explainer-layout { grid-template-columns: minmax(0, 58fr) minmax(280px, 42fr); }
+  .explainer-panel { padding: 28px 26px 24px; }
+}
+
+/* Short landscape screens */
+@media (max-height: 560px) and (min-width: 761px) {
+  .explainer { inset: 12px; }
+  .explainer-head { padding-block: 2px; }
+  .explainer-panel { padding: 18px 22px; }
+  .explainer-stage > svg, .explainer-stage > .explainer-fallback { top: 10px; left: 10px; width: calc(100% - 20px); height: calc(100% - 20px); }
+  .explainer-controls { padding-block: 4px; }
+  .explainer-foot { padding-block: 8px; }
+}
+
+/* Phone: stage on top, scrollable panel below, 44px targets */
+/* Narrow desktop: the side column is too slim for dots + Prev + count + Next in one row. */
+@media (min-width: 761px) and (max-width: 1060px) {
+  .explainer-controls { flex-wrap: wrap; row-gap: 0; }
+  .explainer-dots { order: -1; flex: 1 0 100%; }
+  .explainer-count { flex: 1; min-width: 0; text-align: center; }
+}
+@media (max-width: 760px) {
+  .explainer { inset: 12px; }
+  .explainer-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto clamp(170px, 33dvh, 330px) minmax(0, 1fr) auto;
+    grid-template-areas: "head" "stage" "side" "foot";
+  }
+  .explainer-head { padding: 4px 4px 4px 15px; gap: 12px; }
+  .explainer-head h2 { font-size: 22px; }
+  .explainer-stage { border-right: 0; border-bottom: 1px solid #c8d3e8; }
+  .explainer-stage > svg, .explainer-stage > .explainer-fallback { top: 10px; left: 10px; width: calc(100% - 20px); height: calc(100% - 20px); }
+  .explainer-panel { padding: 20px 16px 22px; }
+  .explainer-heading { font-size: 24px; }
+  .explainer-caption { margin-top: 12px; }
+  .explainer-caption p { font-size: 16px; }
+  .explainer-caption p.explainer-authors { font-size: 13px; }
+  .explainer-terms { margin-top: 18px; }
+  .explainer-index { display: none !important; }
+  /* Title, authors and links first; the figure follows them. */
+  .explainer-step { display: flex; flex-direction: column; }
+  .explainer-figure { order: 9; margin: 24px 0 0; }
+  .explainer-figure img { max-height: 200px; }
+  .explainer-links { font-size: 14px; gap: 0 20px; }
+  .explainer-links a { display: inline-flex; align-items: center; min-height: 44px; padding-bottom: 0; border-bottom: 0; text-decoration: underline; text-decoration-color: #a5a9b6; text-underline-offset: 5px; }
+  .explainer .explainer-cta { min-height: 48px; }
+  .explainer-controls { flex-wrap: wrap; gap: 0 8px; padding: 2px 10px 8px; }
+  .explainer-dots { order: -1; flex: 1 0 100%; }
+  .explainer-dot { width: 44px; }
+  .explainer-count { flex: 1; text-align: center; min-width: 0; }
+  .explainer-foot { display: block; padding: 8px 15px 2px; font-size: 11px; }
+  .explainer-foot > span { display: block; font-size: 10px; }
+  .explainer-foot > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+}
+
+@media (forced-colors: active) {
+  .explainer-frame { border-color: CanvasText; }
+  .explainer-dot i { background: GrayText; forced-color-adjust: none; }
+  .explainer-dot[aria-current="step"] i { background: Highlight; }
+}
+
+/* Focus wash: the stage tint laid over everything outside the current stage
+   region. It shares the poster's viewBox, so it tracks the camera exactly. */
+.explainer-stage > .explainer-focus { pointer-events: none; }
+.explainer-focus path:first-child { fill: var(--explainer-tint, #e6ecf8); fill-opacity: .9; }
+.explainer-crop { fill: none; stroke: #3c65b8; stroke-opacity: .35; stroke-width: 1; }
+.explainer-marks { fill: none; stroke: #3c65b8; stroke-width: 1.5; stroke-linecap: square; }
+.explainer-focus.is-whole .explainer-crop, .explainer-focus.is-whole .explainer-marks { display: none; }

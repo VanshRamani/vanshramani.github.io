@@ -1,0 +1,98 @@
+/* ==========================================================================
+   molecule — the caffeine field (molecule.js, molecule-core.js, -2d.js, -gl.js)
+   The panel shell (field SVG, border, 7px offset, corner brackets) is flex.css.
+   This file sizes the two stacked canvases, ports the template's research card
+   (css/portfolio.css + mobile.css) and refines the legend into a printed key.
+   ========================================================================== */
+
+/* 1. Canvases. The stage height is flex.css's (362 / 315 / 300px); the canvas
+   keeps it even when a compact stage grows to hold the card below it. */
+.molecule-stage { --molecule-h: 362px; touch-action: pan-y; }
+@media (max-width: 1100px) { .molecule-stage { --molecule-h: 315px; } }
+@media (max-width: 760px) { .molecule-stage { --molecule-h: 300px; } }
+.molecule-stage #molecule-canvas { height: var(--molecule-h); }
+.molecule-stage.is-dragging #molecule-canvas { cursor: grabbing; }
+#molecule-canvas:focus-visible { outline-offset: -4px; }
+.molecule-gl { position: absolute; left: 0; top: 0; width: 100%; height: var(--molecule-h); pointer-events: none; opacity: 0; }
+.molecule-stage[data-layout='compact'].has-inspection { height: auto; }
+
+/* 2. The field's caption: what the contours are, said once, quietly. */
+.molecule-field-label { position: absolute; left: 25px; top: calc(var(--molecule-h) - 25px); z-index: 2; color: #536788; font: 9px/1 var(--mono); letter-spacing: .7px; pointer-events: none; white-space: nowrap; }
+@media (max-width: 1100px) { .molecule-field-label { left: 18px; } }
+@media (max-width: 760px) { .molecule-field-label { left: 17px; font-size: 8px; } }
+
+/* 3. Research card (template: portfolio.css "Neighborhood contours…"). */
+.molecule-hover-inspector { --thread-color: #175c75; --thread-tint: #e1f4f5; position: absolute; left: 0; top: 0; z-index: 50; display: block; width: 230px; pointer-events: auto; }
+.molecule-hover-inspector[hidden] { display: none; }
+.molecule-thread { min-width: 0; flex: 1; background: var(--thread-tint); border: 1px solid #98aecb; padding: 12px 14px 10px; box-shadow: 4px 5px 0 #9cafd13d; }
+.molecule-hover-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.molecule-hover-heading > span { font: 9px var(--mono); color: var(--thread-color); letter-spacing: 1px; }
+.molecule-hover-close { padding: 0; font-size: 21px; line-height: 1; color: #526982; }
+.molecule-hover-close:hover { color: var(--thread-color); }
+.molecule-thread h2 { font-size: 22px; letter-spacing: -.9px; line-height: 1.08; margin-top: 8px; }
+.molecule-thread > p { font-size: 12px; line-height: 1.55; color: #455b71; margin-top: 8px; }
+.molecule-thread-links { margin-top: 10px; }
+.molecule-thread-links a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 7px 0; border-top: 1px solid #7894b43b; font-size: 13px; line-height: 1.3; }
+.molecule-thread-links a small { display: block; font-size: 9px; color: #536b85; margin-top: 3px; }
+.molecule-thread-links a b { color: var(--thread-color); font-size: 17px; font-weight: 400; transition: transform .2s var(--ease-out); }
+.molecule-thread-links a:hover { color: var(--thread-color); }
+.molecule-thread-links a:hover b { transform: translate(2px, -2px); }
+.molecule-hover-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 8px; margin-top: 6px; border-top: 1px solid #7894b43b; font-size: 9px; color: #607791; }
+#molecule-neighborhood { font: 9px/1.3 var(--mono); letter-spacing: .5px; text-align: right; color: #4b5d74; }
+#molecule-pin { font-size: 10px; padding: 3px 0; color: var(--thread-color); }
+.molecule-hover-inspector :focus-visible { outline-offset: 2px; }
+html.motion .molecule-hover-inspector:not([hidden]) .molecule-thread { animation: atom-card-enter .15s ease both; }
+@keyframes atom-card-enter { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* Compact stages: the card flows below the canvas (template rules), and the
+   bottom bracket keeps framing the canvas rather than the grown stage. */
+.molecule-stage[data-layout='compact'] .molecule-hover-inspector { position: relative; left: auto !important; top: auto !important; margin: 8px 12px 14px auto; }
+.molecule-stage[data-layout='compact'] .molecule-corner.bottom-right { bottom: auto; top: calc(var(--molecule-h) - 30px); }
+
+/* 4. The legend: a quiet printed key inside the panel border. Mono numbers,
+   sans labels, hairline rules; the active entry takes its direction's colour. */
+.molecule-legend { background: #eef3ffd9; }
+.molecule-legend button { position: relative; gap: 3px; height: 100%; min-height: 52px; padding: 8px 11px 9px; color: #2b3d60; transition: color .15s ease, background-color .15s ease; }
+.molecule-legend button .mono { font-size: 9px; letter-spacing: .7px; color: #56698a; transition: color .15s ease; }
+.molecule-legend button::before { content: ''; position: absolute; left: -1px; right: 0; top: -1px; height: 2px; background: var(--dir-color, var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--ease-out); }
+.molecule-legend li:first-child button::before { left: 0; }
+.molecule-legend button.is-active { color: var(--dir-color); background: var(--dir-tint); }
+.molecule-legend button.is-active .mono { color: var(--dir-color); }
+.molecule-legend button.is-active::before { transform: none; }
+.molecule-legend button:focus-visible { outline-offset: -3px; }
+@media (hover: hover) and (pointer: fine) {
+  .molecule-legend button:hover:not(.is-active) { color: var(--ink); background: #e6eeff; }
+}
+@media (max-width: 1100px) {
+  .molecule-legend button { padding-inline: 8px; font-size: 10.5px; }
+}
+
+/* Narrow panels (phones, and two-column heroes under ~1000px): a 3 × 2 key. */
+.molecule-panel { container-type: inline-size; }
+@container (max-width: 480px) {
+  .molecule-legend { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .molecule-legend li:nth-child(3n + 1) { border-left: 0; }
+  .molecule-legend li:nth-child(n + 4) { border-top: 1px solid var(--panel-line); }
+  .molecule-legend li:nth-child(3n + 1) button::before { left: 0; }
+}
+@media (max-width: 760px) {
+  .molecule-legend button { min-height: 52px; padding: 8px 10px 9px; font-size: 12px; }
+
+  .molecule-stage[data-layout='compact'] .molecule-hover-inspector { width: calc(100% - 24px); max-width: 360px; }
+  .molecule-thread > p { font-size: 14px; line-height: 1.6; }
+  .molecule-thread-links a { min-height: 48px; font-size: 15px; }
+  .molecule-thread-links a small { font-size: 11px; }
+  .molecule-hover-close { min-width: 44px; min-height: 44px; margin: -10px -12px -10px 0; }
+  #molecule-pin { min-height: 44px; font-size: 12px; }
+  .molecule-hover-footer { font-size: 11px; }
+  #molecule-neighborhood { font-size: 10px; }
+  .molecule-thread { padding: 14px 14px 11px; }
+  .molecule-thread h2 { font-size: 23px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .molecule-hover-inspector:not([hidden]) .molecule-thread { animation: none; }
+}
+@media print {
+  .molecule-gl, .molecule-field-label, .molecule-hover-inspector { display: none !important; }
+}
