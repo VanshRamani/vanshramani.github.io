@@ -426,7 +426,7 @@ function runGesture(name, svg, { speed = 1, onEnd } = {}) {
     tl.kill();
     dropGhost();
     stage.restore();
-    console.warn(`[claude-flex] ${name} gesture skipped:`, error);
+    console.warn(`[site] ${name} gesture skipped:`, error);
     return null;
   }
   if (!(tl.duration() > 0)) { done = true; dropGhost(); stage.restore(); return null; }

@@ -1,4 +1,4 @@
-// Turns a poster file from ../images/posters/ into a self-contained inline <svg>.
+// Turns a poster file from images/posters/ into a self-contained inline <svg>.
 //
 // The eight posters were authored as standalone documents. Inlined side by side
 // they collide: they reuse ids (#arrow, #paper, #grid, #poster-title…), ship
@@ -9,13 +9,13 @@
 //     animation hooks, so select with [data-c~="node"] rather than .node
 //   • its <style> selectors scoped to [data-psvg="<scope>"]
 //   • <title>/<desc> removed (the card's <img alt> is the accessible name)
-// The source files in ../images/posters/ are never modified.
+// The source files in images/posters/ are never modified.
 
 const textCache = new Map();
 let instance = 0;
 
 export const POSTERS = ['ramain', 'panorama', 'dissolvr', 'bonsai', 'condensation', 'reasonbench', 'sc3', 'molmerger'];
-export const posterURL = name => `../images/posters/${name}.svg`;
+export const posterURL = name => `images/posters/${name}.svg`;
 
 export function fetchPosterText(name) {
   if (!textCache.has(name)) {
@@ -111,7 +111,7 @@ export async function overlayPoster(link) {
     link._posterSVG = svg;
     return svg;
   } catch (error) {
-    console.warn('[claude-flex] poster stayed as <img>:', error);
+    console.warn('[site] poster stayed as <img>:', error);
     return null;
   }
 }

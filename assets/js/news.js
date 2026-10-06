@@ -59,7 +59,7 @@ export function init() {
 
   function apply(entry) {
     story.textContent = entry.summary;
-    story.href = `../content/news.html#news-${entry.id}`;
+    story.href = `content/news.html#news-${entry.id}`;
     if (date) { date.textContent = entry.date; date.dateTime = machineDate(entry.date); }
   }
 

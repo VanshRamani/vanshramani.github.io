@@ -63,14 +63,14 @@ export const levelOf = rho => Math.sqrt(Math.max(0, -2 * Math.log(Math.max(rho, 
 export const washAt = L => FIELD.wash * (1 - smoothstep(FIELD.washFrom, FIELD.washTo, L));
 
 /* ============================================================ content */
-// Verbatim from the template (js/molecule.js); links rebased for claude-flex/.
+// Verbatim from the template (js/molecule.js); links rebased for the homepage.
 export const DIRECTIONS = [
   { title: 'Molecular learning', atom: 6, color: '#175c75', tint: '#e1f4f5', links: [['DISSOLVR', 'paper-dissolvr', 'ICML 2026'], ['SC³', 'paper-sc3', 'NeurIPS 2026'], ['MolMerger', 'paper-molmerger', 'JCTC 2024']] },
   { title: 'Graph distillation', atom: 2, color: '#315d36', tint: '#edf5da', links: [['Bonsai', 'paper-bonsai', 'ICLR 2025'], ['Graph Condensation Needs a Reset', 'paper-condensation', 'ICML 2026 · Spotlight']] },
   { title: 'Similarity search', atom: 8, color: '#284fc8', tint: '#e5ebff', links: [['Panorama', 'paper-panorama', 'Fast-Track Nearest Neighbors']] },
   { title: 'Reasoning stability', atom: 3, color: '#6d3b88', tint: '#f0e8f8', links: [['ReasonBENCH', 'paper-reasonbench', 'EIML · ICML 2026']] },
   { title: 'Computer-use agents', atom: 5, color: '#224ca0', tint: '#e1ecff', links: [['ramAIn', 'https://ramain.ai', 'Co-founder & CTO · YC W26'], ['What I’m building', '#building', 'Computer use & orchestration']] },
-  { title: 'Unlearning & neurosymbolic AI', atom: 9, color: '#845046', tint: '#f6e9e2', links: [['Research experience', '../content/background.html', 'Carnegie Mellon']] },
+  { title: 'Unlearning & neurosymbolic AI', atom: 9, color: '#845046', tint: '#f6e9e2', links: [['Research experience', 'content/background.html', 'Carnegie Mellon']] },
 ];
 const PREVIEWS = [
   'Solubility prediction, interpretable models, and solute–solvent interactions.',

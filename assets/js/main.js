@@ -19,7 +19,7 @@ const results = await Promise.allSettled(MODULES.map(async name => {
   return name;
 }));
 results.forEach((result, i) => {
-  if (result.status === 'rejected') console.error(`[claude-flex] ${MODULES[i]} failed to start`, result.reason);
+  if (result.status === 'rejected') console.error(`[site] ${MODULES[i]} failed to start`, result.reason);
 });
 
 ScrollTrigger?.refresh();

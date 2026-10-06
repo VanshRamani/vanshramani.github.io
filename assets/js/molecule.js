@@ -59,7 +59,7 @@ function showFallback(canvas) {
   if (canvas.parentElement.querySelector('.molecule-fallback')) return;
   const img = new Image(600, 362);
   img.className = 'molecule-fallback';
-  img.src = '../images/caffeine-fallback.svg';
+  img.src = 'images/caffeine-fallback.svg';
   img.alt = 'Ball-and-stick molecular model of caffeine';
   canvas.replaceWith(img);
 }
