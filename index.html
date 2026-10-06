@@ -1,475 +1,376 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#f7f8fa" name="theme-color"/>
-<meta content="Founder of ramAIn. Researcher working on efficient, reliable AI." name="description"/>
-<meta content="Vansh Ramani — Founder &amp; Researcher" property="og:title"/>
-<meta content="Founder of ramAIn. Researcher working on efficient, reliable AI." property="og:description"/>
-<meta content="https://vanshramani.github.io/images/vansh_profile_pic.jpg" property="og:image"/>
-<title>
-   Vansh Ramani — Founder &amp; Researcher
-  </title>
-<link href="images/monogram.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/fonts.css" rel="stylesheet"/>
-<link href="css/site.css" rel="stylesheet"/>
-<script defer="" src="js/site.js?v=2">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fa">
+<meta name="description" content="Founder of ramAIn. Researcher working on efficient, reliable AI.">
+<meta property="og:title" content="Vansh Ramani — Founder &amp; Researcher">
+<meta property="og:description" content="Founder of ramAIn. Researcher working on efficient, reliable AI.">
+<meta property="og:image" content="https://vanshramani.github.io/images/vansh_profile_pic.jpg">
+<title>Vansh Ramani — Founder &amp; Researcher</title>
+<link rel="icon" href="images/monogram.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo-0.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/grotesk-0.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/grotesk-1.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/mono-0.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/grotesk-3.ttf" as="font" type="font/ttf" crossorigin>
+<script>
+  /* Boot: runs before first paint. Motion is opt-in, and a failsafe reveals everything if the motion layer never starts. */
+  (function (d) {
+    var h = d.documentElement;
+    h.classList.remove('no-js'); h.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('motion');
+    setTimeout(function () {
+      if (!h.classList.contains('motion-ready')) h.classList.add('motion-failed');
+    }, 2600);
+  })(document);
 </script>
-<noscript><style>.atom-targets, .molecule-hover-inspector, .search-open, #molecule-canvas { display:none; }</style></noscript><script defer="" src="js/caffeine-data.js"></script><script defer="" src="js/molecule.js?v=3"></script><link href="css/portfolio.css?v=2" rel="stylesheet"/><link href="css/lower-site.css?v=3" rel="stylesheet"/><link href="css/mobile.css?v=2" rel="stylesheet"/><link href="css/news.css?v=2" rel="stylesheet"/><script defer src="js/news.js?v=2"></script></head>
+<link rel="stylesheet" href="assets/css/flex.css?v=8a79a352">
+<link rel="stylesheet" href="assets/css/hero.css?v=a0736f8e">
+<link rel="stylesheet" href="assets/css/molecule.css?v=d3d692c2">
+<link rel="stylesheet" href="assets/css/ramain.css?v=303a2ac1">
+<link rel="stylesheet" href="assets/css/posters.css?v=fd653ad5">
+<link rel="stylesheet" href="assets/css/explainer.css?v=53d71260">
+<link rel="stylesheet" href="assets/css/publications.css?v=73a20255">
+<link rel="stylesheet" href="assets/css/sections.css?v=9b4a0eaa">
+<link rel="stylesheet" href="assets/css/search.css?v=400a0a40">
+<noscript><style>.molecule-hover-inspector, .search-open, .motion-toggle, #molecule-canvas, .molecule-legend, .molecule-instruction, .map-hint { display: none !important; }</style></noscript>
+<script defer src="assets/vendor/gsap.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+<script defer src="assets/vendor/lenis.min.js"></script>
+<script defer src="js/caffeine-data.js"></script>
+<script type="importmap">{"imports":{"./assets/js/contact-field.js":"./assets/js/contact-field.js?v=5c602354","./assets/js/core.js":"./assets/js/core.js?v=fcacf203","./assets/js/explainer.js":"./assets/js/explainer.js?v=92dca156","./assets/js/hero.js":"./assets/js/hero.js?v=825d7e16","./assets/js/main.js":"./assets/js/main.js?v=d8c16a6b","./assets/js/molecule-2d.js":"./assets/js/molecule-2d.js?v=73e63c82","./assets/js/molecule-core.js":"./assets/js/molecule-core.js?v=97068208","./assets/js/molecule-gl.js":"./assets/js/molecule-gl.js?v=b36fea02","./assets/js/molecule.js":"./assets/js/molecule.js?v=a9b6daed","./assets/js/news.js":"./assets/js/news.js?v=3f28f3d8","./assets/js/poster-svg.js":"./assets/js/poster-svg.js?v=32749986","./assets/js/posters.js":"./assets/js/posters.js?v=408d4239","./assets/js/publications.js":"./assets/js/publications.js?v=2882c9a1","./assets/js/ramain.js":"./assets/js/ramain.js?v=318be9e7","./assets/js/search.js":"./assets/js/search.js?v=a903c3ba","./assets/js/sections.js":"./assets/js/sections.js?v=62afd89d"}}</script>
+<script type="module" src="assets/js/main.js?v=d8c16a6b"></script>
+</head>
 <body>
-<a class="skip" href="#main">
-   Skip to content
-  </a>
-<aside class="news-banner" aria-label="Latest news"><div class="news-banner-inner"><a class="news-banner-label" href="content/news.html">NEWS <span aria-hidden="true">↗</span></a><div class="news-banner-content"><time class="news-banner-date" datetime="2026">2026</time><a class="news-banner-story" href="content/news.html#news-sc3">SC³ accepted at NeurIPS 2026.</a></div></div></aside>
+<a class="skip" href="#main">Skip to content</a>
+
+<aside class="news-banner" aria-label="Latest news">
+  <div class="news-banner-inner">
+    <a class="news-banner-label" href="content/news.html">NEWS <span aria-hidden="true">↗</span></a>
+    <div class="news-banner-content">
+      <time class="news-banner-date" datetime="2026">2026</time>
+      <a class="news-banner-story" href="content/news.html#news-sc3">SC³ accepted at NeurIPS 2026.</a>
+    </div>
+  </div>
+  <i class="news-banner-timer" aria-hidden="true"></i>
+</aside>
+
 <header class="nav">
-<a aria-label="Vansh Ramani home" class="brand" href="index.html">
-<span>
-     v
-    </span>
-<span>
-     r
-    </span>
-<i>
-     ↗
-    </i>
-</a>
-<nav aria-label="Main navigation">
-<a href="index.html#building">
-<span>
-      01
-     </span>
-     Building
-    </a>
-<a href="index.html#research">
-<span>
-      02
-     </span>
-     Research
-    </a>
-<a href="index.html#about">
-<span>
-      03
-     </span>
-     About
-    </a>
-<a href="index.html#writing"><span>04</span> Writing</a>
-<a class="nav-news" href="content/news.html">News</a>
-</nav>
-<div class="nav-tools">
-<button aria-label="Search this site" class="search-open" title="Search (⌘K)">
-<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17">
-<circle cx="10" cy="10" r="6.5">
-</circle>
-<path d="m15 15 5 5">
-</path>
-</svg>
-<span>
-      ⌘ K
-     </span>
-</button>
-<a class="nav-contact" href="mailto:vanshramani27@gmail.com">
-     Email ↗
-    </a>
-</div>
-<div aria-hidden="true" class="reading-progress">
-</div>
+  <a class="brand" href="#main" aria-label="Vansh Ramani home"><span class="brand-tile" aria-hidden="true"><b>vr</b></span><span class="brand-name" aria-hidden="true">VANSH RAMANI</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#building"><span>01</span> Building</a>
+    <a href="#research"><span>02</span> Research</a>
+    <a href="#about"><span>03</span> About</a>
+    <a href="#writing"><span>04</span> Writing</a>
+    <a class="nav-news" href="content/news.html">News</a>
+    <i class="nav-marker" aria-hidden="true"></i>
+  </nav>
+  <div class="nav-tools">
+    <button class="search-open" type="button" aria-label="Search this site" title="Search (⌘K)">
+      <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"></circle><path d="m15 15 5 5"></path></svg>
+      <span>⌘ K</span>
+    </button>
+    <a class="nav-contact" href="mailto:vanshramani27@gmail.com">Email ↗</a>
+  </div>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
 </header>
+
 <main id="main">
-<section aria-labelledby="hero-name" class="hero wrap">
-<div class="hero-prelude">
-<span class="mono">VANSH RAMANI / SELECTED WORK</span>
-<span class="hero-status">
-<span class="status-dot">
-</span>
-      Building ramAIn
-      <span class="mono">
-       YC W26
-      </span>
-</span>
-</div>
-<div class="hero-grid">
-<div class="hero-copy">
-<h1 id="hero-name">
-<span class="name-line">Vansh</span>
-<span class="name-line">Ramani<span class="name-period">.</span></span>
-</h1>
-<div class="intro">
-<p class="hero-role">
-        Co-founder &amp; CTO,
-        <a href="https://ramain.ai" rel="noopener noreferrer" target="_blank">
-         ramAIn ↗
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero wrap" aria-labelledby="hero-name">
+  <div class="hero-prelude">
+    <span class="mono">VANSH RAMANI / SELECTED WORK</span>
+    <span class="hero-status"><span class="status-dot"></span>Building ramAIn <span class="mono">YC W26</span></span>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-name" class="hero-name">
+        <span class="sr-only">Vansh Ramani</span>
+        <span class="name-line" data-line="1" aria-hidden="true">Vansh</span>
+        <span class="name-line" data-line="2" aria-hidden="true">Ramani<i class="sq name-period"></i></span>
+      </h1>
+      <div class="intro">
+        <p class="hero-role">Co-founder &amp; CTO, <a href="https://ramain.ai" target="_blank" rel="noopener noreferrer">ramAIn ↗</a></p>
+        <p class="hero-lede">I work on computer-use agents, efficient learning,<br class="desktop-break"> and reasoning systems.</p>
+        <div class="hero-links">
+          <a class="solid-link" href="#building">What I'm building <span>↗</span></a>
+          <a class="under-link" href="#research">Research <span>↓</span></a>
+        </div>
+      </div>
+    </div>
+
+    <figure class="molecule-panel">
+      <div class="molecule-heading">
+        <div>
+          <span class="mono molecule-instruction">HOVER TO EXPLORE / CLICK TO PIN</span>
+          <h2>Caffeine<span>.</span></h2>
+        </div>
+        <span class="molecule-formula mono" aria-hidden="true">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> · PUBCHEM 2519</span>
+      </div>
+      <div class="molecule-stage">
+        <canvas id="molecule-canvas" tabindex="0" role="img" aria-label="Caffeine research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate."></canvas>
+        <div class="molecule-corner top-left"></div>
+        <div class="molecule-corner bottom-right"></div>
+        <noscript><img class="molecule-fallback" src="images/caffeine-fallback.svg" width="600" height="362" alt="Ball-and-stick molecular model of caffeine"></noscript>
+        <aside class="molecule-hover-inspector" aria-labelledby="molecule-thread-title" hidden>
+          <article class="molecule-thread">
+            <div class="molecule-hover-heading"><span id="molecule-thread-eyebrow">RESEARCH DIRECTION</span><button class="molecule-hover-close" type="button" aria-label="Dismiss atom preview">×</button></div>
+            <h2 id="molecule-thread-title">Molecular learning</h2>
+            <p id="molecule-thread-description"></p>
+            <div class="molecule-thread-links" id="molecule-thread-links"></div>
+            <div class="molecule-hover-footer"><button id="molecule-pin" type="button">Pin this view</button><span id="molecule-neighborhood"></span></div>
+          </article>
+        </aside>
+      </div>
+      <ol class="molecule-legend" aria-label="Research directions on the molecule">
+        <li><button type="button" data-direction="0"><span class="mono">01</span>Molecular learning</button></li>
+        <li><button type="button" data-direction="1"><span class="mono">02</span>Graph distillation</button></li>
+        <li><button type="button" data-direction="2"><span class="mono">03</span>Similarity search</button></li>
+        <li><button type="button" data-direction="3"><span class="mono">04</span>Reasoning stability</button></li>
+        <li><button type="button" data-direction="4"><span class="mono">05</span>Computer-use agents</button></li>
+        <li><button type="button" data-direction="5"><span class="mono">06</span>Unlearning</button></li>
+      </ol>
+    </figure>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-socials">
+      <a href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+      <a href="https://github.com/VanshRamani" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/ramanivansh/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+    <span class="map-hint mono">HOVER AN ATOM · CLICK TO FREEZE ↖</span>
+    <button class="motion-toggle mono" type="button">PAUSE MOTION</button>
+    <a class="scroll-cue" href="#building" aria-label="Scroll to building">↓</a>
+  </div>
+</section>
+
+<!-- ═══════════════ 01 / BUILDING ═══════════════ -->
+<section class="building dark-section band" id="building">
+  <div class="band-inner wrap">
+    <div class="section-label">
+      <span class="mono section-no">01 / BUILDING</span>
+      <span class="mono">CO-FOUNDER &amp; CTO · NOV 2025—</span>
+    </div>
+    <div class="build-grid">
+      <div class="build-copy">
+        <div class="build-heading">
+          <h2>ramAIn</h2>
+          <span class="yc-tag"><b>Y</b> W26</span>
+        </div>
+        <p class="build-lead">Computer-use agents.</p>
+        <p>We build AI agents that operate across web portals and legacy systems. Describe the work in natural language; ramAIn executes it through the software your team already uses.</p>
+        <a class="solid-link white-link" href="https://ramain.ai" target="_blank" rel="noopener noreferrer">Visit ramain.ai <span>↗</span></a>
+        <div class="build-tags mono"><span>COMPUTER USE</span><span>ORCHESTRATION</span><span>AUTOMATION</span></div>
+      </div>
+      <div class="building-visual">
+        <a class="poster-link" data-poster="ramain" data-title="ramAIn" href="images/posters/ramain.svg" aria-label="View ramAIn poster">
+          <img src="images/posters/ramain.svg" width="1200" height="800" loading="lazy" alt="Layered application windows within the Observe, Reason, Act, Verify computer-use loop">
+          <span>View poster <b>↗</b></span>
         </a>
-</p>
-<p>
-        I work on computer-use agents, efficient learning,
-        <br class="desktop-break"/>
-        and reasoning systems.
-       </p>
-<div class="hero-links">
-<a class="solid-link" href="#building">
-         What I'm building
-         <span>
-          ↗
-         </span>
-</a>
-<a class="under-link" href="#research">
-         Research
-         <span>
-          ↓
-         </span>
-</a>
-</div>
-</div>
-</div>
-<figure class="molecule-panel"><div class="molecule-heading"><div><span class="mono">HOVER TO EXPLORE / CLICK TO PIN</span><h2>Caffeine<span>.</span></h2></div></div><div class="molecule-stage"><canvas aria-label="Caffeine research map. Hover over an atom to show neighborhood contours and a research card. Click to pin; drag or use arrow keys to rotate." id="molecule-canvas" role="img" tabindex="0"></canvas><div class="molecule-corner top-left"></div><div class="molecule-corner bottom-right"></div><noscript><img alt="Ball-and-stick molecular model of caffeine" class="molecule-fallback" height="362" src="images/caffeine-fallback.svg" width="600"/></noscript><div aria-label="Research directions" class="atom-targets"><button aria-label="Explore Molecular learning" class="atom-target" data-direction="0">1</button><button aria-label="Explore Graph distillation" class="atom-target" data-direction="1">2</button><button aria-label="Explore Similarity search" class="atom-target" data-direction="2">3</button><button aria-label="Explore Reasoning stability" class="atom-target" data-direction="3">4</button><button aria-label="Explore Computer-use agents" class="atom-target" data-direction="4">5</button><button aria-label="Explore Unlearning &amp; neurosymbolic AI" class="atom-target" data-direction="5">6</button></div><aside aria-labelledby="molecule-thread-title" class="molecule-hover-inspector" hidden=""><article class="molecule-thread"><div class="molecule-hover-heading"><span id="molecule-thread-eyebrow">RESEARCH DIRECTION</span><button aria-label="Dismiss atom preview" class="molecule-hover-close">×</button></div><h2 id="molecule-thread-title">Molecular learning</h2><p id="molecule-thread-description"></p><div class="molecule-thread-links" id="molecule-thread-links"></div><div class="molecule-hover-footer"><button id="molecule-pin">Pin this view</button><span id="molecule-neighborhood"></span></div></article></aside></div></figure>
-</div>
-<div class="hero-bottom">
-<div class="hero-socials">
-<a href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">
-       Scholar ↗
-      </a>
-<a href="https://github.com/VanshRamani" rel="noopener noreferrer" target="_blank">
-       GitHub ↗
-      </a>
-<a href="https://www.linkedin.com/in/ramanivansh/" rel="noopener noreferrer" target="_blank">
-       LinkedIn ↗
-      </a>
-</div>
-<span class="map-hint mono">HOVER AN ATOM · CLICK TO FREEZE ↖</span>
-<a aria-label="Scroll to building" class="scroll-cue" href="#building">
-      ↓
-     </a>
-</div>
+        <div class="building-visual-caption" aria-label="Observe, Reason, Act, Verify loop">
+          <span data-phase="observe">Observe</span> <i>→</i> <span data-phase="reason">Reason</span> <i>→</i> <span data-phase="act">Act</span> <i>→</i> <span data-phase="verify">Verify</span> <i>↺</i>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="building dark-section" id="building">
-<div class="wrap">
-<div class="section-label">
-<span class="mono">
-       01 / BUILDING
-      </span>
-<span class="mono">
-       CO-FOUNDER &amp; CTO · NOV 2025—
-      </span>
-</div>
-<div class="build-grid">
-<div class="build-copy">
-<div class="build-heading">
-<h2>ramAIn</h2>
-<span class="yc-tag">
-<b>
-          Y
-         </b>
-         W26
-        </span>
-</div>
-<p class="build-lead">
-        Computer-use agents.
-       </p>
-<p>
-        We build AI agents that operate across web portals and legacy systems. Describe the work in natural language; ramAIn executes it through the software your team already uses.
-       </p>
-<a class="solid-link white-link" href="https://ramain.ai" rel="noopener noreferrer" target="_blank">
-        Visit ramain.ai
-        <span>
-         ↗
-        </span>
-</a>
-<div class="build-tags mono">
-<span>
-         COMPUTER USE
-        </span>
-<span>
-         ORCHESTRATION
-        </span>
-<span>
-         AUTOMATION
-        </span>
-</div>
-</div>
-<div class="building-visual"><a aria-label="View ramAIn poster" class="poster-link" data-poster="ramain" data-title="ramAIn" href="images/posters/ramain.svg"><img alt="Layered application windows within the Observe, Reason, Act, Verify computer-use loop" height="800" loading="lazy" src="images/posters/ramain.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="building-visual-caption">Observe <i>→</i> Reason <i>→</i> Act <i>→</i> Verify <i>↺</i></div></div>
-</div>
-</div>
-</section>
+
+<!-- ═══════════════ 02 / RESEARCH ═══════════════ -->
 <section class="research wrap" id="research">
-<div class="section-label">
-<span class="mono">
-      02 / RESEARCH
-     </span>
-<a class="mono" href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">
-      FULL PROFILE ON SCHOLAR ↗
-     </a>
-</div>
-<div class="research-heading">
-<h2>Research<span class="blue">.</span></h2>
-<p>
-      Graphs, geometry, molecules, and reasoning.
-      <br/>
-      Selected work from 2024–2026.
-     </p>
-</div>
-<div class="research-gallery"><article class="project-card" style="--card-tint:#e4eaff"><a aria-label="View Panorama poster" class="poster-link" data-poster="panorama" data-title="Panorama" href="images/posters/panorama.svg?v=8"><img alt="A query point moves through spectral distance bounds and candidate pruning to a selected nearest-neighbor set." height="800" loading="lazy" src="images/posters/panorama.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Panorama</h3><p>Nearest-neighbor search · 2026 revision</p></div><a aria-label="Read Panorama publication details" class="poster-open" data-open-paper="paper-panorama" href="#paper-panorama">↗</a></div></article><article class="project-card" style="--card-tint:#e6f8ff"><a aria-label="View DISSOLVR poster" class="poster-link" data-poster="dissolvr" data-title="DISSOLVR" href="images/posters/dissolvr.svg?v=8"><img alt="A molecular structure feeds topological, polarity, and thermodynamic descriptors into aqueous and organic solubility predictions." height="800" loading="lazy" src="images/posters/dissolvr.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>DISSOLVR</h3><p>Solubility prediction · ICML 2026</p></div><a aria-label="Read DISSOLVR publication details" class="poster-open" data-open-paper="paper-dissolvr" href="#paper-dissolvr">↗</a></div></article><article class="project-card" style="--card-tint:#edf6df"><a aria-label="View Bonsai poster" class="poster-link" data-poster="bonsai" data-title="Bonsai" href="images/posters/bonsai.svg"><img alt="A dense graph resolves into selected representative computation trees." height="800" loading="lazy" src="images/posters/bonsai.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Bonsai</h3><p>Graph distillation · ICLR 2025</p></div><a aria-label="Read Bonsai publication details" class="poster-open" data-open-paper="paper-bonsai" href="#paper-bonsai">↗</a></div></article><article class="project-card" style="--card-tint:#f7f6cf"><a aria-label="View Graph Condensation poster" class="poster-link" data-poster="condensation" data-title="Graph Condensation" href="images/posters/condensation.svg"><img alt="A full graph training loop connects to a compact graph and several model branches." height="800" loading="lazy" src="images/posters/condensation.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>Graph Condensation</h3><p>Position paper · ICML 2026 Spotlight</p></div><a aria-label="Read Graph Condensation publication details" class="poster-open" data-open-paper="paper-condensation" href="#paper-condensation">↗</a></div></article><article class="project-card" style="--card-tint:#efeafa"><a aria-label="View ReasonBENCH poster" class="poster-link" data-poster="reasonbench" data-title="ReasonBENCH" href="images/posters/reasonbench.svg"><img alt="Reasoning paths from a fixed prompt converge and diverge across answers." height="800" loading="lazy" src="images/posters/reasonbench.svg" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>ReasonBENCH</h3><p>Reasoning stability · ICML 2026 workshop</p></div><a aria-label="Read ReasonBENCH publication details" class="poster-open" data-open-paper="paper-reasonbench" href="#paper-reasonbench">↗</a></div></article><article class="project-card" style="--card-tint:#f7e9f1"><a aria-label="View SC³ poster" class="poster-link" data-poster="sc3" data-title="SC³" href="images/posters/sc3.svg?v=8"><img alt="One solute is compared across a matrix of solvent environments in a multi-solvent benchmark." height="800" loading="lazy" src="images/posters/sc3.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>SC³</h3><p>Multi-solvent benchmark · NeurIPS 2026</p></div><a aria-label="Read SC³ publication details" class="poster-open" data-open-paper="paper-sc3" href="#paper-sc3">↗</a></div></article><article class="project-card" style="--card-tint:#e1f4f1"><a aria-label="View MolMerger poster" class="poster-link" data-poster="molmerger" data-title="MolMerger" href="images/posters/molmerger.svg?v=8"><img alt="Separate solute and solvent graphs combine through virtual interaction edges in a merged graph." height="800" loading="lazy" src="images/posters/molmerger.svg?v=8" width="1200"/><span>View poster <b>↗</b></span></a><div class="poster-caption"><div><h3>MolMerger</h3><p>Molecular graph learning · JCTC 2024</p></div><a aria-label="Read MolMerger publication details" class="poster-open" data-open-paper="paper-molmerger" href="#paper-molmerger">↗</a></div></article></div>
-<div class="research-toolbar">
-<div aria-label="Filter publications" class="filters" role="group">
-<button aria-pressed="true" class="active" data-filter="all">
-       All
-       <span>
-        07
-       </span>
-</button>
-<button aria-pressed="false" data-filter="learning">
-       Learning &amp; reasoning
-      </button>
-<button aria-pressed="false" data-filter="search">
-       Search
-      </button>
-<button aria-pressed="false" data-filter="molecular">
-       Molecular ML
-      </button>
-</div>
-<span class="mono research-hint">
-      PUBLICATION INDEX
-     </span>
-</div>
-<div class="paper-list">
-<details class="paper-row" data-category="search" id="paper-panorama">
-<summary>
-<span class="paper-number mono">
-        01
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         arXiv · 2026 revision / FAISS
-        </span>
-<h3>
-         Panorama: Fast-Track Nearest Neighbors
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="Panorama research figure" loading="lazy" src="images/panorama.png"/>
-<div>
-<p>
-         Fast search starts with doing less work. PANORAMA uses spectral decay to evaluate distances incrementally and prune candidates early. The July 2026 revision reports up to 28.9× end-to-end speedups and integration into FAISS.
-        </p>
-<p class="authors">
-         Vansh Ramani, Alexis Schlomer, Akash Nayar, Sayan Ranu, Jignesh M. Patel, Panagiotis Karras
-        </p>
-<div class="paper-links">
-<a href="https://arxiv.org/abs/2510.00566" rel="noopener noreferrer" target="_blank">
-          Paper ↗
-         </a>
-<a href="https://github.com/fasttrack-nn/panorama" rel="noopener noreferrer" target="_blank">
-          Code ↗
-         </a>
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="molecular" id="paper-dissolvr">
-<summary>
-<span class="paper-number mono">
-        02
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         ICML 2026
-        </span>
-<h3>
-         DISSOLVR: An Interpretable and Fast Framework for Aqueous and Organic Solubility Prediction
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="DISSOLVR research figure" loading="lazy" src="images/dissolvr.png"/>
-<div>
-<p>
-         An interpretable and fast framework for predicting solubility in aqueous and organic solvents.
-        </p>
-<p class="authors">
-         Vansh Ramani, A. Arora, D. Kuchhal, Sayan Ranu, Tarak Karmakar
-        </p>
-<div class="paper-links">
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="learning" id="paper-condensation">
-<summary>
-<span class="paper-number mono">
-        03
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         ICML 2026 · Spotlight
-        </span>
-<h3>
-         Position: Graph Condensation Needs a Reset — Move Beyond Full-dataset Training and Model-Dependence
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="Graph condensation research figure" loading="lazy" src="images/graph_condensation.png"/>
-<div>
-<p>
-         A position paper arguing for graph condensation methods that move beyond full-dataset training and model dependence.
-        </p>
-<p class="authors">
-         Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu
-        </p>
-<div class="paper-links">
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="learning" id="paper-reasonbench">
-<summary>
-<span class="paper-number mono">
-        04
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         EIML · ICML 2026
-        </span>
-<h3>
-         ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="ReasonBENCH research figure" loading="lazy" src="images/reasonbench.png"/>
-<div>
-<p>
-         Investigating the stability of large language model reasoning: how reliably do reasoning systems behave when their inputs change?
-        </p>
-<p class="authors">
-         Vansh Ramani, N. Potamitis, H. A. Arora, D. Kuchhal, L. H. Klein, A. Arora
-        </p>
-<div class="paper-links">
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="learning" id="paper-bonsai">
-<summary>
-<span class="paper-number mono">
-        05
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         ICLR 2025
-        </span>
-<h3>
-         Bonsai: Gradient-free Graph Distillation for Node Classification
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="Bonsai research figure" loading="lazy" src="images/bonsai.jpg"/>
-<div>
-<p>
-         Graph distillation without the expensive full-dataset training loop. Representative computation trees capture the structure that matters for node classification.
-        </p>
-<p class="authors">
-         Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu
-        </p>
-<div class="paper-links">
-<a href="https://anonymous.4open.science/r/bonsai" rel="noopener noreferrer" target="_blank">
-          Code ↗
-         </a>
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="molecular" id="paper-sc3">
-<summary>
-<span class="paper-number mono">
-        06
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         NeurIPS 2026
-        </span>
-<h3>
-         SC3: The Multi-Solvent Solubility Challenge and Benchmark
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="SC3 research figure" loading="lazy" src="images/sc3.png"/>
-<div>
-<p>
-         A multi-solvent challenge and benchmark for evaluating solubility prediction beyond a single solvent.
-        </p>
-<p class="authors">
-         Vansh Ramani, H. A. Arora, D. Kuchhal, S. Tatarin, L. Krasnov, Sayan Ranu, Tarak Karmakar
-        </p>
-<div class="paper-links">
-</div>
-</div>
-</div>
-</details>
-<details class="paper-row" data-category="molecular" id="paper-molmerger">
-<summary>
-<span class="paper-number mono">
-        07
-       </span>
-<div class="paper-title">
-<span class="paper-venue mono">
-         JCTC 2024
-        </span>
-<h3>
-         Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions
-        </h3>
-</div>
-<span aria-hidden="true" class="paper-plus">
-        ↗
-       </span>
-</summary>
-<div class="paper-body">
-<img alt="MolMerger research figure" loading="lazy" src="images/molmerger.jpg"/>
-<div>
-<p>
-         Modeling solute–solvent interactions with a merged-molecule graph representation, rather than treating each molecule in isolation.
-        </p>
-<p class="authors">
-         Vansh Ramani, Tarak Karmakar
-        </p>
-<div class="paper-links">
-<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" rel="noopener noreferrer" target="_blank">
-          Paper ↗
-         </a>
-<a href="https://github.com/VanshRamani/Molmerger-Solubility-Prediction" rel="noopener noreferrer" target="_blank">
-          Code ↗
-         </a>
-</div>
-</div>
-</div>
-</details>
-</div>
-<p aria-live="polite" class="research-note mono" id="research-count">
-     7 WORKS / 2024–2026
-    </p>
+  <div class="section-label">
+    <span class="mono section-no">02 / RESEARCH</span>
+    <a class="mono" href="https://scholar.google.com/citations?user=hKH8NPoAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">FULL PROFILE ON SCHOLAR ↗</a>
+  </div>
+  <div class="research-heading">
+    <h2 class="display-heading">Research<i class="sq" aria-hidden="true"></i></h2>
+    <p>Graphs, geometry, molecules, and reasoning.<br>Selected work from 2024–2026.</p>
+  </div>
+
+  <div class="research-gallery">
+    <article class="project-card" style="--card-tint:#e4eaff" data-paper="paper-panorama">
+      <a class="poster-link" data-poster="panorama" data-title="Panorama" href="images/posters/panorama.svg" aria-label="View Panorama poster">
+        <img src="images/posters/panorama.svg" width="1200" height="800" loading="lazy" alt="A query point moves through spectral distance bounds and candidate pruning to a selected nearest-neighbor set.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>Panorama</h3><p>Nearest-neighbor search · 2026 revision</p></div><a class="poster-open" href="#paper-panorama" data-open-paper="paper-panorama" aria-label="Read Panorama publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#e6f8ff" data-paper="paper-dissolvr">
+      <a class="poster-link" data-poster="dissolvr" data-title="DISSOLVR" href="images/posters/dissolvr.svg" aria-label="View DISSOLVR poster">
+        <img src="images/posters/dissolvr.svg" width="1200" height="800" loading="lazy" alt="A molecular structure feeds topological, polarity, and thermodynamic descriptors into aqueous and organic solubility predictions.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>DISSOLVR</h3><p>Solubility prediction · ICML 2026</p></div><a class="poster-open" href="#paper-dissolvr" data-open-paper="paper-dissolvr" aria-label="Read DISSOLVR publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#edf6df" data-paper="paper-bonsai">
+      <a class="poster-link" data-poster="bonsai" data-title="Bonsai" href="images/posters/bonsai.svg" aria-label="View Bonsai poster">
+        <img src="images/posters/bonsai.svg" width="1200" height="800" loading="lazy" alt="A dense graph resolves into selected representative computation trees.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>Bonsai</h3><p>Graph distillation · ICLR 2025</p></div><a class="poster-open" href="#paper-bonsai" data-open-paper="paper-bonsai" aria-label="Read Bonsai publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#f7f6cf" data-paper="paper-condensation">
+      <a class="poster-link" data-poster="condensation" data-title="Graph Condensation" href="images/posters/condensation.svg" aria-label="View Graph Condensation poster">
+        <img src="images/posters/condensation.svg" width="1200" height="800" loading="lazy" alt="A full graph training loop connects to a compact graph and several model branches.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>Graph Condensation</h3><p>Position paper · ICML 2026 Spotlight</p></div><a class="poster-open" href="#paper-condensation" data-open-paper="paper-condensation" aria-label="Read Graph Condensation publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#efeafa" data-paper="paper-reasonbench">
+      <a class="poster-link" data-poster="reasonbench" data-title="ReasonBENCH" href="images/posters/reasonbench.svg" aria-label="View ReasonBENCH poster">
+        <img src="images/posters/reasonbench.svg" width="1200" height="800" loading="lazy" alt="Reasoning paths from a fixed prompt converge and diverge across answers.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>ReasonBENCH</h3><p>Reasoning stability · ICML 2026 workshop</p></div><a class="poster-open" href="#paper-reasonbench" data-open-paper="paper-reasonbench" aria-label="Read ReasonBENCH publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#f7e9f1" data-paper="paper-sc3">
+      <a class="poster-link" data-poster="sc3" data-title="SC³" href="images/posters/sc3.svg" aria-label="View SC³ poster">
+        <img src="images/posters/sc3.svg" width="1200" height="800" loading="lazy" alt="One solute is compared across a matrix of solvent environments in a multi-solvent benchmark.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>SC³</h3><p>Multi-solvent benchmark · NeurIPS 2026</p></div><a class="poster-open" href="#paper-sc3" data-open-paper="paper-sc3" aria-label="Read SC³ publication details">↗</a></div>
+    </article>
+    <article class="project-card" style="--card-tint:#e1f4f1" data-paper="paper-molmerger">
+      <a class="poster-link" data-poster="molmerger" data-title="MolMerger" href="images/posters/molmerger.svg" aria-label="View MolMerger poster">
+        <img src="images/posters/molmerger.svg" width="1200" height="800" loading="lazy" alt="Separate solute and solvent graphs combine through virtual interaction edges in a merged graph.">
+        <span>View poster <b>↗</b></span>
+      </a>
+      <div class="poster-caption"><div><h3>MolMerger</h3><p>Molecular graph learning · JCTC 2024</p></div><a class="poster-open" href="#paper-molmerger" data-open-paper="paper-molmerger" aria-label="Read MolMerger publication details">↗</a></div>
+    </article>
+  </div>
+
+  <div class="research-toolbar">
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button type="button" class="active" data-filter="all" aria-pressed="true">All <span>07</span></button>
+      <button type="button" data-filter="learning" aria-pressed="false">Learning &amp; reasoning</button>
+      <button type="button" data-filter="search" aria-pressed="false">Search</button>
+      <button type="button" data-filter="molecular" aria-pressed="false">Molecular ML</button>
+      <i class="filter-pill" aria-hidden="true"></i>
+    </div>
+    <span class="mono research-hint">PUBLICATION INDEX</span>
+  </div>
+
+  <div class="paper-list">
+    <details class="paper-row" id="paper-panorama" data-category="search" data-poster="panorama">
+      <summary>
+        <span class="paper-number mono">01</span>
+        <div class="paper-title"><span class="paper-venue mono">arXiv · 2026 revision / FAISS</span><h3>Panorama: Fast-Track Nearest Neighbors</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/panorama.png" loading="lazy" alt="Panorama research figure">
+        <div>
+          <p>Fast search starts with doing less work. PANORAMA uses spectral decay to evaluate distances incrementally and prune candidates early. The July 2026 revision reports up to 28.9× end-to-end speedups and integration into FAISS.</p>
+          <p class="authors">Vansh Ramani, Alexis Schlomer, Akash Nayar, Sayan Ranu, Jignesh M. Patel, Panagiotis Karras</p>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2510.00566" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+            <a href="https://github.com/fasttrack-nn/panorama" target="_blank" rel="noopener noreferrer">Code ↗</a>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-dissolvr" data-category="molecular" data-poster="dissolvr">
+      <summary>
+        <span class="paper-number mono">02</span>
+        <div class="paper-title"><span class="paper-venue mono">ICML 2026</span><h3>DISSOLVR: An Interpretable and Fast Framework for Aqueous and Organic Solubility Prediction</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/dissolvr.png" loading="lazy" alt="DISSOLVR research figure">
+        <div>
+          <p>An interpretable and fast framework for predicting solubility in aqueous and organic solvents.</p>
+          <p class="authors">Vansh Ramani, Akhil Arora, D. Kuchhal, Sayan Ranu, Tarak Karmakar</p>
+          <div class="paper-links"></div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-condensation" data-category="learning" data-poster="condensation">
+      <summary>
+        <span class="paper-number mono">03</span>
+        <div class="paper-title"><span class="paper-venue mono">ICML 2026 · Spotlight</span><h3>Position: Graph Condensation Needs a Reset — Move Beyond Full-dataset Training and Model-Dependence</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/graph_condensation.png" loading="lazy" alt="Graph condensation research figure">
+        <div>
+          <p>A position paper arguing for graph condensation methods that move beyond full-dataset training and model dependence.</p>
+          <p class="authors">Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu</p>
+          <div class="paper-links"></div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-reasonbench" data-category="learning" data-poster="reasonbench">
+      <summary>
+        <span class="paper-number mono">04</span>
+        <div class="paper-title"><span class="paper-venue mono">EIML · ICML 2026</span><h3>ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/reasonbench.png" loading="lazy" alt="ReasonBENCH research figure">
+        <div>
+          <p>Investigating the stability of large language model reasoning: how reliably do reasoning systems behave when their inputs change?</p>
+          <p class="authors">Vansh Ramani, N. Potamitis, H. A. Arora, D. Kuchhal, L. H. Klein, Akhil Arora</p>
+          <div class="paper-links"></div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-bonsai" data-category="learning" data-poster="bonsai">
+      <summary>
+        <span class="paper-number mono">05</span>
+        <div class="paper-title"><span class="paper-venue mono">ICLR 2025</span><h3>Bonsai: Gradient-free Graph Distillation for Node Classification</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/bonsai.jpg" loading="lazy" alt="Bonsai research figure">
+        <div>
+          <p>Graph distillation without the expensive full-dataset training loop. Representative computation trees capture the structure that matters for node classification.</p>
+          <p class="authors">Mridul Gupta, Samyak Jain, Vansh Ramani, Hariprasad Kodamana, Sayan Ranu</p>
+          <div class="paper-links">
+            <a href="https://anonymous.4open.science/r/bonsai" target="_blank" rel="noopener noreferrer">Code ↗</a>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-sc3" data-category="molecular" data-poster="sc3">
+      <summary>
+        <span class="paper-number mono">06</span>
+        <div class="paper-title"><span class="paper-venue mono">NeurIPS 2026</span><h3>SC3: The Multi-Solvent Solubility Challenge and Benchmark</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/sc3.png" loading="lazy" alt="SC3 research figure">
+        <div>
+          <p>A multi-solvent challenge and benchmark for evaluating solubility prediction beyond a single solvent.</p>
+          <p class="authors">Vansh Ramani, H. A. Arora, D. Kuchhal, S. Tatarin, L. Krasnov, Sayan Ranu, Tarak Karmakar</p>
+          <div class="paper-links"></div>
+        </div>
+      </div>
+    </details>
+    <details class="paper-row" id="paper-molmerger" data-category="molecular" data-poster="molmerger">
+      <summary>
+        <span class="paper-number mono">07</span>
+        <div class="paper-title"><span class="paper-venue mono">JCTC 2024</span><h3>Graph Neural Networks for Predicting Solubility in Diverse Solvents Using MolMerger Incorporating Solute–Solvent Interactions</h3></div>
+        <span class="paper-plus" aria-hidden="true">↗</span>
+      </summary>
+      <div class="paper-body">
+        <img src="images/molmerger.jpg" loading="lazy" alt="MolMerger research figure">
+        <div>
+          <p>Modeling solute–solvent interactions with a merged-molecule graph representation, rather than treating each molecule in isolation.</p>
+          <p class="authors">Vansh Ramani, Tarak Karmakar</p>
+          <div class="paper-links">
+            <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00382" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+            <a href="https://github.com/VanshRamani/Molmerger-Solubility-Prediction" target="_blank" rel="noopener noreferrer">Code ↗</a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+  <p class="research-note mono" id="research-count" aria-live="polite">7 WORKS / 2024–2026</p>
 </section>
+
+<!-- ═══════════════ 03 / ABOUT ═══════════════ -->
 <section class="bio-v2" id="about" aria-labelledby="bio-v2-heading">
   <div class="bio-v2-inner">
     <header class="bio-v2-kicker">
@@ -480,27 +381,24 @@
     <div class="bio-v2-intro">
       <figure class="bio-v2-portrait">
         <div class="bio-v2-photo-mat">
-          <img src="images/vansh_profile_pic.jpg" alt="Portrait of Vansh Ramani" width="676" height="1024" loading="lazy" decoding="async">
+          <div class="bio-v2-photo-crop"><img src="images/vansh_profile_pic.jpg" alt="Portrait of Vansh Ramani" width="676" height="1024" loading="lazy" decoding="async"></div>
           <svg class="bio-v2-photo-linework" viewBox="0 0 100 100" aria-hidden="true">
             <path d="M-8 82C18 82 22 55 47 55S74 27 108 27"/>
             <path d="M-8 91C20 91 25 65 49 65S78 38 108 38"/>
             <circle cx="47" cy="55" r="3"/><circle cx="77" cy="37" r="3"/>
           </svg>
         </div>
-        <figcaption class="bio-v2-photo-caption">
-          <span>VANSH RAMANI</span><span>PORTRAIT / 01</span>
-        </figcaption>
+        <figcaption class="bio-v2-photo-caption"><span>VANSH RAMANI</span><span>PORTRAIT / 01</span></figcaption>
       </figure>
 
       <div class="bio-v2-copy">
         <p class="bio-v2-overline">COMPUTER SCIENCE · RESEARCH</p>
-        <h2 id="bio-v2-heading">A bit about me<span class="bio-v2-period">.</span></h2>
+        <h2 id="bio-v2-heading" class="display-heading">A bit about me<i class="sq" aria-hidden="true"></i></h2>
         <div class="bio-v2-prose">
           <p>I'm a computer science undergraduate at IIT Delhi, currently on a break to build ramAIn.</p>
           <p>My research spans graph learning and distillation, high-dimensional similarity search, molecular prediction, machine unlearning, and the stability of LLM reasoning.</p>
           <p>I've worked with researchers at IIT Delhi, Carnegie Mellon, the University of Copenhagen, and Aarhus. Outside of work, I like jazz, random facts, and exploring new places.</p>
         </div>
-
         <nav class="bio-v2-index" aria-label="More about Vansh">
           <a href="content/fun.html"><span class="bio-v2-index-no" aria-hidden="true">01</span><span class="bio-v2-index-name">Favorites</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
           <a href="content/coursework.html"><span class="bio-v2-index-no" aria-hidden="true">02</span><span class="bio-v2-index-name">Coursework</span><span class="bio-v2-index-arrow" aria-hidden="true">↗</span></a>
@@ -518,35 +416,35 @@
         </div>
         <p class="experience-v2-aside">Four institutions<br>across my research</p>
       </header>
-
       <div class="experience-v2-map">
+        <i class="experience-v2-rail" aria-hidden="true"></i>
         <article class="experience-v2-row experience-v2-row--iit">
           <div class="experience-v2-place">
-            <p class="experience-v2-location">DELHI / INDIA</p>
+            <p class="experience-v2-location">DELHI / INDIA <time class="experience-v2-date" datetime="2023">2023 — PRESENT</time></p>
             <h4><a href="https://www.iitd.ac.in/" target="_blank" rel="noopener noreferrer">IIT Delhi <span aria-hidden="true">↗</span></a></h4>
           </div>
           <p class="experience-v2-domain">Graphs &amp; molecular ML</p>
           <p class="experience-v2-people"><a href="https://www.cse.iitd.ac.in/~sayan/" target="_blank" rel="noopener noreferrer">Dr. Sayan Ranu</a><span aria-hidden="true"> · </span><a href="https://chemistry.iitd.ac.in/faculty/tarak-karmakar" target="_blank" rel="noopener noreferrer">Dr. Tarak Karmakar</a></p>
         </article>
-        <article class="experience-v2-row experience-v2-row--cmu">
-          <div class="experience-v2-place">
-            <p class="experience-v2-location">PITTSBURGH / USA</p>
-            <h4><a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon <span aria-hidden="true">↗</span></a></h4>
-          </div>
-          <p class="experience-v2-domain">Unlearning &amp; neurosymbolic AI</p>
-          <p class="experience-v2-people"><a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank" rel="noopener noreferrer">Prof. Pradeep Ravikumar</a></p>
-        </article>
         <article class="experience-v2-row experience-v2-row--copenhagen">
           <div class="experience-v2-place">
-            <p class="experience-v2-location">COPENHAGEN / DENMARK</p>
+            <p class="experience-v2-location">COPENHAGEN / DENMARK <time class="experience-v2-date" datetime="2024">SUMMER 2024</time></p>
             <h4><a href="https://www.ku.dk/english/" target="_blank" rel="noopener noreferrer">University of Copenhagen <span aria-hidden="true">↗</span></a></h4>
           </div>
           <p class="experience-v2-domain">High-dimensional search</p>
           <p class="experience-v2-people"><a href="https://di.ku.dk/Ansatte/?pure=en/persons/467373" target="_blank" rel="noopener noreferrer">Dr. Panagiotis Karras</a></p>
         </article>
+        <article class="experience-v2-row experience-v2-row--cmu">
+          <div class="experience-v2-place">
+            <p class="experience-v2-location">PITTSBURGH / USA <time class="experience-v2-date" datetime="2025">SUMMER 2025</time></p>
+            <h4><a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon <span aria-hidden="true">↗</span></a></h4>
+          </div>
+          <p class="experience-v2-domain">Unlearning &amp; neurosymbolic AI</p>
+          <p class="experience-v2-people"><a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank" rel="noopener noreferrer">Prof. Pradeep Ravikumar</a></p>
+        </article>
         <article class="experience-v2-row experience-v2-row--aarhus">
           <div class="experience-v2-place">
-            <p class="experience-v2-location">AARHUS / DENMARK</p>
+            <p class="experience-v2-location">AARHUS / DENMARK <time class="experience-v2-date" datetime="2025">2025 — PRESENT</time></p>
             <h4><a href="https://www.au.dk/en/" target="_blank" rel="noopener noreferrer">CLAN, Aarhus University <span aria-hidden="true">↗</span></a></h4>
           </div>
           <p class="experience-v2-domain">Adaptive reasoning</p>
@@ -557,17 +455,16 @@
   </div>
 </section>
 
+<!-- ═══════════════ 04 / WRITING ═══════════════ -->
 <section class="ending-writing" id="writing" aria-labelledby="ending-writing-title">
   <div class="ending-writing__inner">
     <header class="ending-writing__header">
       <div class="ending-writing__heading">
         <p class="ending-writing__eyebrow"><span>04</span> / Writing</p>
-        <h2 id="ending-writing-title">Writing<span aria-hidden="true">.</span></h2>
+        <h2 id="ending-writing-title" class="display-heading">Writing<i class="sq" aria-hidden="true"></i></h2>
         <p class="ending-writing__intro">Conference reflections and explainers on graphs and molecular learning.</p>
       </div>
-      <a class="ending-writing__archive" href="content/blogs.html">
-        <span>Full archive</span><span aria-hidden="true">↗</span>
-      </a>
+      <a class="ending-writing__archive" href="content/blogs.html"><span>Full archive</span><span aria-hidden="true">↗</span></a>
     </header>
 
     <div class="ending-notes-grid">
@@ -577,17 +474,17 @@
             <rect width="480" height="250" fill="#e5f1ef"/>
             <path d="M0 207H480" stroke="#183d42" stroke-opacity=".22"/>
             <path d="M0 220H480M0 232H480" stroke="#6c9893" stroke-opacity=".18"/>
-            <g fill="none" stroke="#5e8881" stroke-width="1" opacity=".45">
+            <g class="art-gridlines" fill="none" stroke="#5e8881" stroke-width="1" opacity=".45">
               <path d="M282 40V208M313 58V208M342 28V208M375 48V208M405 24V208M438 62V208"/>
               <path d="M273 91H452M278 116H465M267 148H447M281 177H469"/>
             </g>
-            <g fill="#c2d9d2" stroke="#315b59" stroke-width="1.4">
+            <g class="art-towers" fill="#c2d9d2" stroke="#315b59" stroke-width="1.4">
               <path d="M265 207V122Q265 105 280 105H299Q314 105 314 122V207Z"/>
               <path d="M324 207V88Q324 72 341 72H360Q377 72 377 88V207Z"/>
               <path d="M389 207V129Q389 112 406 112H424Q441 112 441 129V207Z"/>
             </g>
-            <path d="M296 106Q287 69 302 34M350 73Q343 39 359 18M415 113Q403 74 420 46" fill="none" stroke="#315b59" stroke-width="2"/>
-            <g fill="none" stroke="#315b59" stroke-width="1.1">
+            <path class="art-stems" d="M296 106Q287 69 302 34M350 73Q343 39 359 18M415 113Q403 74 420 46" fill="none" stroke="#315b59" stroke-width="2"/>
+            <g class="art-fronds" fill="none" stroke="#315b59" stroke-width="1.1">
               <path d="M289 54l-18-11m19 18-25 1m29 2 18-16m-19 23 24 7m-23-17-5-25"/>
               <path d="M346 39l-20-11m22 19-27 1m31-2 19-20m-20 28 25 7m-23-18-3-24"/>
               <path d="M408 68l-19-12m21 20-26 1m30-3 19-17m-19 26 23 7m-22-17-3-24"/>
@@ -598,7 +495,7 @@
             <text x="67" y="147" fill="#f4f4d4" font-family="Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-2">ICLR</text>
             <path d="M70 163H180" stroke="#6caa9b"/>
             <text x="70" y="187" fill="#e0eee5" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3">SINGAPORE · 2025</text>
-            <circle cx="228" cy="198" r="4" fill="#d25d43"/>
+            <circle class="art-dot" cx="228" cy="198" r="4" fill="#d25d43"/>
           </svg>
         </div>
         <div class="notes-card__body">
@@ -614,29 +511,31 @@
           <svg viewBox="0 0 480 250" role="img" aria-label="A connected graph resolving into a small representative computation tree">
             <rect width="480" height="250" fill="#edf3d5"/>
             <path d="M0 207H480" stroke="#21473f" stroke-opacity=".18"/>
-            <g fill="none" stroke="#37685a" stroke-width="1.5" opacity=".47">
+            <g class="art-graph-edges" fill="none" stroke="#37685a" stroke-width="1.5" opacity=".47">
               <path d="M35 67 80 42 122 69 164 37 203 69 244 48 279 82"/>
               <path d="M30 119 74 94 118 124 160 91 203 123 242 99 282 131"/>
               <path d="M43 176 82 148 123 178 165 144 205 175 246 148 281 177"/>
               <path d="M35 67 30 119 43 176M80 42 74 94 82 148M122 69 118 124 123 178M164 37 160 91 165 144M203 69 203 123 205 175M244 48 242 99 246 148M279 82 282 131 281 177"/>
               <path d="M35 67 118 124 164 37 203 123 279 82 205 175 282 131"/>
             </g>
-            <g fill="#f5f8e2" stroke="#214b40" stroke-width="1.7">
+            <g class="art-graph-nodes" fill="#f5f8e2" stroke="#214b40" stroke-width="1.7">
               <circle cx="35" cy="67" r="5"/><circle cx="80" cy="42" r="5"/><circle cx="122" cy="69" r="5"/><circle cx="164" cy="37" r="5"/><circle cx="203" cy="69" r="5"/><circle cx="244" cy="48" r="5"/><circle cx="279" cy="82" r="5"/>
               <circle cx="30" cy="119" r="5"/><circle cx="74" cy="94" r="5"/><circle cx="118" cy="124" r="5"/><circle cx="160" cy="91" r="5"/><circle cx="203" cy="123" r="5"/><circle cx="242" cy="99" r="5"/><circle cx="282" cy="131" r="5"/>
               <circle cx="43" cy="176" r="5"/><circle cx="82" cy="148" r="5"/><circle cx="123" cy="178" r="5"/><circle cx="165" cy="144" r="5"/><circle cx="205" cy="175" r="5"/><circle cx="246" cy="148" r="5"/><circle cx="281" cy="177" r="5"/>
             </g>
-            <circle cx="118" cy="124" r="9" fill="#3d67d7" stroke="#f5f8e2" stroke-width="3"/>
-            <path d="M296 124H334" fill="none" stroke="#275b4d" stroke-width="2.3"/>
-            <path d="m327 118 9 6-9 6" fill="none" stroke="#275b4d" stroke-width="2.3"/>
-            <g fill="none" stroke="#275b4d" stroke-width="2.7" stroke-linecap="round">
+            <circle class="art-graph-root" cx="118" cy="124" r="9" fill="#3d67d7" stroke="#f5f8e2" stroke-width="3"/>
+            <g class="art-arrow">
+              <path d="M296 124H334" fill="none" stroke="#275b4d" stroke-width="2.3"/>
+              <path d="m327 118 9 6-9 6" fill="none" stroke="#275b4d" stroke-width="2.3"/>
+            </g>
+            <g class="art-tree-edges" fill="none" stroke="#275b4d" stroke-width="2.7" stroke-linecap="round">
               <path d="M393 79 365 124M393 79 421 124M365 124 350 169M365 124 380 169M421 124 406 169M421 124 437 169"/>
             </g>
-            <g fill="#f6f8dd" stroke="#275b4d" stroke-width="2.2">
+            <g class="art-tree-nodes" fill="#f6f8dd" stroke="#275b4d" stroke-width="2.2">
               <circle cx="393" cy="79" r="10"/><circle cx="365" cy="124" r="8"/><circle cx="421" cy="124" r="8"/>
               <circle cx="350" cy="169" r="6"/><circle cx="380" cy="169" r="6"/><circle cx="406" cy="169" r="6"/><circle cx="437" cy="169" r="6"/>
             </g>
-            <circle cx="393" cy="79" r="6" fill="#3d67d7"/>
+            <circle class="art-tree-root" cx="393" cy="79" r="6" fill="#3d67d7"/>
             <text x="36" y="225" fill="#39594e" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.8">GRAPH</text>
             <text x="393" y="225" text-anchor="middle" fill="#39594e" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.3">COMPUTATION TREE</text>
           </svg>
@@ -658,18 +557,18 @@
             <rect x="260" y="29" width="194" height="166" rx="8" fill="#f3f6fc" stroke="#aabbd8"/>
             <text x="43" y="54" fill="#087f99" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">SOLUTE</text>
             <text x="277" y="54" fill="#3b61a8" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">SOLVENT</text>
-            <g fill="none" stroke="#21485f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <g class="art-rings" fill="none" stroke="#21485f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M75 118 100 75 150 75 175 118 150 161 100 161Z"/>
               <path d="M175 118 201 118M75 118 57 150"/>
               <path d="M312 118 337 75 387 75 412 118 387 161 337 161Z"/>
             </g>
-            <g fill="#f2fafb" stroke="#087f99" stroke-width="2.3">
+            <g class="art-solute-atoms" fill="#f2fafb" stroke="#087f99" stroke-width="2.3">
               <circle cx="75" cy="118" r="7"/><circle cx="100" cy="75" r="7"/><circle cx="150" cy="75" r="7"/><circle cx="175" cy="118" r="7"/><circle cx="150" cy="161" r="7"/><circle cx="100" cy="161" r="7"/>
             </g>
-            <g fill="#f3f6fc" stroke="#3b61a8" stroke-width="2.3">
+            <g class="art-solvent-atoms" fill="#f3f6fc" stroke="#3b61a8" stroke-width="2.3">
               <circle cx="312" cy="118" r="7"/><circle cx="337" cy="75" r="7"/><circle cx="387" cy="75" r="7"/><circle cx="412" cy="118" r="7"/><circle cx="387" cy="161" r="7"/><circle cx="337" cy="161" r="7"/>
             </g>
-            <path d="M175 118H312M150 75H337M150 161H337" fill="none" stroke="#547ca8" stroke-width="1.8" stroke-dasharray="4 6"/>
+            <path class="art-virtual" d="M175 118H312M150 75H337M150 161H337" fill="none" stroke="#547ca8" stroke-width="1.8" stroke-dasharray="4 6"/>
             <text x="46" y="221" fill="#345b73" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">VIRTUAL INTERACTION LINKS</text>
           </svg>
         </div>
@@ -684,7 +583,8 @@
   </div>
 </section>
 
-<section class="ending-contact" id="contact" aria-labelledby="ending-contact-title">
+<!-- ═══════════════ 05 / CONTACT ═══════════════ -->
+<section class="ending-contact band" id="contact" aria-labelledby="ending-contact-title">
   <div class="ending-contact__texture" aria-hidden="true">
     <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice">
       <path d="M-80 310C110 110 210 390 390 210S670 72 822 224 1050 376 1280 126"/>
@@ -694,13 +594,13 @@
       <path d="M-80 406C110 206 210 486 390 306S670 168 822 320 1050 472 1280 222"/>
     </svg>
   </div>
-  <div class="ending-contact__inner">
+  <div class="ending-contact__inner band-inner">
     <div class="ending-contact__topline">
       <p class="ending-contact__eyebrow"><span>05</span> / Contact</p>
       <span class="ending-contact__topname">Vansh Ramani</span>
     </div>
     <div class="ending-contact__main">
-      <h2 id="ending-contact-title">Vansh<br/><span>Ramani</span></h2>
+      <h2 id="ending-contact-title"><span class="contact-line">Vansh</span><span class="contact-line contact-line--accent">Ramani</span></h2>
       <div class="ending-contact__details">
         <p class="ending-contact__label">EMAIL</p>
         <a class="ending-contact__email" href="mailto:vanshramani27@gmail.com">vanshramani27@gmail.com<span aria-hidden="true">↗</span></a>
@@ -714,38 +614,26 @@
   </div>
 </section>
 
-
 </main>
+
 <footer class="ending-footer">
   <div class="ending-footer__inner">
-    <a class="ending-footer__mark" href="index.html#main" aria-label="Vansh Ramani — back to top">v<span>.</span>r<span>↗</span></a>
+    <a class="ending-footer__mark" href="#main" aria-label="Vansh Ramani — back to top"><span class="brand-tile" aria-hidden="true"><b>vr</b></span></a>
     <span class="ending-footer__copyright">© 2026 Vansh Ramani</span>
-    <a class="ending-footer__top" href="index.html#main">Back to top <span aria-hidden="true">↑</span></a>
+    <a class="ending-footer__top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
   </div>
 </footer>
 
-<dialog aria-labelledby="search-title" class="search-dialog">
-<div class="search-dialog-head">
-<h2 id="search-title">Find something.</h2>
-<button aria-label="Close search" class="search-close">
-     Esc
-     <span>
-      ×
-     </span>
-</button>
-</div>
-<label class="search-label" for="site-search">
-    SEARCH PAPERS, PAGES, AND PROJECTS
-   </label>
-<input autocomplete="off" id="site-search" placeholder="Try Panorama, graphs, or jazz…" type="search"/>
-<div aria-live="polite" class="search-results" id="search-results">
-</div>
-<p class="search-help">
-    ↑ ↓ to move
-    <span>
-     ↵ to open
-    </span>
-</p>
+<dialog class="search-dialog" aria-labelledby="search-title" data-lenis-prevent>
+  <div class="search-dialog-head">
+    <h2 id="search-title">Find something.</h2>
+    <button class="search-close" type="button" aria-label="Close search">Esc <span>×</span></button>
+  </div>
+  <label class="search-label" for="site-search">SEARCH PAPERS, PAGES, AND PROJECTS</label>
+  <input id="site-search" type="search" autocomplete="off" placeholder="Try Panorama, graphs, or jazz…">
+  <div class="search-results" id="search-results" aria-live="polite"></div>
+  <p class="search-help">↑ ↓ to move <span>↵ to open</span></p>
 </dialog>
-<dialog aria-labelledby="poster-title" class="poster-dialog"><div class="poster-dialog-header"><h2 id="poster-title">Project poster</h2><button aria-label="Close poster" class="poster-dialog-close">Esc <span>×</span></button></div><img alt="" class="poster-dialog-image" height="800" width="1200"/><div class="poster-dialog-footer"><span>Concept illustration · Original paper figures in publication details</span><a class="poster-paper-link" href="#research">Publication details ↗</a></div></dialog></body>
+
+</body>
 </html>

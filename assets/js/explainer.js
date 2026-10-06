@@ -478,7 +478,7 @@ function abort(error) {
     if (ui.dialog.open) ui.dialog.close();
     if (link?._posterSVG && link._posterSVG.parentNode !== link) returnPoster(link);
   }
-  console.error('[claude-flex] explainer failed to open', error);
+  console.error('[site] explainer failed to open', error);
 }
 
 /** Rest rect of the stage SVG (measured only while it carries no transform). */

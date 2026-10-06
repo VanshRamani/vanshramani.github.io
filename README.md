@@ -1,6 +1,6 @@
 # Vansh Ramani — personal website
 
-A static GitHub Pages website built with HTML, CSS, and vanilla JavaScript. All artwork, fonts, and molecular coordinates are served locally. No build step, backend, runtime packages, or external API calls.
+A static GitHub Pages site built with HTML, CSS and vanilla JavaScript ES modules. All artwork, fonts, molecular coordinates and libraries are served locally. There is no build step, backend or external API call.
 
 ## Preview locally
 
@@ -8,35 +8,37 @@ A static GitHub Pages website built with HTML, CSS, and vanilla JavaScript. All 
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8000/.
+Open http://127.0.0.1:8000/. ES modules need an http origin, so `file://` won't work.
 
-## Design and files
+## Structure
 
-- `index.html`: caffeine opening, ramAIn, illustrated research gallery, publication index, an editorial biography and research-experience index, illustrated writing, and contact.
-- `images/posters/`: eight standalone vector illustrations, one for each research paper and ramAIn. These illustrate concepts; original paper figures remain in publication details.
-- `images/molecular-field.svg`: custom contour field behind the molecule.
-- `js/caffeine-data.js`: local atom coordinates and bonds from [PubChem CID 2519](https://pubchem.ncbi.nlm.nih.gov/compound/2519), downloaded from the PUG REST 3D record. Caffeine contains 24 atoms including hydrogens and 25 bonded atom pairs.
-- `js/molecule.js`: perspective projection, shaded atoms and bonds, pointer and keyboard rotation, atom picking, neighborhood contour fields, research-direction cards, and automatic rotation.
-- `css/site.css`, `css/portfolio.css`, `css/lower-site.css`, `css/mobile.css`: responsive typography, color fields, layouts, motion, and phone controls.
-- `js/site.js`: local search, navigation, poster enlargement, and publication filtering.
-- `content/`: original writing, projects, coursework, achievements, personal notes, and experience/news.
-- `content/news.html`: all 12 original announcements, plus SC³’s NeurIPS 2026 acceptance, in chronological order.
-- `js/news.js` and `css/news.css`: the rotating announcement banner and News page. Banner headlines link to their full entries.
-- `fonts/`: self-hosted typefaces and open-font licenses.
+- `index.html`: the homepage, in this order: news strip, hero with the caffeine research map, ramAIn, illustrated research gallery and publication index, About with the research-experience timeline, Writing, and Contact. All content is in the HTML and readable without JavaScript.
+- `assets/css/`: `flex.css` holds the design tokens, type, layout and responsive rules. The other files hold one feature each.
+- `assets/js/`: `main.js` loads each feature module in isolation, so one failure never breaks the page. `core.js` is the shared runtime (smooth scroll, a single animation ticker, the pause-motion state, visibility helpers).
+- `assets/vendor/`: self-hosted three.js r169, GSAP 3.12.5 with ScrollTrigger, and Lenis 1.1.13.
+- `images/posters/`: eight standalone vector illustrations, one for each paper and ramAIn. `images/` also holds the original paper figures.
+- `js/caffeine-data.js`: atom coordinates and bonds from [PubChem CID 2519](https://pubchem.ncbi.nlm.nih.gov/compound/2519). Caffeine has 24 atoms including hydrogens, and the bond indices are 0-based.
+- `content/`: writing, projects, coursework, achievements, personal notes, experience and news pages. They keep their own styles in `css/` and `js/`.
+- `fonts/`: self-hosted typefaces and their open-font licenses.
 
 ## Interactions
 
-- The news banner advances every eight seconds. Hover, keyboard focus, leaving the viewport, and hidden browser tabs suspend rotation. The banner has no controls; reduced motion keeps the latest headline static. The News archive uses compact dated rows without duplicate summaries. The full archive is static HTML and works without JavaScript.
+- **Caffeine research map:**
+  - The molecule is rendered in WebGL. It sits on a promolecular-density slice drawn in the molecule's own plane.
+  - Hover or tap an atom, or use the 01–06 key under it. The contours spread outward bond by bond in that research direction's colour, and a card links to the related papers. Click to pin; press Escape to clear.
+  - Drag or use the arrow keys to rotate. On page load the same wave plays once from a single atom.
+  - Without WebGL2, a 2D canvas renderer provides the same interactions.
+- **Posters:** each poster acts out its own idea when it first comes into view and again on hover, then rests exactly on the authored illustration. Clicking a poster opens a framed explainer. It moves across the poster stage by stage and ends with the original paper figure, authors and links. The ramAIn poster plays an illustrative Observe → Reason → Act → Verify loop, and the ↺ in its caption replays it.
+- **Publication index:** filters slide between categories and rows expand with their figure. Every `#paper-*` link opens its row.
+- **Search:** the header icon, Cmd/Ctrl+K or `/` opens search. Arrow keys select and Enter opens.
+- **News:** the banner rotates every eight seconds after the first eight. It pauses on hover, focus, off-screen and in hidden tabs.
+- **Pause motion:** the control stops everything that moves on its own and remembers the choice.
 
-- Hover an atom to highlight its bonded neighborhood with smooth contour fields and a small research card on the right. Click the atom to pin it; use Unpin, the close button, or Escape to clear it. On touch screens, tapping pins the view. Six focusable atom targets provide keyboard access: focus previews and Enter pins.
-- Drag the molecule or focus it and use the arrow keys to rotate. Rotation pauses while exploring an atom.
-- Open any poster to view it at a larger size. Escape closes the viewer. The publication link opens its entry in the index; ramAIn links to the company.
-- Search with the header icon, Cmd/Ctrl+K, or `/`. Arrow keys select results; Enter opens them; Escape closes search.
-- Category filters narrow the publication index.
+## Accessibility and performance
 
-The atom-to-research mapping is a navigation metaphor; the molecular geometry and local bonded neighborhoods come from the stored caffeine record. Contours follow the projected positions of the selected atom and its nearby bonded atoms. They are a visual navigation aid, not a physical force-field calculation.
+- The page is complete without JavaScript. `prefers-reduced-motion` gets a calm but complete version.
+- Focus rings are visible everywhere. Dialogs trap and return focus. Touch targets are at least 44px on phones.
+- There is no horizontal scroll from 360px up.
+- The device pixel ratio is capped. Rendering pauses off-screen and in hidden tabs, and Three.js loads only after first paint.
 
-
-Phone navigation keeps all five destinations visible. Touch controls use larger tap targets, vertical swipes scroll past the molecule, and horizontal swipes rotate it. Search uses a 16px input to avoid automatic zoom on iOS; open viewers contain scrolling.
-
-Motion respects reduced-motion preferences. The molecule stops rendering off-screen or in a hidden tab. Without JavaScript, a static caffeine model replaces the canvas, poster links open their SVGs, and native publication details remain usable. Existing `/content/` and `/space/` URLs remain available. The original site is preserved in Git history.
+The previous design is preserved in Git history.

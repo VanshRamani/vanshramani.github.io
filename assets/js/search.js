@@ -4,7 +4,7 @@
 // pattern: focus stays in the input, ↑/↓ move aria-activedescendant.
 import { gsap, motion, lockScroll, unlockScroll, scrollToEl, focusWithoutScroll } from './core.js';
 
-// The original js/site.js index, verbatim, with paths fixed for claude-flex/.
+// The original js/site.js index, verbatim, with paths for the homepage.
 const ENTRIES = [
   ['PAGE', 'Building ramAIn', 'agents computer use founder CTO YC', '#building'],
   ['PAGE', 'Research', 'publications papers machine learning', '#research'],
@@ -16,13 +16,13 @@ const ENTRIES = [
   ['PAPER', 'ReasonBENCH', 'reason reasoning stability LLM ICML', '#paper-reasonbench'],
   ['PAPER', 'SC3', 'solvents solubility molecular benchmark NeurIPS 2026', '#paper-sc3'],
   ['PAPER', 'MolMerger', 'molecule molecules chemistry solubility GNN JCTC', '#paper-molmerger'],
-  ['PAGE', 'News', 'announcements milestones accepted NeurIPS SC3 YC', '../content/news.html'],
-  ['PAGE', 'Writing', 'notes blogs tutorials ICLR', '../content/blogs.html'],
-  ['PAGE', 'Favorites', 'jazz music travel personal', '../content/fun.html'],
-  ['PAGE', 'Projects', 'erudite packing engineering experiments', '../content/projects.html'],
-  ['PAGE', 'Experience & news', 'history research internships', '../content/background.html'],
-  ['PAGE', 'Coursework', 'courses education learning', '../content/coursework.html'],
-  ['PAGE', 'Achievements', 'awards citadel goldman sachs Lam', '../content/achievements.html'],
+  ['PAGE', 'News', 'announcements milestones accepted NeurIPS SC3 YC', 'content/news.html'],
+  ['PAGE', 'Writing', 'notes blogs tutorials ICLR', 'content/blogs.html'],
+  ['PAGE', 'Favorites', 'jazz music travel personal', 'content/fun.html'],
+  ['PAGE', 'Projects', 'erudite packing engineering experiments', 'content/projects.html'],
+  ['PAGE', 'Experience & news', 'history research internships', 'content/background.html'],
+  ['PAGE', 'Coursework', 'courses education learning', 'content/coursework.html'],
+  ['PAGE', 'Achievements', 'awards citadel goldman sachs Lam', 'content/achievements.html'],
 ];
 
 const EMPTY_TEXT = 'No matches. Try a paper title or a research area.';

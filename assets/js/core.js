@@ -1,4 +1,4 @@
-// Shared runtime for every claude-flex module: media queries, the GSAP/Lenis
+// Shared runtime for every site module: media queries, the GSAP/Lenis
 // scroll engine, a single animation ticker, a tiny event bus, the global
 // pause-motion state, visibility helpers and text splitting.
 //
@@ -62,7 +62,7 @@ export function addTicker(fn) {
 // WCAG 2.2.2: one control stops everything that moves on its own
 // (news rotation, molecule wobble, ramAIn demo, poster autoplay, contour drift).
 // User-initiated motion (hover, drag, clicks) still works while paused.
-const PAUSE_KEY = 'claude-flex:motion-paused';
+const PAUSE_KEY = 'vr:motion-paused';
 let paused = false;
 try { paused = localStorage.getItem(PAUSE_KEY) === '1'; } catch { /* storage unavailable */ }
 export const motionPaused = () => paused || mq.reduced.matches;
